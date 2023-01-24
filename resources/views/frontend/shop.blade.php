@@ -30,7 +30,7 @@
                                     @foreach($recent_products as $product)
                                         <div class="col-lg-3 col-6 mb-4 ">
                                             <a href="/shop/{{$product->slug}}">
-                                                <img class="w-100 border-radius-lg shadow mt-0 mt-lg-5" src="{{PUBLIC_DIR}}/uploads/{{$product->image}}" alt="">
+                                                <img class="w-100 border-radius-lg shadow mt-0 mt-lg-5" src="{{ url('public'}}/uploads/{{$product->image}}" alt="">
                                             </a>
                                         </div>
                                     @endforeach
@@ -76,15 +76,15 @@
                         <!-- Card item START -->
                         @foreach($products as $product)
                             <div class="col-md-4">
-                                <a href="/shop/{{$product->slug}}">
+                                <a href="{{ url('shop')}}/{{$product->slug}}">
                                     <div class="card h-100">
                                         <div class="position-relative">
                                             <!-- Image -->
                                             @if(empty($product->image))
-                                                <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                                <img src="{{ url('public'}}/img/placeholder.jpeg"
                                                      class="w-100 border-radius-lg shadow-lg p-5">
                                             @else
-                                                <img src="{{PUBLIC_DIR}}/uploads/{{$product->image}}" class="p-5 card-img-top">
+                                                <img src="{{ url('public'}}/uploads/{{$product->image}}" class="p-5 card-img-top">
                                             @endif
 
                                         </div>
@@ -93,7 +93,7 @@
                                         <div class="card-body ">
                                             <!-- Title -->
                                             <h5 class="card-title text-center mb-0">
-                                                <a href="/shop/{{$product->slug}}" class="">{{$product->name}}</a>
+                                                <a href="{{ url('shop')}}/{{$product->slug}}" class="">{{$product->name}}</a>
                                             </h5>
 
                                             <div class="text-center">{!! renderEbookRating($product->id) !!}</div>
@@ -106,7 +106,7 @@
 
                                         <!-- Card footer -->
                                         <div class=" text-center pt-0 ">
-                                            <a href="/add-to-cart/{{$product->id}}?type=ebook" class="btn btn-dark mb-2 mb-sm-0 me-00 "><i class="bi bi-cart3 "></i>{{__('Add to Cart')}}</a>
+                                            <a href="{{ url('add-to-cart')}}/{{$product->id}}?type=ebook" class="btn btn-dark mb-2 mb-sm-0 me-00 "><i class="bi bi-cart3 "></i>{{__('Add to Cart')}}</a>
 
                                         </div>
                                     </div>

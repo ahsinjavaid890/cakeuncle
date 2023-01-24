@@ -13,7 +13,7 @@
             </spna>
         </div>
         <div class="col text-end">
-            <a href="/students" type="button" class="btn btn-info text-white">{{__('Student List')}}</a>
+            <a href="{{ url('students')}}" type="button" class="btn btn-info text-white">{{__('Student List')}}</a>
         </div>
     </div>
     <!--begin::Stepper-->
@@ -81,7 +81,7 @@
 
                     <!-- Step content START -->
                     <div class="">
-                        <form method="post" action="/save-student"  enctype="multipart/form-data">
+                        <form method="post" action="{{ url('save-student')}}"  enctype="multipart/form-data">
                             @if ($errors->any())
                                 <div class="alert bg-pink-light text-danger">
                                     <ul class="list-unstyled">

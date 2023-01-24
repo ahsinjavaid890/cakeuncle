@@ -8,7 +8,7 @@
                 <!-- LOGO -->
 
                 @if(!empty($super_settings['logo']))
-                    <img src="{{PUBLIC_DIR}}/uploads/{{$super_settings['logo']}}" class="navbar-brand-img h-100 mb-3" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '30'}}px;" alt="...">
+                    <img src="{{ url('public'}}/uploads/{{$super_settings['logo']}}" class="navbar-brand-img h-100 mb-3" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '30'}}px;" alt="...">
                 @else
                     <span class=" font-weight-bold mb-3">{{config('app.name')}}</span>
             @endif
@@ -59,7 +59,7 @@
                                                 <!-- Image -->
                                                 <!-- Title -->
                                                 <h6 class="mb-0 mt-2 mt-lg-0">
-                                                    <a href="/course-details?id={{$course_in_cart->id}}">{{$course_in_cart->name}}</a>
+                                                    <a href="{{ url('course-details')}}?id={{$course_in_cart->id}}">{{$course_in_cart->name}}</a>
                                                 </h6>
                                             </div>
                                         </td>
@@ -94,7 +94,7 @@
 
                                                 <!-- Title -->
                                                 <h6 class="mb-0 mt-2 mt-lg-0">
-                                                    <a href="/view-ebook?id={{$ebook_in_cart->id}}">{{$ebook_in_cart->name}}</a>
+                                                    <a href="{{ url('view-ebook')}}?id={{$ebook_in_cart->id}}">{{$ebook_in_cart->name}}</a>
                                                 </h6>
                                             </div>
                                         </td>

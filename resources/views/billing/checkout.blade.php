@@ -60,7 +60,7 @@
                                 <h5 class="mb-0">{{__('Personal Details')}}</h5>
 
                                 <!-- Form START -->
-                                <form class="row g-3 mt-0" method="post" action="/student-signup-post">
+                                <form class="row g-3 mt-0" method="post" action="{{ url('student-signup-post')}}">
                                     @if (session()->has('status'))
                                         <div class="alert alert-success">
                                             {{session('status')}}
@@ -142,7 +142,7 @@
                                                         </h5>
                                                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPaymentGateways" style="">
                                                             <div id="stripeDiv" class="my-3 p-3">
-                                                                <form action="/payment-stripe" method="post" id="payment-form">
+                                                                <form action="{{ url('payment-stripe')}}" method="post" id="payment-form">
                                                                     <div class="form-row">
                                                                         <label for="card-element">
                                                                             {{__('Credit or debit card')}}
@@ -209,7 +209,7 @@
                                                             <div class="accordion-body text-sm opacity-8">
 
                                                                 <div class="my-3">
-                                                                   <form method="post" action="/handle-payment-gateway">
+                                                                   <form method="post" action="{{ url('handle-payment-gateway')}}">
 
 
                                                                        <div class="mb-3">
@@ -296,7 +296,7 @@
 
 
                                                 <div class="col-md-12">
-                                                    <h6 class="mb-0"><a href="/course-details?id={{$course_in_cart->id}}">{{$course_in_cart->name}}</a></h6>
+                                                    <h6 class="mb-0"><a href="{{ url('course-details')}}?id={{$course_in_cart->id}}">{{$course_in_cart->name}}</a></h6>
                                                     <!-- Info -->
                                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                                         <!-- Price -->
@@ -308,7 +308,7 @@
 
                                                         <!-- Remove and edit button -->
                                                         <div class="text-primary-hover">
-                                                            <a href="/remove-item-from-cart/{{$course_in_cart->id}}" class="btn btn-md bg-pink-light text-danger px-2 mb-0"><i class="fas fa-fw fa-times"></i></a>
+                                                            <a href="{{ url('remove-item-from-cart')}}/{{$course_in_cart->id}}" class="btn btn-md bg-pink-light text-danger px-2 mb-0"><i class="fas fa-fw fa-times"></i></a>
 
 
                                                         </div>
@@ -328,7 +328,7 @@
 
 
                                                 <div class="col-md-12">
-                                                    <h6 class="mb-0"><a href="/view-ebook?id={{$ebook_in_cart->id}}">{{$ebook_in_cart->name}}</a></h6>
+                                                    <h6 class="mb-0"><a href="{{ url('view-ebook')}}?id={{$ebook_in_cart->id}}">{{$ebook_in_cart->name}}</a></h6>
                                                     <!-- Info -->
                                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                                         <!-- Price -->
@@ -339,7 +339,7 @@
 
                                                         <!-- Remove and edit button -->
                                                         <div class="text-primary-hover ">
-                                                            <a href="/remove-item-from-cart/{{$ebook_in_cart->id}}" class="btn btn-md bg-pink-light text-danger px-2 mb-0"><i class="fas fa-fw fa-times"></i></a>
+                                                            <a href="{{ url('remove-item-from-cart')}}/{{$ebook_in_cart->id}}" class="btn btn-md bg-pink-light text-danger px-2 mb-0"><i class="fas fa-fw fa-times"></i></a>
 
 
                                                         </div>
@@ -372,7 +372,7 @@
 
 
                                     <!-- Content -->
-                                    <p class="small mb-0 mt-2 text-center">{{__('By completing order, you agree to these')}} <a href="/termsandconditions"><strong>{{__('Terms of Service')}}</strong></a></p>
+                                    <p class="small mb-0 mt-2 text-center">{{__('By completing order, you agree to these')}} <a href="{{ url('termsandconditions')}}"><strong>{{__('Terms of Service')}}</strong></a></p>
 
                                 </div>
                                 <!-- Order summary END -->

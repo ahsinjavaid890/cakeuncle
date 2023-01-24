@@ -14,7 +14,7 @@
 
         </div>
         <div class="col text-end">
-            <a href="/assignments" type="button" class="btn btn-info text-white">{{__('Assignment List ')}}</a>
+            <a href="{{ url('assignments')}}" type="button" class="btn btn-info text-white">{{__('Assignment List ')}}</a>
 
         </div>
     </div>
@@ -27,7 +27,7 @@
 
     <div class="col-lg-10 col-12 mx-auto">
 
-        <form method="post" action="/save-assignment">
+        <form method="post" action="{{ url('save-assignment')}}">
             <div class="card">
                 <div class="card-header border-bottom">
                     <h5 class="card-title ">{{__('Create Assignment')}}</h5>

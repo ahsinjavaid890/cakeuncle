@@ -8,10 +8,10 @@
                 <div class="col-md-6  mt-5">
                     <div class="avatar avatar-xxl  rounded-circle position-relative border-avatar ms-3">
                         @if(empty($student->photo))
-                            <img src="{{PUBLIC_DIR}}/img/user-avatar-placeholder.png"
+                            <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
                                  class="w-100 border-radius-sm shadow-sm">
                         @else
-                            <img src="{{PUBLIC_DIR}}/uploads/{{$student->photo}}" class="w-100 border-radius-sm ">
+                            <img src="{{ url('public'}}/uploads/{{$student->photo}}" class="w-100 border-radius-sm ">
                         @endif
                     </div>
                     <h6 class="text-white ms-3 mt-3 mb-4">
@@ -27,10 +27,10 @@
     <div class="text-center">
         <ul class="nav  mt-2 ">
             <li class="nav-item">
-                <a class="nav-link @if(($selected_nav ?? '') === 'student-about') active @endif fw-bolder"  href="/student-about?id={{$student->id}}">{{__('About')}}</a>
+                <a class="nav-link @if(($selected_nav ?? '') === 'student-about') active @endif fw-bolder"  href="{{ url('student-about')}}?id={{$student->id}}">{{__('About')}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fw-bolder" href="/student-courses?id={{$student->id}}">{{__('Courses')}}</a>
+                <a class="nav-link fw-bolder" href="{{ url('student-courses')}}?id={{$student->id}}">{{__('Courses')}}</a>
             </li>
 
 
@@ -39,10 +39,10 @@
                 <a href="" class="nav-link @if(($selected_nav ?? '') === 'student-assignment') active @endif fw-bolder">{{__('Assignments')}}</a>
             </li>
             <li class="nav-item">
-                <a href="/student-certificates?id={{$student->id}}" class="nav-link fw-bolder">{{__('Certificates')}}</a>
+                <a href="{{ url('student-certificates')}}?id={{$student->id}}" class="nav-link fw-bolder">{{__('Certificates')}}</a>
             </li>
             <li class="nav-item">
-                <a href="/student-ebooks?id={{$student->id}}" class="nav-link fw-bolder">{{__('eBooks')}}</a>
+                <a href="{{ url('student-ebooks')}}?id={{$student->id}}" class="nav-link fw-bolder">{{__('eBooks')}}</a>
             </li>
         </ul>
         <hr>
@@ -118,14 +118,14 @@
 
                                                 <li>
                                                     <a class="dropdown-item border-radius-md"
-                                                       href="/view-assignment?id={{$assignment->id}}">{{__('See Details')}}</a>
+                                                       href="{{ url('view-assignment')}}?id={{$assignment->id}}">{{__('See Details')}}</a>
                                                 </li>
                                                 <li>
                                                     <hr class="dropdown-divider">
                                                 </li>
                                                 <li>
                                                     <a class="dropdown-item border-radius-md text-danger"
-                                                       href="/delete/assignment/{{$assignment->id}}">{{__('Delete')}}
+                                                       href="{{ url('delete/assignment')}}/{{$assignment->id}}">{{__('Delete')}}
                                                     </a>
                                                 </li>
                                             </ul>

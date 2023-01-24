@@ -9,7 +9,7 @@
 
         <div class="card-body pt-0">
 
-            <form action="/configure-gateway" method="post">
+            <form action="{{ url('configure-gateway')}}" method="post">
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul class="list-unstyled">

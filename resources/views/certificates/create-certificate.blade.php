@@ -13,13 +13,13 @@
         </div>
         <div class="col text-end">
 
-            <a href="/certificates" type="button" class="btn btn-info text-white"> {{__('Certificate Templates')}}</a>
+            <a href="{{ url('certificates')}}" type="button" class="btn btn-info text-white"> {{__('Certificate Templates')}}</a>
 
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
-            <form action="/save-certificate-template" method="post" enctype="multipart/form-data">
+            <form action="{{ url('save-certificate-template')}}" method="post" enctype="multipart/form-data">
                 @if ($errors->any())
                     <div class="alert bg-pink-light text-danger fw-bolder">
                         <ul class="list-unstyled">
@@ -121,7 +121,7 @@
                         <div class="col-md-8">
                             <h4 class=" mt-4">
                                 @if(!empty($certificate->logo))
-                                    <img src="{{PUBLIC_DIR}}/uploads/{{$certificate->logo}}"
+                                    <img src="{{ url('public'}}/uploads/{{$certificate->logo}}"
                                          class="w-50">
                                 @else
                                     {{__(' Company logo')}}

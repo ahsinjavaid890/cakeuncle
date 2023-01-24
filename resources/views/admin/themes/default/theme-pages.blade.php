@@ -18,7 +18,7 @@
 
         </div>
         <div class="col text-end">
-            <a href="/student/profile" type="button" class="btn btn-info text-white">{{__('My Profile')}}</a>
+            <a href="{{ url('student/profile')}}" type="button" class="btn btn-info text-white">{{__('My Profile')}}</a>
         </div>
     </div>
 
@@ -44,7 +44,7 @@
 
 
                         <td class="text-end">
-                            <a  href="/landingpage"  class="btn btn-icon btn-2 bg-info-light shadow-none " type="button">
+                            <a  href="{{ url('landingpage')}}"  class="btn btn-icon btn-2 bg-info-light shadow-none " type="button">
                                 <span class="btn-inner--icon text-info-light">
 
 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
@@ -60,7 +60,7 @@
 
 
                         <td class="text-end">
-                            <a  href="/footer"  class="btn btn-icon btn-2 bg-info-light shadow-none " type="button">
+                            <a  href="{{ url('footer')}}"  class="btn btn-icon btn-2 bg-info-light shadow-none " type="button">
                                 <span class="btn-inner--icon text-info-light">
 
 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>

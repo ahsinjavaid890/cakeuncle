@@ -8,7 +8,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" mb-2 feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
         </span>
         </button>
-        <a href="/home" target="_blank" type="button" class="btn btn-success btn-icon-only">
+        <a href="{{ url('home')}}" target="_blank" type="button" class="btn btn-success btn-icon-only">
             <span class="btn-inner--icon">
 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
             </span>
@@ -21,7 +21,7 @@
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <form action="/save-footer-section" method="post" enctype="multipart/form-data">
+            <form action="{{ url('save-footer-section')}}" method="post" enctype="multipart/form-data">
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul class="list-unstyled">
@@ -108,17 +108,17 @@
                         <h6 class="text-gradient text-dark text-sm ms-3">{{__('Pages')}}</h6>
                         <ul class="flex-column  nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="/home" target="_blank">
+                                <a class="nav-link" href="{{ url('home')}}" target="_blank">
                                     {{__('Home Page')}}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/blog" target="_blank">
+                                <a class="nav-link" href="{{ url('blog')}}" target="_blank">
                                     {{__('Blog')}}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/course" target="_blank">
+                                <a class="nav-link" href="{{ url('course')}}" target="_blank">
                                     {{__('Courses')}}
                                 </a>
                             </li>
@@ -174,12 +174,12 @@
                         <ul class="flex-column  nav">
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/privacy" target="_blank">
+                                <a class="nav-link" href="{{ url('privacy')}}" target="_blank">
                                     {{__(' Privacy Policy')}}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/termsandconditions" target="_blank">
+                                <a class="nav-link" href="{{ url('termsandconditions')}}" target="_blank">
                                     {{__(' Terms of Service')}}
                                 </a>
                             </li>

@@ -2,7 +2,7 @@
 @section('title',__('Add Note'))
 @section('content')
     <div class="container-fluid py-4">
-        <form enctype="multipart/form-data" action="/save-note" method="post">
+        <form enctype="multipart/form-data" action="{{ url('save-note')}}" method="post">
             @if ($errors->any())
                 <div class="alert bg-pink-light text-danger">
                     <ul class="list-unstyled">

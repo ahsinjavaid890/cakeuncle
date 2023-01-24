@@ -10,7 +10,7 @@
                     <!-- Badge -->
                     @if(!empty($course->id))
                         <a class="btn btn-blue mb-3 ms-lg-auto me-lg-0 me-auto mt-lg-0 mt-2 "
-                           href="/student/my-course-details?id={{$course->id}}" >
+                           href="{{ url('student/my-course-details')}}?id={{$course->id}}" >
                             {{__('Go to Course Page')}}
                         </a>
                 @endif
@@ -47,7 +47,7 @@
                         <div class="position-relative mb-3">
 
                             @if(!empty($lesson->video))
-                                <iframe controlsList="nodownload" class="embed-responsive-item w-100 height-400  border-radius-lg shadow-lg mt-3" src="{{PUBLIC_DIR}}/uploads/{{$lesson->video}}" type="video/mp4">
+                                <iframe controlsList="nodownload" class="embed-responsive-item w-100 height-400  border-radius-lg shadow-lg mt-3" src="{{ url('public'}}/uploads/{{$lesson->video}}" type="video/mp4">
                                 </iframe>
 
                             @elseif(!empty($lesson->youtube_video))
@@ -56,7 +56,7 @@
 
 
                             @else
-                                <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg" class="w-100 border-radius-lg shadow-lg mt-3">
+                                <img src="{{ url('public'}}/img/placeholder.jpeg" class="w-100 border-radius-lg shadow-lg mt-3">
 
                             @endif
                         </div>
@@ -132,7 +132,7 @@
                                                                 <i class="fas fa-play text-info"></i>
                                                             </div>
                                                             <div class="ms-2 ms-sm-3 mt-1 mt-sm-0">
-                                                                <a href="/view-lesson?id={{$lesson->id}}"> <h6 class="mb-0">{{$loop->iteration}}. {{$lesson->title}}</h6></a>
+                                                                <a href="{{ url('view-lesson')}}?id={{$lesson->id}}"> <h6 class="mb-0">{{$loop->iteration}}. {{$lesson->title}}</h6></a>
                                                                 <p class="mb-2 mb-sm-0 small">{{__('Last Updated')}} {{$lesson->updated_at->diffForHumans()}}</p>
                                                             </div>
                                                         </div>
@@ -148,7 +148,7 @@
 
 
                                                                 <li><a class="dropdown-item border-radius-sm"
-                                                                       href="/view-lesson?id={{$lesson->id}}">{{__('See Details')}}</a>
+                                                                       href="{{ url('view-lesson')}}?id={{$lesson->id}}">{{__('See Details')}}</a>
                                                                 </li>
 
 

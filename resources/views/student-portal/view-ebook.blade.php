@@ -13,10 +13,10 @@
                             <!-- Image -->
                             <div class="rounded-3">
                                 @if(empty($product->image))
-                                    <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                    <img src="{{ url('public'}}/img/placeholder.jpeg"
                                          class="w-100 border-radius-lg shadow-lg mt-3">
                                 @else
-                                    <img src="{{PUBLIC_DIR}}/uploads/{{$product->image}}" class=" p-6 w-100 card-img-top">
+                                    <img src="{{ url('public'}}/uploads/{{$product->image}}" class=" p-6 w-100 card-img-top">
                                 @endif
 
                             </div>
@@ -26,7 +26,7 @@
                                 <!-- Buttons and price -->
                                 <div class="text-center">
                                     <!-- Buttons -->
-                                    <a href="{{PUBLIC_DIR}}/uploads/{{$product->file}}" class="btn btn-success mb-sm-0 me-00 ">
+                                    <a href="{{ url('public'}}/uploads/{{$product->file}}" class="btn btn-success mb-sm-0 me-00 ">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                                        {{__(' View and Download')}}</a>
@@ -48,7 +48,7 @@
                                             </div>
                                         @else
 
-                                            <img src="{{PUBLIC_DIR}}/uploads/{{$product->author_photo}}"
+                                            <img src="{{ url('public'}}/uploads/{{$product->author_photo}}"
                                                  class="avatar avatar-md rounded-circle  shadow-sm">
                                         @endif
                                     </div>
@@ -153,7 +153,7 @@
 
 
     <div class="modal fade" id="review" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <form action="/student/save-ebook-review" method="post">
+        <form action="{{ url('student/save-ebook-review')}}" method="post">
 
             <div class="modal-dialog">
                 <div class="modal-content">

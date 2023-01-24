@@ -33,7 +33,7 @@
 
                                         </div>
                                     @else
-                                        <img src="{{PUBLIC_DIR}}/uploads/{{$user->photo}}" class="w-100 border-radius-lg shadow-sm">
+                                        <img src="{{ url('public'}}/uploads/{{$user->photo}}" class="w-100 border-radius-lg shadow-sm">
                                     @endif
 
                                 </div>
@@ -75,7 +75,7 @@
         </div>
 
         <div class="col-md-8 mt-lg-0">
-            <form enctype="multipart/form-data" action="/profile" method="post">
+            <form enctype="multipart/form-data" action="{{ url('profile')}}" method="post">
 
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -179,7 +179,7 @@
                 <div class="card-header">
                     <h5>{{__('Change Password')}}</h5>
                 </div>
-                <form action="/user-change-password" method="post">
+                <form action="{{ url('user-change-password')}}" method="post">
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul class="list-unstyled">

@@ -12,7 +12,7 @@
 
         </div>
         <div class="col text-end">
-            <a href="/shop" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Buy More ')}}</a>
+            <a href="{{ url('shop')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Buy More ')}}</a>
 
         </div>
     </div>
@@ -26,10 +26,10 @@
                     <div class="position-relative">
                         <!-- Image -->
                         @if(empty($product->image))
-                            <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                            <img src="{{ url('public'}}/img/placeholder.jpeg"
                                  class="w-100 border-radius-lg shadow-lg p-5">
                         @else
-                            <img src="{{PUBLIC_DIR}}/uploads/{{$product->image}}" class=" p-5  card-img-top">
+                            <img src="{{ url('public'}}/uploads/{{$product->image}}" class=" p-5  card-img-top">
                         @endif
                     </div>
                     <!-- Card body -->
@@ -37,7 +37,7 @@
                     <div class="card-body text-center px-3">
                         <!-- Title -->
                         <h5 class="card-title mb-0">
-                            <a href="/student/view-ebook?id={{$product->id}}" class="">{{$product->name}}</a>
+                            <a href="{{ url('student/view-ebook')}}?id={{$product->id}}" class="">{{$product->name}}</a>
                         </h5>
                         {!! renderEbookRating($product->id) !!}
                     </div>

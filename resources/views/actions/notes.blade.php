@@ -8,7 +8,7 @@
             </h5>
         </div>
         <div class="col text-end">
-            <a href="/add-note" type="button" class="btn btn-info">{{__('Take New Note')}}</a>
+            <a href="{{ url('add-note')}}" type="button" class="btn btn-info">{{__('Take New Note')}}</a>
         </div>
     </div>
     <div class="row" data-masonry='{"percentPosition": true }'>
@@ -16,7 +16,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     @if(!empty($note->cover_photo))
-                        <img src="{{PUBLIC_DIR}}/uploads/{{$note->cover_photo}}" class="card-img-top" alt="...">
+                        <img src="{{ url('public'}}/uploads/{{$note->cover_photo}}" class="card-img-top" alt="...">
                     @endif
 
                     <div class="card-body">
@@ -24,7 +24,7 @@
                         <h5 class="card-title">{{$note->title}}</h5>
                         <p class="card-text"> {!!substr($note->notes,0,400)!!} </p>
                         <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-                           href="/view-note?id={{$note->id}}">
+                           href="{{ url('view-note')}}?id={{$note->id}}">
                             {{__('Read More')}}
                             <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                         </a>

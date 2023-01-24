@@ -17,7 +17,7 @@
         </div>
         <div class="col text-end">
 
-            <a class="btn btn-info mb-0" href="/new-user"><i class="fas fa-plus"></i>&nbsp;&nbsp;
+            <a class="btn btn-info mb-0" href="{{ url('new-user')}}"><i class="fas fa-plus"></i>&nbsp;&nbsp;
                 {{__(' Add New User')}}
             </a>
 
@@ -56,7 +56,7 @@
                                                         </div>
                                                     @else
 
-                                                        <img src="{{PUBLIC_DIR}}/uploads/{{$workspace_user->photo}}"
+                                                        <img src="{{ url('public'}}/uploads/{{$workspace_user->photo}}"
                                                              alt="" class="avatar avatar-md shadow-sm">
                                                     @endif
                                                 </div>
@@ -73,17 +73,17 @@
                                         </td>
                                         <td class="align-middle">
                                             <div class="ms-auto text-end">
-                                                <a class="btn btn-link text-dark px-3 mb-0" href="/user-edit/{{$workspace_user->id}}"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>{{__('Edit')}}</a>
+                                                <a class="btn btn-link text-dark px-3 mb-0" href="{{ url('user-edit')}}/{{$workspace_user->id}}"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>{{__('Edit')}}</a>
 
                                                 <a class="btn btn-link text-dark px-3 mb-0"
-                                                   href="/user-profile?id={{$workspace_user->id}}"><i
+                                                   href="{{ url('user-profile')}}?id={{$workspace_user->id}}"><i
                                                         class="fas fa-file-alt text-dark me-2"
                                                         aria-hidden="true"></i>{{__('View')}}</a>
 
                                                 @if($user->id != $workspace_user->id)
 
                                                     <a class="btn btn-link text-danger text-gradient px-3 mb-0"
-                                                       href="/delete-user/{{$workspace_user->id}}"><i
+                                                       href="{{ url('delete-user')}}/{{$workspace_user->id}}"><i
                                                             class="far fa-trash-alt me-2"></i>{{__('Delete')}}</a>
 
                                                 @endif

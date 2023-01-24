@@ -26,7 +26,7 @@
                     <div class="card-body p-2">
                         @foreach($admins as $admin)
 
-                            <a href="/student/messages?id={{$admin->id}}" class="d-block p-2 border-radius-lg  mb-2 @if($selected_admin->id  ==  $admin->id) bg-gray @endif">
+                            <a href="{{ url('student/messages')}}?id={{$admin->id}}" class="d-block p-2 border-radius-lg  mb-2 @if($selected_admin->id  ==  $admin->id) bg-gray @endif">
 
                                 <div class="d-flex p-2">
                                     @if(empty( $admin->photo))
@@ -35,7 +35,7 @@
                                             <h6 class="text-white fw-normal text-uppercase mt-1 ">{{ $admin->first_name['0']}}{{ $admin->last_name['0']}}</h6>
                                         </div>
                                     @else
-                                        <img src="{{PUBLIC_DIR}}/uploads/{{ $admin->photo}}" class="rounded-circle avatar shadow">
+                                        <img src="{{ url('public'}}/uploads/{{ $admin->photo}}" class="rounded-circle avatar shadow">
                                     @endif
 
                                     <div class="ms-3">
@@ -87,7 +87,7 @@
                                             <h6 class="text-white  fw-normal mt-1 text-uppercase">{{$selected_admin->first_name['0']}}{{$selected_admin->last_name['0']}}</h6>
                                         </div>
                                     @else
-                                        <img src="{{PUBLIC_DIR}}/uploads/{{$selected_admin->photo}}" class="rounded-circle avatar shadow">
+                                        <img src="{{ url('public'}}/uploads/{{$selected_admin->photo}}" class="rounded-circle avatar shadow">
                                     @endif
                                     <div class="ms-3">
                                         <h6 class="mb-0 d-block">{{$selected_admin->first_name}} {{$selected_admin->last_name}}</h6>

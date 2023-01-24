@@ -9,7 +9,7 @@
             </h5>
         </div>
         <div class="col text-end">
-            <a href="/student/profile" type="button" class="btn btn-info text-white">{{__('My Profile')}}</a>
+            <a href="{{ url('student/profile')}}" type="button" class="btn btn-info text-white">{{__('My Profile')}}</a>
         </div>
     </div>
 
@@ -77,7 +77,7 @@
 
                     <!-- Step content START -->
                     <div class="">
-                        <form method="post" action="/student/student-edit-profile"  enctype="multipart/form-data">
+                        <form method="post" action="{{ url('student/student-edit-profile')}}"  enctype="multipart/form-data">
                             @if ($errors->any())
                                 <div class="alert bg-pink-light text-danger">
                                     <ul class="list-unstyled">

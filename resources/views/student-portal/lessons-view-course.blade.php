@@ -42,10 +42,10 @@
                         <!-- Image and video -->
                         <div class="col-12 position-relative">
                             @if(empty($course->image))
-                                <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                <img src="{{ url('public'}}/img/placeholder.jpeg"
                                      class="w-100 border-radius-sm">
                             @else
-                                <img src="{{PUBLIC_DIR}}/uploads/{{$course->image}}" class="w-100  border-radius-sm ">
+                                <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100  border-radius-sm ">
                             @endif
                         </div>
 
@@ -55,14 +55,14 @@
                             <ul class="nav  mt-2 ">
 
                                 <li class="nav-item">
-                                    <a class="nav-link fw-bolder" href="/student/my-course-details/?id={{$course->id}}">{{__('Course Description')}}</a>
+                                    <a class="nav-link fw-bolder" href="{{ url('student/my-course-details')}}/?id={{$course->id}}">{{__('Course Description')}}</a>
                                 </li>
 
                                 <li class="nav-item">
                                     <a href="" class=" @if(($selected_nav ?? '') === 'student-course-lessons') active @endif nav-link fw-bolder">{{__('Lessons')}}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/student/my-course-discussion/?id={{$course->id}}" class="nav-link fw-bolder">{{__('Comments')}}</a>
+                                    <a href="{{ url('student/my-course-discussion')}}/?id={{$course->id}}" class="nav-link fw-bolder">{{__('Comments')}}</a>
                                 </li>
 
                             </ul>
@@ -90,14 +90,14 @@
                                                             <i class="fas fa-play text-info"></i>
                                                         </div>
                                                         <div class="ms-2 ms-sm-3 mt-1 mt-sm-0">
-                                                            <a href="/student/view-mylesson?id={{$less->id}}"> <h6 class="mb-0">{{$less->title}}</h6></a>
+                                                            <a href="{{ url('student/view-mylesson')}}?id={{$less->id}}"> <h6 class="mb-0">{{$less->title}}</h6></a>
                                                             <p class="mb-2 mb-sm-0 small">
                                                                 {{$less->duration}}</p>
 
                                                         </div>
                                                     </div>
                                                     <!-- Button -->
-                                                    <a href="/student/view-mylesson?id={{$less->id}}" class="btn btn-sm btn-info mb-0">{{__('Learn')}}</a>
+                                                    <a href="{{ url('student/view-mylesson')}}?id={{$less->id}}" class="btn btn-sm btn-info mb-0">{{__('Learn')}}</a>
                                                 </div>
                                                 <p class="">{!! $less->summary !!}</p>
                                                 <!-- Divider -->
@@ -226,7 +226,7 @@
 
                                             @if(!empty($users[$course->admin_id]->photo))
                                                 <a href="javascript:" class="ms-3 mt-4 avatar rounded-circle border border-secondary">
-                                                    <img alt="" class="p-1" src="{{PUBLIC_DIR}}/uploads/{{$users[$course->admin_id]->photo}}">
+                                                    <img alt="" class="p-1" src="{{ url('public'}}/uploads/{{$users[$course->admin_id]->photo}}">
                                                 </a>
                                             @else
                                                 <div class="avatar ms-3   mt-4 rounded-circle bg-info-light  border-radius-md p-2">
@@ -288,7 +288,7 @@
                                 <!-- Course info END -->
                             </div>
                                 <div class="modal fade" id="review" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <form action="/student/save-review" method="post">
+                                <form action="{{ url('student/save-review')}}" method="post">
 
                                     <div class="modal-dialog">
                                         <div class="modal-content">

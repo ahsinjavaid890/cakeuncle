@@ -12,7 +12,7 @@
             <p class="text-muted">{{__('Create, edit or delete blog articles.')}}</p>
         </div>
         <div class="col text-end">
-            <a href="/write-blog" type="button" class="btn btn-info"><i class="fas fa-plus"></i> {{__('Write New Blog')}}</a>
+            <a href="{{ url('write-blog')}}" type="button" class="btn btn-info"><i class="fas fa-plus"></i> {{__('Write New Blog')}}</a>
 
         </div>
     </div>
@@ -23,7 +23,7 @@
             <div class="card-body">
                 <p>{{__('No items to display. Get started by adding an item.')}}</p>
 
-                <a href="/write-blog" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Write an article ')}}</a>
+                <a href="{{ url('write-blog')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Write an article ')}}</a>
             </div>
         </div>
 
@@ -34,15 +34,14 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     @if(!empty($blog->cover_photo))
-                        <img src="{{PUBLIC_DIR}}/uploads/{{$blog->cover_photo}}" class="card-img-top" alt="...">
+                        <img src="{{ url('public'}}/uploads/{{$blog->cover_photo}}" class="card-img-top" alt="...">
                     @endif
 
                     <div class="card-body">
                         <p class="mb-1 pt-2 text-bold">{{$blog->topic}}</p>
                         <h5 class="card-title">{{$blog->title}}</h5>
 
-                        <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-                           href="/view-blog?id={{$blog->id}}">
+                        <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="{{ url('view-blog')}}?id={{$blog->id}}">
                             {{__('Read More')}}
                             <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                         </a>

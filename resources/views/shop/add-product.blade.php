@@ -9,7 +9,7 @@
             </h5>
         </div>
         <div class="col text-end">
-            <a href="/products" type="button" class="btn btn-info text-white">{{__('eBook List')}}</a>
+            <a href="{{ url('products')}}" type="button" class="btn btn-info text-white">{{__('eBook List')}}</a>
         </div>
     </div>
     <!--begin::Stepper-->
@@ -67,7 +67,7 @@
                 <div class="card-body">
                     <!-- Step content START -->
                     <div class="">
-                        <form action="/save-product" method="post" enctype="multipart/form-data">
+                        <form action="{{ url('save-product')}}" method="post" enctype="multipart/form-data">
                             @if ($errors->any())
                                 <div class="alert bg-pink-light text-danger">
                                     <ul class="list-unstyled">
@@ -224,7 +224,7 @@
                                         <!-- Item START -->
                                         <div class="text-center justify-content-center align-items-center p-4 p-sm-5 border border-2 border-dashed position-relative rounded-3 mb-4">
                                             <!-- Image -->
-{{--                                            <img src="assets/images/element/gallery.svg" class="h-50px" alt="">--}}
+{{--                                            <img src="{{ url('public/assets/images/element/gallery.svg')}}" class="h-50px" alt="">--}}
                                             <div>
                                                 <h6 class="my-2">Upload product file here, or<a href="#!" class="text-primary"> Browse</a></h6>
                                                 <label style="cursor:pointer;">

@@ -52,7 +52,7 @@
                                             <a href="javascript:" class="avatar avatar-sm rounded-circle"
                                                data-bs-toggle="tooltip" data-bs-placement="top"
                                                title="{{$students[$member]->first_name}}">
-                                                <img src="{{PUBLIC_DIR}}/uploads/{{$students[$member]->photo}}"
+                                                <img src="{{ url('public'}}/uploads/{{$students[$member]->photo}}"
                                                 >
                                             </a>
 
@@ -113,12 +113,12 @@
                                                             </div>
                                                         @else
 
-                                                            <img src="{{PUBLIC_DIR}}/uploads/{{$students[$student_submission->student_id]->photo}}"
+                                                            <img src="{{ url('public'}}/uploads/{{$students[$student_submission->student_id]->photo}}"
                                                                  class="avatar avatar-md rounded-circle  shadow-sm">
                                                         @endif
                                                     </div>
                                                     <div class="d-flex flex-column justify-content-center ms-3">
-                                                        <a href="/student-about?id={{$students[$student_submission->student_id]->id}}">
+                                                        <a href="{{ url('student-about')}}?id={{$students[$student_submission->student_id]->id}}">
                                                             <h6 class="mb-0">{{$students[$student_submission->student_id]->first_name}} {{$students[$student_submission->student_id]->last_name}}</h6>
                                                         </a>
 
@@ -145,7 +145,7 @@
 
 
                                                         <li><a class="dropdown-item border-radius-md"
-                                                               href="/check-assignment?id={{$student_submission->id}}">{{__('Check and mark')}}</a>
+                                                               href="{{ url('check-assignment')}}?id={{$student_submission->id}}">{{__('Check and mark')}}</a>
                                                         </li>
                                                         <li>
                                                             <hr class="dropdown-divider">

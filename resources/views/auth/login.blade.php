@@ -31,7 +31,7 @@
 
                         <h3 class="text-purple mb-5">{{__('Welcome Back!')}}</h3>
 
-                        <a class="navbar-brand text-dark bg-transparent fw-bolder" href="/home" rel="tooltip" title="" data-placement="bottom" target="_blank">
+                        <a class="navbar-brand text-dark bg-transparent fw-bolder" href="{{ url('home')}}" rel="tooltip" title="" data-placement="bottom" target="_blank">
                             @if(!empty($super_settings['logo']))
                                 <img src="{{ url('public') }}/uploads/{{$super_settings['logo']}}" class="navbar-brand-img h-100" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '30'}}px;" alt="...">
                             @else
@@ -102,7 +102,7 @@
                                             <label class="form-check-label" for="exampleCheck1">{{__('Remember me')}}</label>
                                         </div>
                                         <div class="text-primary-hover">
-                                            <a href="/forgot-password" class="text-info-light">
+                                            <a href="{{ url('forgot-password')}}" class="text-info-light">
                                                 <u>{{__('Forgot Password?')}}</u>
                                             </a>
                                         </div>
@@ -126,8 +126,7 @@
 
 
                                 </p>
-                                <p class="text-sm mt-3 mb-0">{{__('Do not have an account?')}} <a href="/signup"
-                                                                                                  class="text-dark font-weight-bolder">{{__('Signup Here')}}</a>
+                                <p class="text-sm mt-3 mb-0">{{__('Do not have an account?')}} <a href="{{ url('signup')}}"class="text-dark font-weight-bolder">{{__('Signup Here')}}</a>
                             </div>
                         </div>
                         <!-- Form END -->

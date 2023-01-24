@@ -7,7 +7,7 @@
                 <!--form panels-->
                 <div class="row">
                     <div class="col-12 col-lg-8 m-auto">
-                        <form action="/user-post" method="post" class="multisteps-form__form mb-8">
+                        <form action="{{ url('user-post')}}" method="post" class="multisteps-form__form mb-8">
                             <!--single form panel-->
                             @if ($errors->any())
                                 <div class="alert bg-pink-light text-danger">

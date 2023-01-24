@@ -14,8 +14,8 @@
         </div>
         <div class="col text-end">
 
-            <a href="/create-lesson?course_id={{$course->id}}" class="btn btn-info " type="button" >{{__('Add Lesson')}}</a>
-            <a href="/create-course?id={{$course->id}}" class="btn  btn-blue  ">{{__('Edit Course')}}</a>
+            <a href="{{ url('create-lesson')}}?course_id={{$course->id}}" class="btn btn-info " type="button" >{{__('Add Lesson')}}</a>
+            <a href="{{ url('create-course')}}?id={{$course->id}}" class="btn  btn-blue  ">{{__('Edit Course')}}</a>
         </div>
     </div>
 
@@ -47,10 +47,10 @@
                         <!-- Image and video -->
                         <div class="col-12 position-relative">
                             @if(empty($course->image))
-                                <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                <img src="{{ url('public'}}/img/placeholder.jpeg"
                                      class="w-100 border-radius-sm  mt-3">
                             @else
-                                <img src="{{PUBLIC_DIR}}/uploads/{{$course->image}}" class="w-100  border-radius-sm mt-3">
+                                <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100  border-radius-sm mt-3">
                             @endif
                         </div>
 
@@ -212,7 +212,7 @@
 
                                             @if(!empty($user->photo))
                                                 <a href="javascript:;" class="avatar avatar-sm rounded-circle border border-secondary">
-                                                    <img alt="" class="p-1" src="{{PUBLIC_DIR}}/uploads/{{$user->photo}}">
+                                                    <img alt="" class="p-1" src="{{ url('public'}}/uploads/{{$user->photo}}">
                                                 </a>
                                             @else
                                                 <div class="avatar avatar-lg rounded-circle bg-purple-light  border-radius-md p-2">
@@ -243,7 +243,7 @@
 
                                         <!-- button -->
 
-                                        <a href="/create-course?id={{$course->id}}" class="btn btn-sm btn-blue mb-0 mt-2 mt-sm-0">{{__('Edit Course')}}</a>
+                                        <a href="{{ url('create-course')}}?id={{$course->id}}" class="btn btn-sm btn-blue mb-0 mt-2 mt-sm-0">{{__('Edit Course')}}</a>
                                     </div>
                                 </div>
                                 <!-- Course info END -->
@@ -291,7 +291,7 @@
                                                                 <i class="fas fa-play text-info"></i>
                                                             </div>
                                                             <div class="ms-2 ms-sm-3 mt-1 mt-sm-0">
-                                                                <a href="/view-lesson?id={{$lesson->id}}"> <h6 class="mb-0">{{$lesson->title}}</h6></a>
+                                                                <a href="{{ url('view-lesson')}}?id={{$lesson->id}}"> <h6 class="mb-0">{{$lesson->title}}</h6></a>
                                                                 <p class="mb-2 mb-sm-0 small">
                                                                     {{$lesson->duration}}</p>
                                                             </div>
@@ -306,10 +306,10 @@
                                                             <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
                                                                 aria-labelledby="dropdownMarketingCard">
                                                                 <li><a class="dropdown-item border-radius-sm"
-                                                                       href="/create-lesson?course_id={{$course->id}}&id={{$lesson->id}}">{{__('Edit')}}</a></li>
+                                                                       href="{{ url('create-lesson')}}?course_id={{$course->id}}&id={{$lesson->id}}">{{__('Edit')}}</a></li>
 
                                                                 <li><a class="dropdown-item border-radius-sm"
-                                                                       href="/view-lesson?id={{$lesson->id}}">{{__('See Details')}}</a>
+                                                                       href="{{ url('view-lesson')}}?id={{$lesson->id}}">{{__('See Details')}}</a>
                                                                 </li>
 
 

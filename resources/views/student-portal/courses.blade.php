@@ -13,7 +13,7 @@
         </div>
         <div class="col text-end">
 
-            <a href="/course" type="button" class="btn btn-info btn-rounded"><i class="fas fa-plus"></i>&nbsp;{{__('Enroll for more')}}</a>
+            <a href="{{ url('course')}}" type="button" class="btn btn-info btn-rounded"><i class="fas fa-plus"></i>&nbsp;{{__('Enroll for more')}}</a>
 
         </div>
     </div>
@@ -25,10 +25,10 @@
                     <div class="position-relative">
                         <a class="d-block shadow-xl border-radius-xl">
                             @if(empty($course->image))
-                                <img src="{{PUBLIC_DIR}}/img/placeholder.png"
+                                <img src="{{ url('public'}}/img/placeholder.png"
                                      class="w-100 border-radius-lg shadow-sm mt-3">
                             @else
-                                <img src="{{PUBLIC_DIR}}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
+                                <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
                             @endif
                         </a>
                     </div>
@@ -43,7 +43,7 @@
 
                             @endif
                         </p>
-                        <a href="/student/my-course-details?id={{$course->id}}">
+                        <a href="{{ url('student/my-course-details')}}?id={{$course->id}}">
                             <h5>
                                 <strong>{{$course->name}}</strong>
                             </h5>

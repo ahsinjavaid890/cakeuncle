@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-md-4 text-right">
                     @if($users_count_on_this_workspace < $maximum_allowed_users)
-                        <a class="btn bg-gradient-dark mb-0" href="/new-user"><i class="fas fa-plus"></i>&nbsp;&nbsp;
+                        <a class="btn bg-gradient-dark mb-0" href="{{ url('new-user')}}"><i class="fas fa-plus"></i>&nbsp;&nbsp;
                             {{__(' Add New User')}}
                         </a>
                     @endif
@@ -47,7 +47,7 @@
                                                     </div>
                                                 @else
 
-                                                    <img src="{{PUBLIC_DIR}}/uploads/{{$staff->photo}}"
+                                                    <img src="{{ url('public'}}/uploads/{{$staff->photo}}"
                                                          alt="" class="avatar avatar-md shadow-sm">
                                                 @endif
                                             </div>
@@ -69,11 +69,11 @@
 
                                             @if(!$workspace->owner_id || $staff->id != $workspace->owner_id )
                                                 <a class="btn btn-link text-danger text-gradient px-3 mb-0"
-                                                   href="/delete/staff/{{$staff->id}}"><i
+                                                   href="{{ url('delete/staff')}}/{{$staff->id}}"><i
                                                         class="far fa-trash-alt me-2"></i>{{__('Delete')}}</a>
                                             @endif
                                             <a class="btn btn-link text-dark px-3 mb-0"
-                                               href="/user-edit/{{$staff->id}}"><i
+                                               href="{{ url('user-edit')}}/{{$staff->id}}"><i
                                                     class="fas fa-pencil-alt text-dark me-2"
                                                     aria-hidden="true"></i>{{__('Edit')}}</a>
                                         </div>

@@ -16,7 +16,7 @@
 
         </div>
         <div class="col text-end">
-            <a href="/add-product" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Add eBook ')}}</a>
+            <a href="{{ url('add-product')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Add eBook ')}}</a>
 
         </div>
     </div>
@@ -30,7 +30,7 @@
                         <div class="card-body">
                             <p>{{__('No items to display. Get started by adding an item.')}}</p>
 
-                            <a href="/add-product" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Add eBook ')}}</a>
+                            <a href="{{ url('add-product')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Add eBook ')}}</a>
                         </div>
                     </div>
 
@@ -58,17 +58,17 @@
                                                         <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
                                                             aria-labelledby="dropdownMarketingCard">
                                                             <li><a class="dropdown-item border-radius-md"
-                                                                   href="/add-product?id={{$product->id}}">{{__('Edit')}}</a></li>
+                                                                   href="{{ url('add-product')}}?id={{$product->id}}">{{__('Edit')}}</a></li>
 
                                                             <li><a class="dropdown-item border-radius-md"
-                                                                   href="/view-product?id={{$product->id}}">{{__('See Details')}}</a>
+                                                                   href="{{ url('view-product')}}?id={{$product->id}}">{{__('See Details')}}</a>
                                                             </li>
                                                             <li>
                                                                 <hr class="dropdown-divider">
                                                             </li>
                                                             <li>
                                                                 <a class="dropdown-item border-radius-md text-danger"
-                                                                   href="/delete/product/{{$product->id}}">{{__('Delete')}}
+                                                                   href="{{ url('delete/product')}}/{{$product->id}}">{{__('Delete')}}
                                                                 </a>
                                                             </li>
                                                         </ul>
@@ -78,10 +78,10 @@
                                             <div class="position-relative">
                                                 <!-- Image -->
                                                 @if(empty($product->image))
-                                                    <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                                    <img src="{{ url('public'}}/img/placeholder.jpeg"
                                                          class="w-100 border-radius-lg shadow-lg p-5">
                                                 @else
-                                                    <img src="{{PUBLIC_DIR}}/uploads/{{$product->image}}" class="p-5  card-img-top">
+                                                    <img src="{{ url('public'}}/uploads/{{$product->image}}" class="p-5  card-img-top">
                                                 @endif
 
                                             </div>
@@ -90,7 +90,7 @@
                                             <div class="card-body px-3">
                                                 <!-- Title -->
                                                 <h5 class="card-title mb-0">
-                                                    <a href="/view-product?id={{$product->id}}" class="">
+                                                    <a href="{{ url('view-product')}}?id={{$product->id}}" class="">
                                                         {{$product->name}}</a>
                                                 </h5>
 

@@ -20,12 +20,12 @@
                                 </div>
                             @else
 
-                                <img src="{{PUBLIC_DIR}}/uploads/{{$students[$order->student_id]->photo}}"
+                                <img src="{{ url('public'}}/uploads/{{$students[$order->student_id]->photo}}"
                                      class="avatar avatar-md rounded-circle  shadow-sm">
                             @endif
                         </div>
                         <div class="d-flex flex-column justify-content-center ms-3">
-                            <a href="/student-about?id={{$students[$order->student_id]->id}}">
+                            <a href="{{ url('student-about')}}?id={{$students[$order->student_id]->id}}">
                                 <h6 class="mb-0">{{$students[$order->student_id]->first_name}} {{$students[$order->student_id]->last_name}}</h6>
                             </a>
 

@@ -9,11 +9,11 @@
             </h5>
         </div>
         <div class="col text-end">
-            <a href="/blogs" type="button" class="btn btn-info text-white">{{__('Articles')}}</a>
+            <a href="{{ url('blogs')}}" type="button" class="btn btn-info text-white">{{__('Articles')}}</a>
         </div>
     </div>
     <div class="">
-        <form enctype="multipart/form-data" action="/save-blog" method="post">
+        <form enctype="multipart/form-data" action="{{ url('save-blog')}}" method="post">
             @if ($errors->any())
                 <div class="alert bg-pink-light text-danger">
                     <ul class="list-unstyled">

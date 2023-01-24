@@ -53,10 +53,10 @@
 
                         <div class="col-12 position-relative">
                             @if(empty($course->image))
-                                <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                <img src="{{ url('public'}}/img/placeholder.jpeg"
                                      class="w-100 border-radius-sm">
                             @else
-                                <img src="{{PUBLIC_DIR}}/uploads/{{$course->image}}" class="w-100  border-radius-sm ">
+                                <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100  border-radius-sm ">
                             @endif
                         </div>
 
@@ -72,10 +72,10 @@
 
 
                                 <li class="nav-item" >
-                                    <a href="/student/my-course-lessons/?id={{$course->id}}" class="nav-link fw-bolder">{{__('Lessons')}}</a>
+                                    <a href="{{ url('student/my-course-lessons')}}/?id={{$course->id}}" class="nav-link fw-bolder">{{__('Lessons')}}</a>
                                 </li>
                                 <li class="nav-item" >
-                                    <a href="/student/my-course-discussion/?id={{$course->id}}" class="nav-link fw-bolder">{{__('Comments')}}</a>
+                                    <a href="{{ url('student/my-course-discussion')}}/?id={{$course->id}}" class="nav-link fw-bolder">{{__('Comments')}}</a>
                                 </li>
 
 
@@ -260,7 +260,7 @@
 
                                             @if(!empty($users[$course->admin_id]->photo))
                                                 <a href="javascript:" class="ms-3 mt-4 avatar rounded-circle border border-secondary">
-                                                    <img alt="" class="p-1" src="{{PUBLIC_DIR}}/uploads/{{$users[$course->admin_id]->photo}}">
+                                                    <img alt="" class="p-1" src="{{ url('public'}}/uploads/{{$users[$course->admin_id]->photo}}">
                                                 </a>
                                             @else
                                                 <div class="avatar ms-3   mt-4 rounded-circle bg-info-light  border-radius-md p-2">
@@ -325,7 +325,7 @@
 
 
                           <div class="modal fade" id="review" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <form action="/student/save-review" method="post">
+                              <form action="{{ url('student/save-review')}}" method="post">
 
                                 <div class="modal-dialog">
                                     <div class="modal-content">

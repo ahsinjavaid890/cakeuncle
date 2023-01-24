@@ -15,7 +15,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" mb-2 feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
         </span>
         </button>
-        <a href="/home" target="_blank" type="button" class="btn btn-success btn-icon-only">
+        <a href="{{ url('home')}}" target="_blank" type="button" class="btn btn-success btn-icon-only">
             <span class="btn-inner--icon">
 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
             </span>
@@ -29,7 +29,7 @@
             <h5 id="offcanvasRightLabel">{{__('Hero Section ')}}</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <form action="/save-hero-section" method="post" enctype="multipart/form-data">
+        <form action="{{ url('save-hero-section')}}" method="post" enctype="multipart/form-data">
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul class="list-unstyled">
@@ -102,8 +102,8 @@
 
                         </p>
                         <div class=" text-start buttons mb-4">
-                            <a href="/course" type="button" class="btn  btn-dark-blue text-white mt-4">{{__('Buy Courses')}}</a>
-                            <a href="/signup" type="button" class="btn  btn-success text-white mt-4">{{__('Get Started')}}</a>
+                            <a href="{{ url('course')}}" type="button" class="btn  btn-dark-blue text-white mt-4">{{__('Buy Courses')}}</a>
+                            <a href="{{ url('signup')}}" type="button" class="btn  btn-success text-white mt-4">{{__('Get Started')}}</a>
 
                         </div>
                         <p>{{__('Newly enrolled students')}}</p>
@@ -116,7 +116,7 @@
                                     <a  class="avatar avatar-sm rounded-circle"
                                         data-bs-toggle="tooltip" data-bs-placement="bottom"
                                         title="{{$student->first_name}}">
-                                        <img src="{{PUBLIC_DIR}}/uploads/{{$student->photo}}"
+                                        <img src="{{ url('public'}}/uploads/{{$student->photo}}"
                                              alt="team1">
                                     </a>
 
@@ -156,7 +156,7 @@
 
                                 <div class="position-relative">
                                     @if (!empty($landingpage))
-                                        <img src="{{PUBLIC_DIR}}/uploads/{{$landingpage->background_image}}" alt="" class="img-fluid  rounded-3">
+                                        <img src="{{ url('public'}}/uploads/{{$landingpage->background_image}}" alt="" class="img-fluid  rounded-3">
                                     @endif
                                 </div>
 
@@ -170,7 +170,7 @@
                                                 <a  class="avatar avatar-sm rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="{{$student->first_name}}">
-                                                    <img src="{{PUBLIC_DIR}}/uploads/{{$student->photo}}"
+                                                    <img src="{{ url('public'}}/uploads/{{$student->photo}}"
                                                          alt="team1">
                                                 </a>
 
@@ -386,10 +386,10 @@
                                         <div class="col-xl-6 text-center my-auto px-7 mt-md-auto mt-4">
                                             <div class="avatar rounded-circle avatar-xxl position-relative border-avatar">
                                                 @if(empty($landingpage->testimonial1_image))
-                                                    <img src="{{PUBLIC_DIR}}/img/user-avatar-placeholder.png"
+                                                    <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
                                                          class="w-100 border-radius-sm avatar-xxl shadow-sm">
                                                 @else
-                                                    <img src="{{PUBLIC_DIR}}/uploads/{{$landingpage->testimonial1_image}}" class="w-100 border-radius-sm ">
+                                                    <img src="{{ url('public'}}/uploads/{{$landingpage->testimonial1_image}}" class="w-100 border-radius-sm ">
                                                 @endif
                                             </div>
                                             <h5 class="text-white"> @if (!empty($landingpage))
@@ -423,10 +423,10 @@
                                         <div class="col-xl-6 text-center my-auto px-7 mt-md-auto mt-4">
                                             <div class=" avatar rounded-circle avatar-xxl position-relative border-avatar ">
                                                 @if(empty($landingpage->testimonial2_image))
-                                                    <img src="{{PUBLIC_DIR}}/img/user-avatar-placeholder.png"
+                                                    <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
                                                          class="avatar mb-3 avatar-xxl rounded-circle bg-purple-light  border-radius-md ">
                                                 @else
-                                                    <img src="{{PUBLIC_DIR}}/uploads/{{$landingpage->testimonial2_image}}" class=" w-100 border-radius-sm rounder-circle ">
+                                                    <img src="{{ url('public'}}/uploads/{{$landingpage->testimonial2_image}}" class=" w-100 border-radius-sm rounder-circle ">
                                                 @endif
                                             </div>
                                             <h5 class="text-white"> @if (!empty($landingpage))
@@ -527,11 +527,11 @@
 
                         <div class="d-block ">
                             @if (!empty($landingpage))
-                                <img src="{{PUBLIC_DIR}}/uploads/{{$landingpage->story2_image}}" alt="" class="img-fluid  rounded-3">
+                                <img src="{{ url('public'}}/uploads/{{$landingpage->story2_image}}" alt="" class="img-fluid  rounded-3">
                             @endif
 
                         </div>
-                        <div class="" style="background-image: url('{{PUBLIC_DIR}}/img/feature.jpg');"></div>
+                        <div class="" style="background-image: url('{{ url('public'}}/img/feature.jpg');"></div>
                     </div>
 
                 </div>

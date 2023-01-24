@@ -18,7 +18,7 @@
                             <p class="mb-0">{{__('Set a new password')}}</p>
                         </div>
                         <div class="card-body">
-                            <form role="form " action="/post-new-password" method="post">
+                            <form role="form " action="{{ url('post-new-password')}}" method="post">
                                 @if ($errors->any())
                                     <div class="alert alert-danger">
                                         <ul class="list-unstyled">

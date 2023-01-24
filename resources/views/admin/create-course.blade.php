@@ -4,7 +4,7 @@
 
 
 
-    <form action="/save-course" method="post" enctype="multipart/form-data" >
+    <form action="{{ url('save-course')}}" method="post" enctype="multipart/form-data" >
         @if ($errors->any())
             <div class="alert bg-pink-light text-danger">
                 <ul class="list-unstyled">
@@ -173,10 +173,10 @@
 
 
                                 @if(empty($course->image))
-                                    <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                    <img src="{{ url('public'}}/img/placeholder.jpeg"
                                          class="w-100 border-radius-lg shadow-lg mt-3">
                                 @else
-                                    <img src="{{PUBLIC_DIR}}/uploads/{{$course->image}}" class="w-100  border-radius-lg shadow-lg mt-3">
+                                    <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100  border-radius-lg shadow-lg mt-3">
                                 @endif
                             </div>
 
@@ -195,10 +195,10 @@
                             <div class="col-12">
 
                                 @if(empty($course->video))
-                                    <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                    <img src="{{ url('public'}}/img/placeholder.jpeg"
                                          class="w-100 border-radius-lg shadow-lg mt-3">
                                 @else
-                                    <iframe class="embed-responsive-item w-100  border-radius-lg shadow-lg mt-3" src="{{PUBLIC_DIR}}/uploads/{{$course->video}}" type="video/mp4">
+                                    <iframe class="embed-responsive-item w-100  border-radius-lg shadow-lg mt-3" src="{{ url('public'}}/uploads/{{$course->video}}" type="video/mp4">
 
                                     </iframe>
 

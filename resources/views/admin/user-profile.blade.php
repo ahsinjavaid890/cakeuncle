@@ -27,11 +27,11 @@
                         <div class="col-auto">
                             <div class="avatar avatar-xxl position-relative">
                                 @if(empty($up_user->photo))
-                                    <img src="{{PUBLIC_DIR}}/img/user-avatar-placeholder.png"
+                                    <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
                                          class="w-100 border-radius-lg shadow-sm">
                                 @else
 
-                                    <img src="{{PUBLIC_DIR}}/uploads/{{$up_user->photo}}" alt=""
+                                    <img src="{{ url('public'}}/uploads/{{$up_user->photo}}" alt=""
                                          class="w-100 border-radius-lg shadow-sm">
                                 @endif
 
@@ -77,7 +77,7 @@
 
                     </ul>
 
-                    <a class="btn btn-info mb-3 mt-3" href="/user-edit/{{$up_user->id}}">{{__('Edit')}}</a>
+                    <a class="btn btn-info mb-3 mt-3" href="{{ url('user-edit')}}/{{$up_user->id}}">{{__('Edit')}}</a>
 
                 </div>
 

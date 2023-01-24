@@ -7,10 +7,10 @@
                 <div class="col-md-6  mt-5">
                     <div class="avatar avatar-xxl  rounded-circle position-relative border-avatar ms-3">
                         @if(empty($student->photo))
-                            <img src="{{PUBLIC_DIR}}/img/user-avatar-placeholder.png"
+                            <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
                                  class="w-100 border-radius-sm shadow-sm">
                         @else
-                            <img src="{{PUBLIC_DIR}}/uploads/{{$student->photo}}" class="w-100 border-radius-sm ">
+                            <img src="{{ url('public'}}/uploads/{{$student->photo}}" class="w-100 border-radius-sm ">
                         @endif
 
                     </div>
@@ -30,17 +30,17 @@
                 <a class="nav-link @if(($selected_nav ?? '') === 'student-about') active @endif fw-bolder"  href="">{{__('About')}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fw-bolder" href="/student-courses?id={{$student->id}}">{{__('Courses')}}</a>
+                <a class="nav-link fw-bolder" href="{{ url('student-courses')}}?id={{$student->id}}">{{__('Courses')}}</a>
             </li>
 
             <li class="nav-item">
-                <a href="/student-assignments?id={{$student->id}}" class="nav-link fw-bolder">{{__('Assignments')}}</a>
+                <a href="{{ url('student-assignments')}}?id={{$student->id}}" class="nav-link fw-bolder">{{__('Assignments')}}</a>
             </li>
             <li class="nav-item">
-                <a href="/student-certificates?id={{$student->id}}" class="nav-link fw-bolder">{{__('Certificates')}}</a>
+                <a href="{{ url('student-certificates')}}?id={{$student->id}}" class="nav-link fw-bolder">{{__('Certificates')}}</a>
             </li>
             <li class="nav-item">
-                <a href="/student-ebooks?id={{$student->id}}" class="nav-link fw-bolder">{{__('eBooks')}}</a>
+                <a href="{{ url('student-ebooks')}}?id={{$student->id}}" class="nav-link fw-bolder">{{__('eBooks')}}</a>
             </li>
 
 
@@ -109,7 +109,7 @@
 
 
                     </ul>
-                    <a class="btn btn-info btn-sm mb-0 mt-3" href="/new-student?id={{$student->id}}">{{__('Edit')}}</a>
+                    <a class="btn btn-info btn-sm mb-0 mt-3" href="{{ url('new-student')}}?id={{$student->id}}">{{__('Edit')}}</a>
 
 
                 </div>

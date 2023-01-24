@@ -6,8 +6,8 @@
             {{$note->topic}}
         </h5>
         <div class="col text-end mb-3">
-            <a href="/add-note?id={{$note->id}}" class="btn btn-info btn-sm mb-0">{{__('Edit')}}</a>
-            <a href="/delete/note/{{$note->id}}" class="btn btn-warning btn-sm mb-0">{{__('Delete')}}</a>
+            <a href="{{ url('add-note')}}?id={{$note->id}}" class="btn btn-info btn-sm mb-0">{{__('Edit')}}</a>
+            <a href="{{ url('delete/note')}}/{{$note->id}}" class="btn btn-warning btn-sm mb-0">{{__('Delete')}}</a>
         </div>
     </div>
     <div class="card">
@@ -16,14 +16,14 @@
                 <h2 class="mt-6 ms-3">{{$note->title}}</h2>
                 @if(!empty($users[$note->admin_id]->photo))
                     <a href="javascript:" class=" mt-4 avatar rounded-circle border border-secondary">
-                        <img alt="" class="p-1" src="{{PUBLIC_DIR}}/uploads/{{$users[$note->admin_id]->photo}}">
+                        <img alt="" class="p-1" src="{{ url('public'}}/uploads/{{$users[$note->admin_id]->photo}}">
                     </a>
                 @else
                     <div class="avatar   mt-4 rounded-circle bg-purple-light  border-radius-md p-2">
                         <h6 class="text-purple mt-1">{{$users[$note->admin_id]->first_name[0]}}{{$users[$note->admin_id]->last_name[0]}}</h6>
                     </div>
                 @endif
-                <a href="/profile" class=" nav-link text-body font-weight-bold px-0">
+                <a href="{{ url('profile')}}" class=" nav-link text-body font-weight-bold px-0">
                         <span class="d-sm-inline d-none "> @if(isset($users[$note->admin_id]))
                                 {{$users[$note->admin_id]->first_name}}  {{$users[$note->admin_id]->last_name}}
                             @endif
@@ -38,7 +38,7 @@
                 <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
                     <a href="javascript:" class="d-block">
                         @if(!empty($note->cover_photo))
-                            <img src="{{PUBLIC_DIR}}/uploads/{{$note->cover_photo}}" class="img-fluid border-radius-lg">
+                            <img src="{{ url('public'}}/uploads/{{$note->cover_photo}}" class="img-fluid border-radius-lg">
 
                         @endif
 

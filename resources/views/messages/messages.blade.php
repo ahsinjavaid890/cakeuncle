@@ -42,7 +42,7 @@
 
                         @foreach($students as $student)
 
-                            <a href="/messages?id={{$student->id}}" class="d-block p-2 border-radius-lg  mb-2 @if($student_id == $student->id) bg-gray @endif">
+                            <a href="{{ url('messages')}}?id={{$student->id}}" class="d-block p-2 border-radius-lg  mb-2 @if($student_id == $student->id) bg-gray @endif">
 
                                 <div class="d-flex p-2">
 
@@ -56,7 +56,7 @@
                                         </div>
 
                                     @else
-                                        <img src="{{PUBLIC_DIR}}/uploads/{{$student->photo}}" class="rounded-circle avatar avatar-sm shadow">
+                                        <img src="{{ url('public'}}/uploads/{{$student->photo}}" class="rounded-circle avatar avatar-sm shadow">
                                     @endif
 
                                     <div class="ms-3">
@@ -100,7 +100,7 @@
         <div class="col-8">
             @if(!$selected_student)
                 <p class="text-muted">{{__('Add student to start chat.')}}</p>
-                <a href="/new-student" class="btn btn-info">{{__('Add Student')}}</a>
+                <a href="{{ url('new-student')}}" class="btn btn-info">{{__('Add Student')}}</a>
             @else
                 <div class="card h-100-vh overflow-x-hidden ">
                     <div class="card-header border-bottom">
@@ -118,7 +118,7 @@
 
                                         </div>
                                     @else
-                                        <img src="{{PUBLIC_DIR}}/uploads/{{$selected_student->photo}}" class="rounded-circle avatar shadow">
+                                        <img src="{{ url('public'}}/uploads/{{$selected_student->photo}}" class="rounded-circle avatar shadow">
                                     @endif
                                     <div class="ms-3">
                                         <h6 class="mb-0 d-block">{{$selected_student->first_name}} {{$selected_student->last_name}}</h6>

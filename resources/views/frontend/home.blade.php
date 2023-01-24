@@ -26,8 +26,8 @@
                         </p>
 
                         <div class="text-start buttons mb-4">
-                            <a href="/course" type="button" class="btn  btn-dark-blue text-white mt-4">{{__('Buy Courses')}}</a>
-                            <a href="/signup" type="button" class="btn  btn-success text-white mt-4">{{__('Get Started')}}</a>
+                            <a href="{{ url('course')}}" type="button" class="btn  btn-dark-blue text-white mt-4">{{__('Buy Courses')}}</a>
+                            <a href="{{ url('signup')}}" type="button" class="btn  btn-success text-white mt-4">{{__('Get Started')}}</a>
 
                         </div>
                         <p class="text-start  mt-2">{{__('Newly enrolled students')}}</p>
@@ -41,7 +41,7 @@
                                     <a  class="avatar avatar-sm rounded-circle"
                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
                                        title="{{$stu->first_name}}">
-                                        <img src="{{PUBLIC_DIR}}/uploads/{{$stu->photo}}"
+                                        <img src="{{ url('public'}}/uploads/{{$stu->photo}}"
                                              alt="team1">
                                     </a>
 
@@ -81,7 +81,7 @@
 
                                 <div class="position-relative">
                                     @if (!empty($landingpage))
-                                        <img src="{{PUBLIC_DIR}}/uploads/{{$landingpage->background_image}}" alt="" class="img-fluid  rounded-3">
+                                        <img src="{{ url('public'}}/uploads/{{$landingpage->background_image}}" alt="" class="img-fluid  rounded-3">
                                     @endif
                                 </div>
 
@@ -94,7 +94,7 @@
                                                 <a  class="avatar avatar-sm rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="{{$stu->first_name}}">
-                                                    <img src="{{PUBLIC_DIR}}/uploads/{{$stu->photo}}"
+                                                    <img src="{{ url('public'}}/uploads/{{$stu->photo}}"
                                                          alt="team1">
                                                 </a>
                                             @else
@@ -147,17 +147,17 @@
                                 <div class="card-image border-radius-lg position-relative">
                                     <a href="javascript:;">
                                         @if(empty($course->image))
-                                            <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                            <img src="{{ url('public'}}/img/placeholder.jpeg"
                                                  class="w-100 border-radius-lg move-on-hover shadow mt-3">
                                         @else
-                                            <img src="{{PUBLIC_DIR}}/uploads/{{$course->image}}" class="w-100 border-radius-lg move-on-hover shadow mt-3">
+                                            <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100 border-radius-lg move-on-hover shadow mt-3">
                                         @endif
 
                                     </a>
                                 </div>
                                 <div class="card-body px-0">
                                     <h5>
-                                        <a href="/course/{{$course->slug}}" class="text-dark font-weight-bold">{{$course->name}}</a>
+                                        <a href="{{ url('course')}}/{{$course->slug}}" class="text-dark font-weight-bold">{{$course->name}}</a>
                                     </h5>
                                     <div class=" pb-0">
                                         <!-- Badge and favorite -->
@@ -194,7 +194,7 @@
                                         <div class="author align-items-center">
 
                                     @if(!empty($users[$course->admin_id]->photo))
-                                                <img alt="" class=" avatar rounded-circle " src="{{PUBLIC_DIR}}/uploads/{{$users[$course->admin_id]->photo}}">
+                                                <img alt="" class=" avatar rounded-circle " src="{{ url('public'}}/uploads/{{$users[$course->admin_id]->photo}}">
                                             @else
                                                 <div class="avatar  rounded-circle bg-purple-light  border-radius-sm ">
                                             <h6 class="text-purple mt-1">{{$users[$course->admin_id]->first_name[0]}}{{$users[$course->admin_id]->last_name[0]}}</h6>
@@ -269,10 +269,10 @@
                                         <div class="col-xl-6 text-center my-auto px-7 mt-md-auto mt-4">
                                             <div class="avatar rounded-circle avatar-xxl position-relative border-avatar">
                                                 @if(empty($landingpage->testimonial1_image))
-                                                    <img src="{{PUBLIC_DIR}}/img/user-avatar-placeholder.png"
+                                                    <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
                                                          class="w-100 border-radius-sm avatar-xxl shadow-sm">
                                                 @else
-                                                    <img src="{{PUBLIC_DIR}}/uploads/{{$landingpage->testimonial1_image}}" class="w-100 border-radius-sm ">
+                                                    <img src="{{ url('public'}}/uploads/{{$landingpage->testimonial1_image}}" class="w-100 border-radius-sm ">
                                                 @endif
                                             </div>
                                             <h5 class="text-white"> @if (!empty($landingpage))
@@ -306,10 +306,10 @@
                                         <div class="col-xl-6 text-center my-auto px-7 mt-md-auto mt-4">
                                             <div class=" avatar rounded-circle avatar-xxl position-relative border-avatar ">
                                                 @if(empty($landingpage->testimonial2_image))
-                                                    <img src="{{PUBLIC_DIR}}/img/user-avatar-placeholder.png"
+                                                    <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
                                                          class="avatar mb-3 avatar-xxl rounded-circle bg-purple-light  border-radius-md ">
                                                 @else
-                                                    <img src="{{PUBLIC_DIR}}/uploads/{{$landingpage->testimonial2_image}}" class=" w-100 border-radius-sm rounder-circle ">
+                                                    <img src="{{ url('public'}}/uploads/{{$landingpage->testimonial2_image}}" class=" w-100 border-radius-sm rounder-circle ">
                                                 @endif
                                             </div>
                                             <h5 class="text-white"> @if (!empty($landingpage))
@@ -345,14 +345,14 @@
                     <div class="col-lg-4 mb-lg-0 mb-4">
                         <div class="card">
                             <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
-                                <a href="/blog/{{$blog->slug}}" class="d-block">
+                                <a href="{{ url('blog')}}/{{$blog->slug}}" class="d-block">
 
                                     @if(empty($blog->cover_photo))
 
-                                        <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                        <img src="{{ url('public'}}/img/placeholder.jpeg"
                                              class="w-100 border-radius-lg move-on-hover shadow mt-3">
                                     @else
-                                        <img src="{{PUBLIC_DIR}}/uploads/{{$blog->cover_photo}}" class="img-fluid border-radius-lg">
+                                        <img src="{{ url('public'}}/uploads/{{$blog->cover_photo}}" class="img-fluid border-radius-lg">
                                     @endif
 
                                 </a>
@@ -360,7 +360,7 @@
 
                             <div class="card-body pt-3">
                                 <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">{{$blog->topic}}</span>
-                                <a href="/blog/{{$blog->slug}}" class="text-darker card-title h5 d-block">
+                                <a href="{{ url('blog')}}/{{$blog->slug}}" class="text-darker card-title h5 d-block">
                                     {{$blog->title}}
                                 </a>
                                 <p class="card-description mb-4">
@@ -373,7 +373,7 @@
                                 </p>
                                 <div class="author align-items-center">
                                     @if(!empty($users[$blog->admin_id]->photo))
-                                        <img alt="" class=" avatar shadow " src="{{PUBLIC_DIR}}/uploads/{{$users[$blog->admin_id]->photo}}">
+                                        <img alt="" class=" avatar shadow " src="{{ url('public'}}/uploads/{{$users[$blog->admin_id]->photo}}">
                                     @else
                                         <div class="avatar mt-4 rounded-circle bg-purple-light  border-radius-md ">
                                             <h6 class="text-purple mt-1">{{$users[$blog->admin_id]->first_name[0]}}{{$users[$blog->admin_id]->last_name[0]}}</h6>
@@ -401,7 +401,7 @@
 
 
     <section class="py-8 bg-dark-alt position-relative overflow-hidden">
-        <img src="../../assets/img/shapes/waves-white.svg" class="position-absolute top-0 d-lg-block d-none opacity-6" alt="">
+        <img src="{{ url('public/assets/img/shapes/waves-white.svg'}}" class="position-absolute top-0 d-lg-block d-none opacity-6" alt="">
 
         <div class="container">
             <div class="row mb-5">
@@ -417,17 +417,17 @@
                         <div class="card card-blog card-plain">
                             <a href="javascript:;">
                                 @if(empty($ebook->image))
-                                    <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                    <img src="{{ url('public'}}/img/placeholder.jpeg"
                                          class="w-100 border-radius-lg shadow-lg p-4">
                                 @else
-                                    <img src="{{PUBLIC_DIR}}/uploads/{{$ebook->image}}" class=" p-5 border-radius-sm  card-img-top">
+                                    <img src="{{ url('public'}}/uploads/{{$ebook->image}}" class=" p-5 border-radius-sm  card-img-top">
                                 @endif
                             </a>
                             <div class="card-body px-0">
                                 <h4 class="text-white"> {{formatCurrency($ebook->price,getWorkspaceCurrency($super_settings))}}</h4>
                                 <h4 class="text-white">{{$ebook->name}}</h4>
 
-                                <a href="/shop/{{$ebook->slug}}" type="button" class=" mt-1 btn btn-outline-white border-2 btn-rounded">{{__('Read more')}}</a>
+                                <a href="{{ url('shop')}}/{{$ebook->slug}}" type="button" class=" mt-1 btn btn-outline-white border-2 btn-rounded">{{__('Read more')}}</a>
                             </div>
                         </div>
                     </div>
@@ -453,7 +453,7 @@
     </section>
 
     <section class="bg-darkblue position-relative overflow-hidden">
-        <img src="../../assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute opacity-6">
+        <img src="{{('public/assets/img/shapes/waves-white.svg')}}" alt="pattern-lines" class="position-absolute opacity-6">
         <div class="position-absolute w-100 z-inde-1 top-0 mt-n3">
             <svg width="100%" viewBox="0 -2 1920 157" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>wave-down</title>
@@ -505,10 +505,10 @@
                         <div class="position-relative">
 
                             @if (!empty($landingpage))
-                                <img src="{{PUBLIC_DIR}}/uploads/{{$landingpage->story2_image}}" alt="" class="img-fluid  rounded-3">
+                                <img src="{{ url('public'}}/uploads/{{$landingpage->story2_image}}" alt="" class="img-fluid  rounded-3">
                             @endif
                         </div>
-                        <div class="colored-shadow" style="background-image: url('{{PUBLIC_DIR}}/img/feature.jpg');"></div>
+                        <div class="colored-shadow" style="background-image: url('{{ url('public'}}/img/feature.jpg');"></div>
                     </div>
                 </div>
                 <div class="col-md-5 m-auto">
@@ -545,7 +545,7 @@
                                 {{$landingpage->calltoaction_title}}
                             @endif
                         </h3>
-                        <a href="/signup" class="btn btn-info">{{__('Get Started')}}</a>
+                        <a href="{{ url('signup')}}" class="btn btn-info">{{__('Get Started')}}</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-7 offset-xl-1">

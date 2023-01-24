@@ -33,7 +33,7 @@
                                         <i class="fas fa-play text-info"></i>
                                     </div>
                                     <div class="ms-2 ms-sm-3 mt-1 mt-sm-0">
-                                        <a href="/view-lesson?id={{$lesson->id}}"> <h6 class="mb-0">{{$lesson->title}}</h6></a>
+                                        <a href="{{ url('view-lesson')}}?id={{$lesson->id}}"> <h6 class="mb-0">{{$lesson->title}}</h6></a>
                                         <p class="mb-2 mb-sm-0 small">{{__('Last Updated')}} {{$lesson->updated_at}}</p>
 
                                     </div>
@@ -47,17 +47,17 @@
                                     <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
                                         aria-labelledby="dropdownMarketingCard">
                                         <li><a class="dropdown-item border-radius-md"
-                                               href="/create-lesson?course_id={{$course->id}}&id={{$lesson->id}}">{{__('Edit')}}</a></li>
+                                               href="{{ url('create-lesson')}}?course_id={{$course->id}}&id={{$lesson->id}}">{{__('Edit')}}</a></li>
 
                                         <li><a class="dropdown-item border-radius-md"
-                                               href="/view-lesson?id={{$lesson->id}}">{{__('See Details')}}</a>
+                                               href="{{ url('view-lesson')}}?id={{$lesson->id}}">{{__('See Details')}}</a>
                                         </li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
                                         <li>
                                             <a class="dropdown-item border-radius-md text-danger"
-                                               href="/delete/lesson/{{$lesson->id}}">{{__('Delete')}}
+                                               href="{{ url('delete/lesson')}}/{{$lesson->id}}">{{__('Delete')}}
                                             </a>
                                         </li>
                                     </ul>

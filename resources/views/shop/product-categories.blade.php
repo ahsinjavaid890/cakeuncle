@@ -57,7 +57,7 @@
 
                                 </a>
                                 <a class="btn btn-link text-danger   mb-0"
-                                   href="/delete/product-category/{{$category->id}}">
+                                   href="{{ url('delete/product-category')}}/{{$category->id}}">
                                     <i
                                             class="far fa-trash-alt "></i> {{__('Delete')}}
 
@@ -85,7 +85,7 @@
                 </div>
                 <div class="modal-body">
                     <div id="sp_result_div"></div>
-                    <form method="post" action="/product-category-save" id="form_main" class="">
+                    <form method="post" action="{{ url('product-category-save')}}" id="form_main" class="">
                         <!-- Form -->
                         <div class="form-group mb-4">
                             <label for="email">{{__('Name')}}</label>

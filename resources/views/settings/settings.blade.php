@@ -25,7 +25,7 @@
             <div class="  col-md-12 mt-lg-0 mt-4">
                 <div class="card">
                     <div class="card-body">
-                        <form enctype="multipart/form-data" action="/settings" method="post">
+                        <form enctype="multipart/form-data" action="{{ url('settings')}}" method="post">
 
                             @if ($errors->any())
                                 <div class="alert alert-danger">
@@ -114,7 +114,7 @@
                             </h5>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionRental" style="">
                                 <div class="accordion-body text-sm opacity-8">
-                                    <form action="/save-email-setting" method="post">
+                                    <form action="{{ url('save-email-setting')}}" method="post">
 
                                         <div class="mt-3" id="basic-info">
                                             <div class=" pt-0">
@@ -180,7 +180,7 @@
                             </h5>
                             <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionRental">
                                 <div class="accordion-body text-sm">
-                                    <form action="/settings/save-recaptcha-config" method="post">
+                                    <form action="{{ url('settings/save-recaptcha-config')}}" method="post">
                                         <div class="mt-3">
                                             <div class="pt-0">
                                                 <div class="row mb-4">
@@ -251,7 +251,7 @@
                             <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionRental">
                                 <div class="accordion-body text-sm opacity-8">
 
-                                    <form action="/settings/save-twilio-config" method="post">
+                                    <form action="{{ url('settings/save-twilio-config')}}" method="post">
 
 
 
@@ -303,7 +303,7 @@
                             <div id="collapsePusher" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionSettings">
                                 <div class="accordion-body text-sm opacity-8">
 
-                                    <form action="/settings/save-pusher-config" method="post">
+                                    <form action="{{ url('settings/save-pusher-config')}}" method="post">
 
                                         <div class="mt-3">
                                             <div class=" pt-0">

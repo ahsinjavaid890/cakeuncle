@@ -7,18 +7,18 @@
             <div class="row ">
                 <div class="card ">
                     <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" @if(!empty($student->cover_photo))
-                    style="background-image: url('{{PUBLIC_DIR}}/uploads/{{$student->cover_photo}}'); background-position-y: 50%;"
+                    style="background-image: url('{{ url('public'}}/uploads/{{$student->cover_photo}}'); background-position-y: 50%;"
                             @endif>
                         <span class="mask bg-dark-alt"></span>
                         <div class="card-body position-relative z-index-1 h-100 ">
                             <h4 class="text-white font-weight-bolder mb-3 mt-3">  Hi, {{$student->first_name}} {{$student->last_name}}, {{__('Happy Learning!')}}</h4>
 
                             <div class="text-end mb-2">
-                                <a href="/student/my-courses" class="btn btn-round btn-outline-white mb-2" href="javascript:;">
+                                <a href="{{ url('student/my-courses')}}" class="btn btn-round btn-outline-white mb-2" href="javascript:;">
                                     {{__("All of my courses")}}
                                     <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                                 </a>
-                                <a href="/student/profile" class="btn btn-round btn-outline-white mb-2" href="javascript:;">
+                                <a href="{{ url('student/profile')}}" class="btn btn-round btn-outline-white mb-2" href="javascript:;">
                                     {{__("My Profile")}}
                                     <i class="fas fa-user-alt text-sm ms-1" aria-hidden="true"></i>
                                 </a>
@@ -45,10 +45,10 @@
                                     <div class=" card-img">
                                         <a class="d-block shadow-xl border-radius-xl">
                                             @if(empty($course->image))
-                                                <img src="{{PUBLIC_DIR}}/img/placeholder.png"
+                                                <img src="{{ url('public'}}/img/placeholder.png"
                                                      class="w-100 border-radius-lg shadow-sm mt-3">
                                             @else
-                                                <img src="{{PUBLIC_DIR}}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
+                                                <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
                                             @endif
                                         </a>
                                         <div class="card-body px-1 pb-0">
@@ -60,7 +60,7 @@
                                                     @endif
                                                 @endif
                                             </p>
-                                            <a href="/student/my-course-details?id={{$course->id}}">
+                                            <a href="{{ url('student/my-course-details')}}?id={{$course->id}}">
                                                 <h5>
                                                     <strong>{{$course->name}}</strong>
                                                 </h5>
@@ -118,10 +118,10 @@
                                         <div class="position-relative">
                                             <!-- Image -->
                                             @if(empty($product->image))
-                                                <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                                <img src="{{ url('public'}}/img/placeholder.jpeg"
                                                      class="w-100 border-radius-lg shadow-lg p-5">
                                             @else
-                                                <img src="{{PUBLIC_DIR}}/uploads/{{$product->image}}" class=" p-5  card-img-top">
+                                                <img src="{{ url('public'}}/uploads/{{$product->image}}" class=" p-5  card-img-top">
                                             @endif
                                         </div>
                                         <!-- Card body -->

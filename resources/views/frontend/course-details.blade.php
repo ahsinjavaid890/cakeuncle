@@ -90,20 +90,20 @@
                     <!-- Image and video -->
                     <div class="col-12 position-relative">
 {{--                        @if(empty($course->video))--}}
-{{--                            <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"--}}
+{{--                            <img src="{{ url('public'}}/img/placeholder.jpeg"--}}
 {{--                                 class="w-100 border-radius-lg shadow-lg mt-3">--}}
 {{--                        @else--}}
-{{--                            <iframe class="embed-responsive-item w-100  border-radius-lg shadow-lg mt-3" src="{{PUBLIC_DIR}}/uploads/{{$course->video}}" type="video/mp4">--}}
+{{--                            <iframe class="embed-responsive-item w-100  border-radius-lg shadow-lg mt-3" src="{{ url('public'}}/uploads/{{$course->video}}" type="video/mp4">--}}
 
 {{--                            </iframe>--}}
 
 {{--                        @endif--}}
 
                         @if(empty($course->video))
-                            <img src="{{PUBLIC_DIR}}/uploads/{{$course->image}}" class="w-100  border-radius-md ">
+                            <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100  border-radius-md ">
                         @else
                             <video class="w-100 border-radius-lg shadow-lg" controls>
-                                <source src="{{PUBLIC_DIR}}/uploads/{{$course->video}}" type="video/mp4">
+                                <source src="{{ url('public'}}/uploads/{{$course->video}}" type="video/mp4">
 
                             </video>
 
@@ -111,7 +111,7 @@
                             <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                 <!-- Video button and link -->
                                 <div class="m-auto">
-                                    <a href="{{PUBLIC_DIR}}/uploads/{{$course->video}}" class="btn btn-lg text-danger btn-round btn-white-shadow mb-0" data-glightbox="" data-gallery="course-video">
+                                    <a href="{{ url('public'}}/uploads/{{$course->video}}" class="btn btn-lg text-danger btn-round btn-white-shadow mb-0" data-glightbox="" data-gallery="course-video">
                                         <div
                                                 class="avatar avatar-lg bg-info-light rounded-circle  border-radius-md p-2 ">
                                             <i class="fas fa-play text-info-light"></i>
@@ -244,7 +244,7 @@
                                     {{--                                                        <i class="fas fa-lock text-danger"></i>--}}
                                     {{--                                                    </div>--}}
                                     {{--                                                    <div class="ms-3 mt-1 mt-sm-0">--}}
-                                    {{--                                                        <a href="/add-to-cart/{{$course->id}}?type=course">--}}
+                                    {{--                                                        <a href="{{ url('add-to-cart')}}/{{$course->id}}?type=course">--}}
                                     {{--                                                            <h6 class="mb-0">{{$lesson->title}}</h6>--}}
                                     {{--                                                        </a>--}}
 
@@ -290,8 +290,8 @@
 
                             <!-- Buttons -->
                             <div class="mt-3 d-grid">
-                                <a href="/add-to-cart/{{$course->id}}?type=course" class="btn  bg-purple-light text-purple shadow-none mb-2">{{__('Add to cart')}}</a>
-                                <a href="/add-to-cart/{{$course->id}}?type=course" class="btn btn-dark">{{__('Buy now')}}</a>
+                                <a href="{{ url('add-to-cart')}}/{{$course->id}}?type=course" class="btn  bg-purple-light text-purple shadow-none mb-2">{{__('Add to cart')}}</a>
+                                <a href="{{ url('add-to-cart')}}/{{$course->id}}?type=course" class="btn btn-dark">{{__('Buy now')}}</a>
                             </div>
                             <!-- Divider -->
                             <hr>
@@ -373,7 +373,7 @@
                                 <div class="avatar avatar-xl">
                                     @if(!empty($users[$course->admin_id]->photo))
                                         <a href="javascript:" class="ms-3 mt-4 avatar rounded-circle border border-secondary">
-                                            <img alt="" class="p-1" src="{{PUBLIC_DIR}}/uploads/{{$users[$course->admin_id]->photo}}">
+                                            <img alt="" class="p-1" src="{{ url('public'}}/uploads/{{$users[$course->admin_id]->photo}}">
                                         </a>
                                     @else
                                         <div class="avatar ms-3   mt-4 rounded-circle bg-info-light  border-radius-md p-2">
@@ -415,7 +415,7 @@
 
                                                     @if(isset($students[$review->student_id]->photo))
 
-                                                        <img alt="" class=" avatar shadow " src="{{PUBLIC_DIR}}/uploads/{{$students[$review->student_id]->photo}}">
+                                                        <img alt="" class=" avatar shadow " src="{{ url('public'}}/uploads/{{$students[$review->student_id]->photo}}">
                                                     @else
                                                         <div class="avatar  rounded-circle bg-purple-light  border-radius-md ">
                                                             <h6 class="text-purple mt-1">{{$students[$review->student_id]->first_name[0]}}{{$students[$review->student_id]->last_name[0]}}</h6>

@@ -8,10 +8,10 @@
                 <div class="col-md-6 mt-5">
                     <div class="avatar avatar-xxl rounded-circle position-relative border-avatar ms-3">
                         @if(empty($student->photo))
-                            <img src="{{PUBLIC_DIR}}/img/user-avatar-placeholder.png"
+                            <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
                                  class="w-100 border-radius-sm shadow-sm">
                         @else
-                            <img src="{{PUBLIC_DIR}}/uploads/{{$student->photo}}" class="w-100 border-radius-sm ">
+                            <img src="{{ url('public'}}/uploads/{{$student->photo}}" class="w-100 border-radius-sm ">
                         @endif
 
                     </div>
@@ -33,16 +33,16 @@
                 <a class="nav-link  fw-bolder" aria-current="page" href="/student-about?id={{$student->id}}">{{__('About')}}</a>
             </li>
             <li class="nav-item">
-                <a href="/student-courses?id={{$student->id}}" class="nav-link  fw-bolder" href="">{{__('Courses')}}</a>
+                <a href="{{ url('student-courses')}}?id={{$student->id}}" class="nav-link  fw-bolder" href="">{{__('Courses')}}</a>
             </li>
             <li class="nav-item">
-                <a href="/student-assignments?id={{$student->id}}" class="nav-link fw-bolder">{{__('Assignments')}}</a>
+                <a href="{{ url('student-assignments')}}?id={{$student->id}}" class="nav-link fw-bolder">{{__('Assignments')}}</a>
             </li>
             <li class="nav-item">
                 <a href="" class="nav-link @if(($selected_nav ?? '') === 'student-certificate') active @endif fw-bolder">{{__('Certificates')}}</a>
             </li>
             <li class="nav-item">
-                <a href="/student-ebooks?id={{$student->id}}" class="nav-link fw-bolder">{{__('eBooks')}}</a>
+                <a href="{{ url('student-ebooks')}}?id={{$student->id}}" class="nav-link fw-bolder">{{__('eBooks')}}</a>
             </li>
         </ul>
         <hr>
@@ -52,7 +52,7 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <form action="/save-certificate-received" method="post">
+                    <form action="{{ url('save-certificate-received')}}" method="post">
                         @if ($errors->any())
                             <div class="alert bg-pink-light text-danger">
                                 <ul class="list-unstyled">
@@ -141,7 +141,7 @@
 
                                                 <li>
                                                     <a class="dropdown-item border-radius-md text-danger"
-                                                       href="/delete/certificate-received/{{$course_purchase->id}}">{{__('Delete')}}
+                                                       href="{{ url('delete/certificate-received')}}/{{$course_purchase->id}}">{{__('Delete')}}
                                                     </a>
                                                 </li>
                                             </ul>

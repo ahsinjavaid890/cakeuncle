@@ -17,7 +17,7 @@
 
         </div>
         <div class="col text-end">
-            <a href="/new-student" type="button" class="btn btn-info  text-white"><i class="fas fa-plus"></i> {{__('Add Student ')}}</a>
+            <a href="{{ url('new-student')}}" type="button" class="btn btn-info  text-white"><i class="fas fa-plus"></i> {{__('Add Student ')}}</a>
 
         </div>
     </div>
@@ -54,12 +54,12 @@
                                                     </div>
                                                 @else
 
-                                                    <img src="{{PUBLIC_DIR}}/uploads/{{$student->photo}}"
+                                                    <img src="{{ url('public'}}/uploads/{{$student->photo}}"
                                                           class="avatar avatar-md rounded-circle  shadow-sm">
                                                 @endif
                                             </div>
                                             <div class="d-flex flex-column justify-content-center ms-3">
-                                                <a href="/student-about?id={{$student->id}}">
+                                                <a href="{{ url('student-about')}}?id={{$student->id}}">
                                                     <h6 class="mb-0">{{$student->first_name}} {{$student->last_name}}</h6>
                                                 </a>
 
@@ -91,17 +91,17 @@
                                             <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
                                                 aria-labelledby="dropdownMarketingCard">
                                                 <li><a class="dropdown-item border-radius-md"
-                                                       href="/new-student?id={{$student->id}}">{{__('Edit')}}</a></li>
+                                                       href="{{ url('new-student')}}?id={{$student->id}}">{{__('Edit')}}</a></li>
 
                                                 <li><a class="dropdown-item border-radius-md"
-                                                       href="/student-about?id={{$student->id}}">{{__('See Details')}}</a>
+                                                       href="{{ url('student-about')}}?id={{$student->id}}">{{__('See Details')}}</a>
                                                 </li>
                                                 <li>
                                                     <hr class="dropdown-divider">
                                                 </li>
                                                 <li>
                                                     <a class="dropdown-item border-radius-md text-danger"
-                                                       href="/delete/student/{{$student->id}}">{{__('Delete')}}
+                                                       href="{{ url('delete/student')}}/{{$student->id}}">{{__('Delete')}}
                                                     </a>
                                                 </li>
                                             </ul>

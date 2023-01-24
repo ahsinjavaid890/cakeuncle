@@ -21,7 +21,7 @@
         <div class="  col-md-8 mt-lg-0 mt-4">
             <div class="card">
                 <div class="card-body">
-                    <form enctype="multipart/form-data" action="/save-email-setting" method="post">
+                    <form enctype="multipart/form-data" action="{{ url('save-email-setting')}}" method="post">
 
                         @if ($errors->any())
                             <div class="alert alert-danger">

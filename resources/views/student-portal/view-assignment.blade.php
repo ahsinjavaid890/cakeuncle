@@ -81,7 +81,7 @@
                     <div class="card-body">
                         <div class="mb-4">
 
-                            <form method="post" action="/student/submit-assignment" enctype="multipart/form-data">
+                            <form method="post" action="{{ url('student/submit-assignment')}}" enctype="multipart/form-data">
 
                                 @if ($errors->any())
                                     <div class="alert bg-pink-light text-danger">

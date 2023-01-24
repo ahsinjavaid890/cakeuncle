@@ -40,7 +40,7 @@
                                     </td>
                                     <td class="align-middle text-right">
                                         <a class=" btn btn-info"
-                                           href="/view-order?id={{$order->id}}">{{__('View Order')}}</a>
+                                           href="{{ url('view-order')}}?id={{$order->id}}">{{__('View Order')}}</a>
                                     </td>
                                 </tr>
                             @endforeach

@@ -10,7 +10,7 @@
 
                 <div class=" align-items-center mb-4 mt-4">
                     @if(!empty($users[$blog->admin_id]->photo))
-                        <img alt="" class=" avatar rounded-circle shadow " src="{{PUBLIC_DIR}}/uploads/{{$users[$blog->admin_id]->photo}}">
+                        <img alt="" class=" avatar rounded-circle shadow " src="{{ url('public'}}/uploads/{{$users[$blog->admin_id]->photo}}">
                     @else
                         <div class="avatar mt-4 rounded-circle bg-purple-light  border-radius-md p-2">
                             <h6 class="text-purple mt-1">{{$users[$blog->admin_id]->first_name[0]}}{{$users[$blog->admin_id]->last_name[0]}}</h6>
@@ -39,7 +39,7 @@
             <div class="position-relative d-flex">
                 <a class="d-block blur-shadow-image">
                     @if(!empty($blog->cover_photo))
-                        <img src="{{PUBLIC_DIR}}/uploads/{{$blog->cover_photo}}" alt="img-blur-shadow" class=" w-100" >
+                        <img src="{{ url('public'}}/uploads/{{$blog->cover_photo}}" alt="img-blur-shadow" class=" w-100" >
                     @endif
 
                 </a>

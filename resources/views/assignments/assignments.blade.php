@@ -13,7 +13,7 @@
 
         </div>
         <div class="col text-end">
-            <a href="/create-assignment" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i>&nbsp;&nbsp; {{__('Create Assignment ')}}</a>
+            <a href="{{ url('create-assignment')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i>&nbsp;&nbsp; {{__('Create Assignment ')}}</a>
 
 
         </div>
@@ -106,19 +106,19 @@
                                     <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
                                         aria-labelledby="dropdownMarketingCard">
                                         <li><a class="dropdown-item border-radius-md"
-                                               href="/create-assignment?id={{$assignment->id}}">{{__('Edit')}}</a>
+                                               href="{{ url('create-assignment')}}?id={{$assignment->id}}">{{__('Edit')}}</a>
                                         </li>
 
                                         <li>
                                             <a class="dropdown-item border-radius-md"
-                                               href="/view-assignment?id={{$assignment->id}}">{{__('See Details')}}</a>
+                                               href="{{ url('view-assignment')}}?id={{$assignment->id}}">{{__('See Details')}}</a>
                                         </li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
                                         <li>
                                             <a class="dropdown-item border-radius-md text-danger"
-                                               href="/delete/assignment/{{$assignment->id}}">{{__('Delete')}}
+                                               href="{{ url('delete/assignment')}}/{{$assignment->id}}">{{__('Delete')}}
                                             </a>
                                         </li>
                                     </ul>

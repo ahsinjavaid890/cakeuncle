@@ -23,7 +23,7 @@
 
     <div class="row mt-4">
         <div class="col-lg-4 mb-lg-0 mb-4">
-            <a href="/theme-pages">
+            <a href="{{ url('theme-pages')}}">
                 <div class="card">
                     <div class="card-body">
                         <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 144">

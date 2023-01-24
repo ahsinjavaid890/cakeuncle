@@ -18,7 +18,7 @@
         </div>
         <div class="col text-end">
 
-            <a href="/create-course" type="button" class="btn btn-info"><i class="fas fa-plus"></i>&nbsp;{{__('Create Course')}}</a>
+            <a href="{{ url('create-course')}}" type="button" class="btn btn-info"><i class="fas fa-plus"></i>&nbsp;{{__('Create Course')}}</a>
 
         </div>
     </div>
@@ -49,10 +49,10 @@
                             <div class="d-flex px-2 py-1">
                                 <div>
                                     @if(empty($course->image))
-                                        <img src="{{PUBLIC_DIR}}/img/placeholder.png"
+                                        <img src="{{ url('public/img/placeholder.png'}}"
                                              class="w-100 border-radius-lg shadow-sm mt-2">
                                     @else
-                                        <img src="{{PUBLIC_DIR}}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-2 avatar-xxl">
+                                        <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-2 avatar-xxl">
                                     @endif
                                 </div>
                                 <div class="d-flex flex-column justify-content-center ms-3">
@@ -113,25 +113,25 @@
                                     <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
                                         aria-labelledby="dropdownMarketingCard">
                                         <li><a class="dropdown-item border-radius-md fw-bold"
-                                               href="/create-lesson?course_id={{$course->id}}">{{__('Add Lesson')}}</a>
+                                               href="{{ url('create-lesson')}}?course_id={{$course->id}}">{{__('Add Lesson')}}</a>
                                         </li>
                                         <li><a class="dropdown-item border-radius-md fw-bold"
-                                               href="/create-course?id={{$course->id}}">{{__('Edit Course')}}</a>
+                                               href="{{ url('create-course')}}?id={{$course->id}}">{{__('Edit Course')}}</a>
                                         </li>
 
                                         <li>
                                             <a class="dropdown-item border-radius-md fw-bold"
-                                               href="/view-course?id={{$course->id}}">{{__('View Course')}}</a>
+                                               href="{{ url('view-course')}}?id={{$course->id}}">{{__('View Course')}}</a>
                                         </li>
                                         <li><a class="dropdown-item border-radius-md fw-bold"
-                                               href="/lessons?id={{$course->id}}">{{__('Lessons')}}</a>
+                                               href="{{ url('lessons')}}?id={{$course->id}}">{{__('Lessons')}}</a>
                                         </li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
                                         <li>
                                             <a class="dropdown-item border-radius-md text-danger fw-bold"
-                                               href="/delete/course/{{$course->id}}">{{__('Delete')}}
+                                               href="{{ url('delete/course')}}/{{$course->id}}">{{__('Delete')}}
                                             </a>
                                         </li>
                                     </ul>

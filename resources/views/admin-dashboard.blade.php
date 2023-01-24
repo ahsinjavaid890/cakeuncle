@@ -25,21 +25,21 @@
                     <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
                         aria-labelledby="dropdownMarketingCard">
                         <li><a class="dropdown-item border-radius-md fw-bolder"
-                               href="/new-student">{{__('Add Student')}}</a></li>
+                               href="{{ url('new-student')}}">{{__('Add Student')}}</a></li>
 
                         <li><a class="dropdown-item border-radius-md fw-bolder"
-                               href="/create-course">{{__('Add Course')}}</a>
+                               href="{{ url('create-course')}}">{{__('Add Course')}}</a>
                         </li>
                         <li><a class="dropdown-item border-radius-md fw-bolder"
-                               href="/add-product">{{__('Add eBook')}}</a>
+                               href="{{ url('add-product')}}">{{__('Add eBook')}}</a>
                         </li>
 
                     </ul>
-                    <a href="/admin-profile" class="btn btn-icon-only bg-info-light"
+                    <a href="{{ url('admin-profile')}}" class="btn btn-icon-only bg-info-light"
                       >
                         <i class="fas fa-user text-info"></i>
                     </a>
-                    <a href="/logout" class="btn btn-icon-only bg-pink-light"
+                    <a href="{{ url('logout')}}" class="btn btn-icon-only bg-pink-light"
                        >
                         <i class="fas fa-sign-out-alt text-danger"></i>
                     </a>
@@ -176,7 +176,7 @@
                     <div class="d-flex justify-content-between">
                         <h6 class="text-capitalize mb-0">{{__('Recent Students')}}</h6>
                         @if(count($recent_students))
-                            <a href="/students" class="btn  bg-purple-light text-purple shadow-none mb-0 ms-2 d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="">
+                            <a href="{{ url('students')}}" class="btn  bg-purple-light text-purple shadow-none mb-0 ms-2 d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="">
                                 {{__('View All')}}
                             </a>
                         @endif
@@ -210,12 +210,12 @@
                                                         </div>
                                                     @else
 
-                                                        <img src="{{PUBLIC_DIR}}/uploads/{{$student->photo}}"
+                                                        <img src="{{ url('public'}}/uploads/{{$student->photo}}"
                                                              class="avatar avatar-md rounded-circle  shadow-sm">
                                                     @endif
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center ms-3">
-                                                    <a href="/student-about?id={{$student->id}}">
+                                                    <a href="{{ url('student-about')}}?id={{$student->id}}">
                                                         <h6 class="mb-0">{{$student->first_name}} {{$student->last_name}}</h6>
                                                     </a>
 
@@ -234,17 +234,17 @@
                                                 <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
                                                     aria-labelledby="dropdownMarketingCard">
                                                     <li><a class="dropdown-item border-radius-md"
-                                                           href="/new-student?id={{$student->id}}">{{__('Edit')}}</a></li>
+                                                           href="{{ url('new-student')}}?id={{$student->id}}">{{__('Edit')}}</a></li>
 
                                                     <li><a class="dropdown-item border-radius-md"
-                                                           href="/student-about?id={{$student->id}}">{{__('See Details')}}</a>
+                                                           href="{{ url('student-about')}}?id={{$student->id}}">{{__('See Details')}}</a>
                                                     </li>
                                                     <li>
                                                         <hr class="dropdown-divider">
                                                     </li>
                                                     <li>
                                                         <a class="dropdown-item border-radius-md text-danger"
-                                                           href="/delete/student/{{$student->id}}">{{__('Delete')}}
+                                                           href="{{ url('delete/student')}}/{{$student->id}}">{{__('Delete')}}
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -269,7 +269,7 @@
                     <div class="d-flex justify-content-between">
                         <h6 class="mb-0 text-capitalize">{{__('Recent Orders')}}</h6>
                         @if(count($recent_orders))
-                            <a href="/earnings" class="btn  bg-purple-light text-purple shadow-none mb-0 ms-2 d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="">
+                            <a href="{{ url('earnings')}}" class="btn  bg-purple-light text-purple shadow-none mb-0 ms-2 d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="">
                                 {{__('View All')}}
                             </a>
                         @endif
@@ -314,14 +314,14 @@
                                                         </div>
                                                     @else
 
-                                                        <img src="{{PUBLIC_DIR}}/uploads/{{$students[$order->student_id]->photo}}"
+                                                        <img src="{{ url('public'}}/uploads/{{$students[$order->student_id]->photo}}"
                                                              class="avatar avatar-md rounded-circle  shadow-sm">
                                                     @endif
                                                 </div>
 
                                                 @if(!empty($students[$order->student_id]->id))
                                                     <div class="d-flex flex-column justify-content-center ms-3">
-                                                        <a href="/student-about?id={{$students[$order->student_id]->id}}">
+                                                        <a href="{{ url('student-about')}}?id={{$students[$order->student_id]->id}}">
                                                             <h6 class="mb-0">{{$students[$order->student_id]->first_name}} {{$students[$order->student_id]->last_name}}</h6>
                                                         </a>
 
@@ -346,7 +346,7 @@
                                         </td>
                                         <td class="align-middle text-right">
                                             <a class=" btn bg-purple-light text-purple btn-icon-only  shadow-none"
-                                               href="/order-details?id={{$order->id}}">
+                                               href="{{ url('order-details')}}?id={{$order->id}}">
 
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
                                             </a>
@@ -374,7 +374,7 @@
                         <div class="d-flex justify-content-between">
 
                             <h6 class="mb-1 text-capitalize ">{{__('Recent Courses')}}</h6>
-                            <a href="/courses"  class="btn  bg-purple-light text-purple shadow-none mb-0 ms-2 d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="">
+                            <a href="{{ url('courses')}}"  class="btn  bg-purple-light text-purple shadow-none mb-0 ms-2 d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="">
                                 {{__('View All')}}
                             </a>
                         </div>
@@ -391,10 +391,10 @@
                                     <div class="card card-img">
                                         <a class="d-block shadow-xl border-radius-xl">
                                             @if(empty($course->image))
-                                                <img src="{{PUBLIC_DIR}}/img/placeholder.png"
+                                                <img src="{{ url('public'}}/img/placeholder.png"
                                                      class="w-100 border-radius-lg shadow-sm mt-3">
                                             @else
-                                                <img src="{{PUBLIC_DIR}}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
+                                                <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
                                             @endif
                                         </a>
                                         <div class="card-body px-1 pb-0">
@@ -406,7 +406,7 @@
                                                     @endif
                                                 @endif
                                             </p>
-                                            <a href="/view-course?id={{$course->id}}">
+                                            <a href="{{ url('view-course')}}?id={{$course->id}}">
                                                 <h5>
                                                     <strong>{{$course->name}}</strong>
                                                 </h5>
@@ -455,7 +455,7 @@
                     <div class="d-flex justify-content-between">
 
                         <h6 class="mb-1  ">{{__('Recent eBooks')}}</h6>
-                        <a href="/products"  class="btn  bg-purple-light text-purple shadow-none mb-0 ms-2 d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="">
+                        <a href="{{ url('products')}}"  class="btn  bg-purple-light text-purple shadow-none mb-0 ms-2 d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="">
                             {{__('View All')}}
                         </a>
                     </div>
@@ -472,15 +472,15 @@
                                 <div class="card card-img">
                                     <a class="d-block shadow-xl border-radius-xl">
                                         @if(empty($ebook->image))
-                                            <img src="{{PUBLIC_DIR}}/img/placeholder.png"
+                                            <img src="{{ url('public'}}/img/placeholder.png"
                                                  class="w-100 border-radius-lg shadow-sm mt-3">
                                         @else
-                                            <img src="{{PUBLIC_DIR}}/uploads/{{$ebook->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
+                                            <img src="{{ url('public'}}/uploads/{{$ebook->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
                                         @endif
                                     </a>
                                     <div class="card-body text-center px-1 pb-0">
 
-                                        <a href="/view-product?id={{$ebook->id}}">
+                                        <a href="{{ url('view-product')}}?id={{$ebook->id}}">
                                             <h5>
                                                 <strong>{{$ebook->name}}</strong>
                                             </h5>

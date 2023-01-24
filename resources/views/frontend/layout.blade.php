@@ -223,17 +223,17 @@
                     <ul class="flex-column  nav">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/privacy" target="_blank">
+                            <a class="nav-link" href="{{ url('privacy')}}" target="_blank">
                                 {{__(' Privacy Policy')}}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/termsandconditions" target="_blank">
+                            <a class="nav-link" href="{{ url('termsandconditions')}}" target="_blank">
                                 {{__(' Terms of Service')}}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/cookie-policy" target="_blank">
+                            <a class="nav-link" href="{{ url('cookie-policy')}}" target="_blank">
                                 {{__(' Cookie Policy')}}
                             </a>
                         </li>
@@ -257,7 +257,7 @@
     </div>
 </footer>
 
-<script src="{{PUBLIC_DIR}}/js/app.js?v=94"></script>
+<script src="{{ url('public'}}/js/app.js?v=94"></script>
 
 @yield('script')
 

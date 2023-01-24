@@ -18,10 +18,10 @@
                                         <!-- Image -->
                                         <div class="rounded-3">
                                             @if(empty($product->image))
-                                                <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                                <img src="{{ url('public'}}/img/placeholder.jpeg"
                                                      class="w-100 border-radius-lg shadow-lg mt-3">
                                             @else
-                                                <img src="{{PUBLIC_DIR}}/uploads/{{$product->image}}" class="p-3 w-100 card-img-top">
+                                                <img src="{{ url('public'}}/uploads/{{$product->image}}" class="p-3 w-100 card-img-top">
                                             @endif
 
                                         </div>
@@ -31,7 +31,7 @@
                                             <!-- Buttons and price -->
                                             <div class="text-center">
                                                 <!-- Buttons -->
-                                                <a href="/add-to-cart/{{$product->id}}?type=ebook" class="btn btn-dark mb-2 mb-sm-0 me-00 "><i class="bi bi-cart3 "></i>{{__('Add to Cart')}}</a>
+                                                <a href="{{ url('add-to-cart')}}/{{$product->id}}?type=ebook" class="btn btn-dark mb-2 mb-sm-0 me-00 "><i class="bi bi-cart3 "></i>{{__('Add to Cart')}}</a>
 
                                             </div>
                                         </div>
@@ -54,7 +54,7 @@
                                             </div>
                                         @else
 
-                                            <img src="{{PUBLIC_DIR}}/uploads/{{$product->author_photo}}"
+                                            <img src="{{ url('public'}}/uploads/{{$product->author_photo}}"
                                                  class="avatar avatar-md rounded-circle">
                                         @endif
                                     </div>
@@ -179,7 +179,7 @@
 
                                                     @if(isset($students[$review->student_id]->photo))
 
-                                                        <img alt="" class=" avatar avatar-md rounded-circle " src="{{PUBLIC_DIR}}/uploads/{{$students[$review->student_id]->photo}}">
+                                                        <img alt="" class=" avatar avatar-md rounded-circle " src="{{ url('public'}}/uploads/{{$students[$review->student_id]->photo}}">
                                                     @else
                                                         <div class="avatar  rounded-circle bg-purple-light  border-radius-md ">
                                                             <h6 class="text-purple mt-1">{{$students[$review->student_id]->first_name[0]}}{{$students[$review->student_id]->last_name[0]}}</h6>

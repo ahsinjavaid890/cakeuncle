@@ -11,7 +11,7 @@
                         <div class="d-flex align-items-start mt-3">
                             <div class="nav flex-column  me-3" id="v-pills-tab">
                                 @foreach($categories as $category)
-                                    <h5><a href="/course?category_id={{$category->id}}" class="nav-link fw-bolder badge bg-purple-light mb-2 text-purple   active  " id="v-pills-home-tab">{{$category->name}}</a></h5>
+                                    <h5><a href="{{ url('course')}}?category_id={{$category->id}}" class="nav-link fw-bolder badge bg-purple-light mb-2 text-purple   active  " id="v-pills-home-tab">{{$category->name}}</a></h5>
                                 @endforeach
                             </div>
                         </div>
@@ -31,10 +31,10 @@
                                             <div class="card shadow  h-100">
                                                 <!-- Image -->
                                                 @if(empty($course->image))
-                                                    <img src="{{PUBLIC_DIR}}/img/placeholder.png"
+                                                    <img src="{{ url('public'}}/img/placeholder.png"
                                                          class="w-100 border-radius-lg shadow-sm ">
                                                 @else
-                                                    <img src="{{PUBLIC_DIR}}/uploads/{{$course->image}}" class="w-100  card-img-top shadow-sm ">
+                                                    <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100  card-img-top shadow-sm ">
                                             @endif
                                             <!-- Card body -->
                                                 <div class="card-body pb-0">
@@ -50,7 +50,7 @@
 
                                                     </div>
                                                     <!-- Title -->
-                                                    <h5 class="card-title"><a href="/course/{{$course->slug}}">{{$course->name}}</a></h5>
+                                                    <h5 class="card-title"><a href="{{ url('course')}}/{{$course->slug}}">{{$course->name}}</a></h5>
                                                     <!-- Rating star -->
 
                                                     <div class="row mb-0">

@@ -1,7 +1,7 @@
 @extends('layouts.admin-portal')
 @section('title',__('Create Lesson'))
 @section('content')
-    <form action="/save-lesson" method="post" enctype="multipart/form-data" >
+    <form action="{{ url('save-lesson')}}" method="post" enctype="multipart/form-data" >
         @if ($errors->any())
             <div class="alert bg-pink-light text-danger">
                 <ul class="list-unstyled">
@@ -19,7 +19,7 @@
 
                 </div>
                 <div class="col-lg-6 text-end d-flex flex-row">
-                    <a href="/create-lesson?course_id={{$course->id}}" class="btn btn-info mb-0 ms-lg-auto me-lg-0 me-auto mt-lg-0">{{__('Add Lesson')}}</a>
+                    <a href="{{ url('create-lesson')}}?course_id={{$course->id}}" class="btn btn-info mb-0 ms-lg-auto me-lg-0 me-auto mt-lg-0">{{__('Add Lesson')}}</a>
 
                 </div>
             </div>
@@ -85,7 +85,7 @@
                                 <div class="col-12">
 
                                     @if(!empty($lesson->video))
-                                        <iframe class="embed-responsive-item w-100  border-radius-lg shadow-lg mt-3" src="{{PUBLIC_DIR}}/uploads/{{$lesson->video}}" type="video/mp4">
+                                        <iframe class="embed-responsive-item w-100  border-radius-lg shadow-lg mt-3" src="{{ url('public'}}/uploads/{{$lesson->video}}" type="video/mp4">
 
                                     @elseif(!empty($lesson->youtube_video))
 
@@ -93,7 +93,7 @@
 
 
                                      @else
-                                       <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg" class="w-100 border-radius-lg shadow-lg mt-3">
+                                       <img src="{{ url('public'}}/img/placeholder.jpeg" class="w-100 border-radius-lg shadow-lg mt-3">
 
                                     @endif
                                 </div>

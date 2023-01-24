@@ -1,4 +1,4 @@
-<form action="/save-event" method="post" id="form_main">
+<form action="{{ url('save-event')}}" method="post" id="form_main">
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul class="list-unstyled">

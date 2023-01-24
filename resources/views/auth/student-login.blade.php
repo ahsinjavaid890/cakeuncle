@@ -22,7 +22,7 @@
                     <div class="text-center mt-9">
                         <a class="navbar-brand text-dark bg-transparent fw-bolder" href="/home" rel="tooltip" title="" data-placement="bottom" target="_blank">
                             @if(!empty($settings['logo']))
-                                <img src="{{PUBLIC_DIR}}/uploads/{{$settings['logo']}}" class="navbar-brand-img h-100" style="max-height: {{$settings['frontend_logo_max_height'] ?? '30'}}px;" alt="...">
+                                <img src="{{ url('public'}}/uploads/{{$settings['logo']}}" class="navbar-brand-img h-100" style="max-height: {{$settings['frontend_logo_max_height'] ?? '30'}}px;" alt="...">
                             @else
                                 <h2 class="text-white fw-bolder">{{config('app.name')}}</h2>
                             @endif
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-6 m-auto h-100"
+        <div class="col-12 col-lg-6 m-auto h-100">
             <div class="row container">
                 <div class= "col-sm-10 col-xl-8 m-auto">
 
@@ -56,7 +56,7 @@
                         <div class="card-info ">
 
                             <div class="card-body">
-                                <form role="form text-left" method="post" action="/student/login">
+                                <form role="form text-left" method="post" action="{{ url('student/login')}}">
 
                                     @if (session()->has('status'))
                                         <div class="alert alert-success">
@@ -118,7 +118,7 @@
 
 
                                 </p>
-                                <p class="text-sm mt-3 mb-0">{{__('Do not have an account?')}} <a href="/signup"
+                                <p class="text-sm mt-3 mb-0">{{__('Do not have an account?')}} <a href="{{ url('signup')}}"
                                                                                                   class="text-dark font-weight-bolder">{{__('Signup Here')}}</a>
                             </div>
                         </div>

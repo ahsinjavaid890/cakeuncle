@@ -42,10 +42,10 @@
                         <!-- Image and video -->
                         <div class="col-12 position-relative">
                             @if(empty($course->image))
-                                <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg"
+                                <img src="{{ url('public'}}/img/placeholder.jpeg"
                                      class="w-100 border-radius-sm">
                             @else
-                                <img src="{{PUBLIC_DIR}}/uploads/{{$course->image}}" class="w-100  border-radius-sm ">
+                                <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100  border-radius-sm ">
                             @endif
                         </div>
 
@@ -55,12 +55,12 @@
                             <ul class="nav  mt-2 ">
 
                                 <li class="nav-item">
-                                    <a class="nav-link fw-bolder" href="/student/my-course-details/?id={{$course->id}}">{{__('Course Description')}}</a>
+                                    <a class="nav-link fw-bolder" href="{{ url('student/my-course-details')}}/?id={{$course->id}}">{{__('Course Description')}}</a>
                                 </li>
 
 
                                 <li class="nav-item">
-                                    <a href="/student/my-course-lessons/?id={{$course->id}}" class="  nav-link fw-bolder">{{__('Lessons')}}</a>
+                                    <a href="{{ url('student/my-course-lessons')}}/?id={{$course->id}}" class="  nav-link fw-bolder">{{__('Lessons')}}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="" class="@if(($selected_nav ?? '') === 'student-course-discussion') active @endif nav-link fw-bolder">{{__('Comments')}}</a>
@@ -87,7 +87,7 @@
                                                 @if(!empty($users[$comment->admin_id]->photo))
                                                     <a href="javascript:" class=" avatar avatar-md rounded-circle ">
                                                         <img alt="" class="avatar rounded-circle flex-shrink-0"
-                                                             src="{{PUBLIC_DIR}}/uploads/{{$users[$comment->admin_id]->photo}}">
+                                                             src="{{ url('public'}}/uploads/{{$users[$comment->admin_id]->photo}}">
                                                     </a>
                                                 @else
                                                     <div
@@ -101,7 +101,7 @@
                                                 @if(!empty($students[$comment->student_id]->photo))
                                                     <a href="javascript:" class=" avatar avatar-md rounded-circle ">
                                                         <img alt="" class="avatar rounded-circle flex-shrink-0"
-                                                             src="{{PUBLIC_DIR}}/uploads/{{$students[$comment->student_id]->photo}}">
+                                                             src="{{ url('public'}}/uploads/{{$students[$comment->student_id]->photo}}">
                                                     </a>
                                                 @else
                                                     <div
@@ -145,7 +145,7 @@
                                 @endforeach
                                 <!-- Divider -->
                                     <div class="" id="collapseComment">
-                                        <form action="/student/save-course-comment" method="post">
+                                        <form action="{{ url('student/save-course-comment')}}" method="post">
                                             <div class="d-flex mt-3">
                                                 <textarea class="form-control mb-0" placeholder="Add a comment..." rows="2" spellcheck="false" name="message"></textarea>
                                                 <input type="hidden" name="course_id" value="{{$course->id}}">
@@ -275,7 +275,7 @@
 
                                             @if(!empty($users[$course->admin_id]->photo))
                                                 <a href="javascript:" class="ms-3 mt-4 avatar rounded-circle border border-secondary">
-                                                    <img alt="" class="p-1" src="{{PUBLIC_DIR}}/uploads/{{$users[$course->admin_id]->photo}}">
+                                                    <img alt="" class="p-1" src="{{ url('public'}}/uploads/{{$users[$course->admin_id]->photo}}">
                                                 </a>
                                             @else
                                                 <div class="avatar ms-3   mt-4 rounded-circle bg-info-light  border-radius-md p-2">
@@ -337,7 +337,7 @@
                                     <!-- Course info END -->
                                 </div>
                                 <div class="modal fade" id="review" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <form action="/student/save-review" method="post">
+                                    <form action="{{ url('student/save-review')}}" method="post">
 
                                         <div class="modal-dialog">
                                             <div class="modal-content">

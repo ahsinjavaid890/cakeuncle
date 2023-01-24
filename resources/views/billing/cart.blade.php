@@ -38,10 +38,10 @@
                                                             <!-- Image -->
                                                             <div>
                                                                 @if(empty($course_in_cart->image))
-                                                                    <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg" class="avatar avatar-xxl me-3" alt="product image">
+                                                                    <img src="{{ url('public/img/placeholder.jpeg'}}" class="avatar avatar-xxl me-3" alt="product image">
 
                                                                 @else
-                                                                    <img src="{{PUBLIC_DIR}}/uploads/{{$course_in_cart->image}}" class="w-100 avatar avatar-xxl me-3">
+                                                                    <img src="{{ url('public'}}/uploads/{{$course_in_cart->image}}" class="w-100 avatar avatar-xxl me-3">
                                                                 @endif
 
 
@@ -50,7 +50,7 @@
 
                                                             <!-- Title -->
                                                             <h6 class="mb-0 ms-lg-3 mt-2 mt-lg-0">
-                                                                <a href="/course-details?id={{$course_in_cart->id}}">{{$course_in_cart->name}}</a>
+                                                                <a href="{{ url('course-details')}}?id={{$course_in_cart->id}}">{{$course_in_cart->name}}</a>
                                                             </h6>
                                                         </div>
                                                     </td>
@@ -66,7 +66,7 @@
                                                     </td>
                                                     <!-- Action item -->
                                                     <td>
-                                                        <a href="/remove-item-from-cart/{{$course_in_cart->id}}" class="btn btn-md bg-pink-light text-danger px-2 mb-0"><i class="fas fa-fw fa-times"></i></a>
+                                                        <a href="{{ url('remove-item-from-cart')}}/{{$course_in_cart->id}}" class="btn btn-md bg-pink-light text-danger px-2 mb-0"><i class="fas fa-fw fa-times"></i></a>
                                                     </td>
                                                 </tr>
 
@@ -85,10 +85,10 @@
                                                             <!-- Image -->
                                                             <div>
                                                                 @if(empty($ebook_in_cart->image))
-                                                                    <img src="{{PUBLIC_DIR}}/img/placeholder.jpeg" class="avatar avatar-xxl me-3" alt="product image">
+                                                                    <img src="{{ url('public/img/placeholder.jpeg'}}" class="avatar avatar-xxl me-3" alt="product image">
 
                                                                 @else
-                                                                    <img src="{{PUBLIC_DIR}}/uploads/{{$ebook_in_cart->image}}" class="w-100 avatar avatar-xxl me-3 ">
+                                                                    <img src="{{ url('public'}}/uploads/{{$ebook_in_cart->image}}" class="w-100 avatar avatar-xxl me-3 ">
                                                                 @endif
 
 
@@ -96,7 +96,7 @@
 
                                                             <!-- Title -->
                                                             <h6 class="mb-0 ms-lg-3 mt-2 mt-lg-0">
-                                                                <a href="/view-ebook?id={{$ebook_in_cart->id}}">{{$ebook_in_cart->name}}</a>
+                                                                <a href="{{ url('view-ebook')}}?id={{$ebook_in_cart->id}}">{{$ebook_in_cart->name}}</a>
                                                             </h6>
                                                         </div>
                                                     </td>
@@ -112,7 +112,7 @@
                                                     </td>
                                                     <!-- Action item -->
                                                     <td>
-                                                        <a href="/remove-item-from-cart/{{$ebook_in_cart->id}}" class="btn btn-md bg-pink-light text-danger px-2 mb-0"><i class="fas fa-fw fa-times"></i></a>
+                                                        <a href="{{ url('remove-item-from-cart')}}/{{$ebook_in_cart->id}}" class="btn btn-md bg-pink-light text-danger px-2 mb-0"><i class="fas fa-fw fa-times"></i></a>
                                                     </td>
                                                 </tr>
 
@@ -185,11 +185,11 @@
 
                                 <!-- Button -->
                                 <div class="d-grid">
-                                    <a href="/checkout" class="btn btn-lg btn-success">{{__('Checkout')}}</a>
+                                    <a href="{{ url('checkout')}}" class="btn btn-lg btn-success">{{__('Checkout')}}</a>
                                 </div>
 
                                 <!-- Content -->
-                                <p class="small mb-0 mt-2 text-center">{{__('By purchasing, you agree to these')}} </p><p class="text-center"><a href="/termsandconditions"><strong>{{__('Terms of Service')}}</strong></a></p>
+                                <p class="small mb-0 mt-2 text-center">{{__('By purchasing, you agree to these')}} </p><p class="text-center"><a href="{{ url('termsandconditions')}}"><strong>{{__('Terms of Service')}}</strong></a></p>
 
                             </div>
                             <!-- Card total END -->

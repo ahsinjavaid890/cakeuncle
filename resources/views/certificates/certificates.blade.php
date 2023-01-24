@@ -14,7 +14,7 @@
         </div>
         <div class="col text-end">
 
-            <a href="/create-certificate" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Create Certificate')}}</a>
+            <a href="{{ url('create-certificate')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Create Certificate')}}</a>
 
         </div>
     </div>
@@ -75,7 +75,7 @@
                                         <li>
 
                                             <a class="dropdown-item border-radius-md fw-bolder"
-                                               href="/create-certificate?id={{$certificate->id}}">{{__('Edit')}}</a>
+                                               href="{{ url('create-certificate')}}?id={{$certificate->id}}">{{__('Edit')}}</a>
                                         </li>
 
 
@@ -84,7 +84,7 @@
                                         </li>
                                         <li>
                                             <a class="dropdown-item border-radius-md text-danger fw-bolder"
-                                               href="/delete/certificate-template/{{$certificate->id}}">{{__('Delete')}}
+                                               href="{{ url('delete/certificate-template')}}/{{$certificate->id}}">{{__('Delete')}}
                                             </a>
                                         </li>
                                     </ul>
