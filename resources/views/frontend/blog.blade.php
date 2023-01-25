@@ -20,7 +20,7 @@
                             <div class="card-header p-0 mx-lg-3 mt-3 position-relative z-index-1">
                                 <a href="javascript:;" class="d-block">
                                     @if(!empty($blog->cover_photo))
-                                        <img src="{{ url('public'}}/uploads/{{$blog->cover_photo}}" class="img-fluid border-radius-md" alt="...">
+                                        <img src="{{ url('public') }}/uploads/{{$blog->cover_photo}}" class="img-fluid border-radius-md" alt="...">
                                     @endif
                                 </a>
                             </div>
@@ -35,7 +35,7 @@
 
                                 <div class="author">
                                     @if(!empty($users[$blog->admin_id]->photo))
-                                        <img alt="" class=" avatar shadow " src="{{ url('public'}}/uploads/{{$users[$blog->admin_id]->photo}}">
+                                        <img alt="" class=" avatar shadow " src="{{ url('public') }}/uploads/{{$users[$blog->admin_id]->photo}}">
                                     @else
                                         <div class="avatar mt-4 rounded-circle bg-purple-light  border-radius-md ">
                                             <h6 class="text-purple mt-1">{{$users[$blog->admin_id]->first_name[0]}}{{$users[$blog->admin_id]->last_name[0]}}</h6>

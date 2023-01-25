@@ -51,7 +51,7 @@
                                                 <h6 class="text-info-light fw-normal text-uppercase mt-1 ">{{ $user->first_name['0']}}{{ $user->last_name['0']}}</h6>
                                             </div>
                                         @else
-                                            <img src="{{ url('public'}}/uploads/{{ $user->photo}}" class="rounded-circle avatar shadow">
+                                            <img src="{{ url('public') }}/uploads/{{ $user->photo}}" class="rounded-circle avatar shadow">
                                     @endif
 
                                     <!-- Info -->
@@ -97,7 +97,7 @@
                                     @if(!empty($users[$comment->admin_id]->photo))
                                         <a href="javascript:" class=" avatar avatar-md rounded-circle ">
                                             <img alt="" class="avatar rounded-circle flex-shrink-0"
-                                                 src="{{ url('public'}}/uploads/{{$users[$comment->admin_id]->photo}}">
+                                                 src="{{ url('public') }}/uploads/{{$users[$comment->admin_id]->photo}}">
                                         </a>
                                     @else
                                         <div
@@ -111,7 +111,7 @@
                                     @if(!empty($students[$comment->student_id]->photo))
                                         <a href="javascript:" class=" avatar avatar-md rounded-circle ">
                                             <img alt="" class="avatar rounded-circle flex-shrink-0"
-                                                 src="{{ url('public'}}/uploads/{{$students[$comment->student_id]->photo}}">
+                                                 src="{{ url('public') }}/uploads/{{$students[$comment->student_id]->photo}}">
                                         </a>
                                     @else
                                         <div

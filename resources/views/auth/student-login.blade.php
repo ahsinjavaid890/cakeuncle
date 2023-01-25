@@ -22,7 +22,7 @@
                     <div class="text-center mt-9">
                         <a class="navbar-brand text-dark bg-transparent fw-bolder" href="/home" rel="tooltip" title="" data-placement="bottom" target="_blank">
                             @if(!empty($settings['logo']))
-                                <img src="{{ url('public'}}/uploads/{{$settings['logo']}}" class="navbar-brand-img h-100" style="max-height: {{$settings['frontend_logo_max_height'] ?? '30'}}px;" alt="...">
+                                <img src="{{ url('public') }}/uploads/{{$settings['logo']}}" class="navbar-brand-img h-100" style="max-height: {{$settings['frontend_logo_max_height'] ?? '30'}}px;" alt="...">
                             @else
                                 <h2 class="text-white fw-bolder">{{config('app.name')}}</h2>
                             @endif

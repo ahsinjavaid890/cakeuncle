@@ -53,10 +53,10 @@
 
                         <div class="col-12 position-relative">
                             @if(empty($course->image))
-                                <img src="{{ url('public'}}/img/placeholder.jpeg"
+                                <img src="{{ url('public') }}/img/placeholder.jpeg"
                                      class="w-100 border-radius-sm">
                             @else
-                                <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100  border-radius-sm ">
+                                <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100  border-radius-sm ">
                             @endif
                         </div>
 
@@ -260,7 +260,7 @@
 
                                             @if(!empty($users[$course->admin_id]->photo))
                                                 <a href="javascript:" class="ms-3 mt-4 avatar rounded-circle border border-secondary">
-                                                    <img alt="" class="p-1" src="{{ url('public'}}/uploads/{{$users[$course->admin_id]->photo}}">
+                                                    <img alt="" class="p-1" src="{{ url('public') }}/uploads/{{$users[$course->admin_id]->photo}}">
                                                 </a>
                                             @else
                                                 <div class="avatar ms-3   mt-4 rounded-circle bg-info-light  border-radius-md p-2">

@@ -27,11 +27,11 @@
                         <div class="col-auto">
                             <div class="avatar avatar-xxl position-relative">
                                 @if(empty($up_user->photo))
-                                    <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
+                                    <img src="{{ url('public') }}/img/user-avatar-placeholder.png"
                                          class="w-100 border-radius-lg shadow-sm">
                                 @else
 
-                                    <img src="{{ url('public'}}/uploads/{{$up_user->photo}}" alt=""
+                                    <img src="{{ url('public') }}/uploads/{{$up_user->photo}}" alt=""
                                          class="w-100 border-radius-lg shadow-sm">
                                 @endif
 

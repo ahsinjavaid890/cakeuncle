@@ -116,7 +116,7 @@
                                     <a  class="avatar avatar-sm rounded-circle"
                                         data-bs-toggle="tooltip" data-bs-placement="bottom"
                                         title="{{$student->first_name}}">
-                                        <img src="{{ url('public'}}/uploads/{{$student->photo}}"
+                                        <img src="{{ url('public') }}/uploads/{{$student->photo}}"
                                              alt="team1">
                                     </a>
 
@@ -156,7 +156,7 @@
 
                                 <div class="position-relative">
                                     @if (!empty($landingpage))
-                                        <img src="{{ url('public'}}/uploads/{{$landingpage->background_image}}" alt="" class="img-fluid  rounded-3">
+                                        <img src="{{ url('public') }}/uploads/{{$landingpage->background_image}}" alt="" class="img-fluid  rounded-3">
                                     @endif
                                 </div>
 
@@ -170,7 +170,7 @@
                                                 <a  class="avatar avatar-sm rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="{{$student->first_name}}">
-                                                    <img src="{{ url('public'}}/uploads/{{$student->photo}}"
+                                                    <img src="{{ url('public') }}/uploads/{{$student->photo}}"
                                                          alt="team1">
                                                 </a>
 
@@ -386,10 +386,10 @@
                                         <div class="col-xl-6 text-center my-auto px-7 mt-md-auto mt-4">
                                             <div class="avatar rounded-circle avatar-xxl position-relative border-avatar">
                                                 @if(empty($landingpage->testimonial1_image))
-                                                    <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
+                                                    <img src="{{ url('public') }}/img/user-avatar-placeholder.png"
                                                          class="w-100 border-radius-sm avatar-xxl shadow-sm">
                                                 @else
-                                                    <img src="{{ url('public'}}/uploads/{{$landingpage->testimonial1_image}}" class="w-100 border-radius-sm ">
+                                                    <img src="{{ url('public') }}/uploads/{{$landingpage->testimonial1_image}}" class="w-100 border-radius-sm ">
                                                 @endif
                                             </div>
                                             <h5 class="text-white"> @if (!empty($landingpage))
@@ -423,10 +423,10 @@
                                         <div class="col-xl-6 text-center my-auto px-7 mt-md-auto mt-4">
                                             <div class=" avatar rounded-circle avatar-xxl position-relative border-avatar ">
                                                 @if(empty($landingpage->testimonial2_image))
-                                                    <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
+                                                    <img src="{{ url('public') }}/img/user-avatar-placeholder.png"
                                                          class="avatar mb-3 avatar-xxl rounded-circle bg-purple-light  border-radius-md ">
                                                 @else
-                                                    <img src="{{ url('public'}}/uploads/{{$landingpage->testimonial2_image}}" class=" w-100 border-radius-sm rounder-circle ">
+                                                    <img src="{{ url('public') }}/uploads/{{$landingpage->testimonial2_image}}" class=" w-100 border-radius-sm rounder-circle ">
                                                 @endif
                                             </div>
                                             <h5 class="text-white"> @if (!empty($landingpage))
@@ -527,11 +527,11 @@
 
                         <div class="d-block ">
                             @if (!empty($landingpage))
-                                <img src="{{ url('public'}}/uploads/{{$landingpage->story2_image}}" alt="" class="img-fluid  rounded-3">
+                                <img src="{{ url('public') }}/uploads/{{$landingpage->story2_image}}" alt="" class="img-fluid  rounded-3">
                             @endif
 
                         </div>
-                        <div class="" style="background-image: url('{{ url('public'}}/img/feature.jpg');"></div>
+                        <div class="" style="background-image: url('{{ url('public') }}/img/feature.jpg');"></div>
                     </div>
 
                 </div>

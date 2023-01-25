@@ -121,7 +121,7 @@
                         <div class="col-md-8">
                             <h4 class=" mt-4">
                                 @if(!empty($certificate->logo))
-                                    <img src="{{ url('public'}}/uploads/{{$certificate->logo}}"
+                                    <img src="{{ url('public') }}/uploads/{{$certificate->logo}}"
                                          class="w-50">
                                 @else
                                     {{__(' Company logo')}}

@@ -47,10 +47,10 @@
                         <!-- Image and video -->
                         <div class="col-12 position-relative">
                             @if(empty($course->image))
-                                <img src="{{ url('public'}}/img/placeholder.jpeg"
+                                <img src="{{ url('public') }}/img/placeholder.jpeg"
                                      class="w-100 border-radius-sm  mt-3">
                             @else
-                                <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100  border-radius-sm mt-3">
+                                <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100  border-radius-sm mt-3">
                             @endif
                         </div>
 
@@ -212,7 +212,7 @@
 
                                             @if(!empty($user->photo))
                                                 <a href="javascript:;" class="avatar avatar-sm rounded-circle border border-secondary">
-                                                    <img alt="" class="p-1" src="{{ url('public'}}/uploads/{{$user->photo}}">
+                                                    <img alt="" class="p-1" src="{{ url('public') }}/uploads/{{$user->photo}}">
                                                 </a>
                                             @else
                                                 <div class="avatar avatar-lg rounded-circle bg-purple-light  border-radius-md p-2">

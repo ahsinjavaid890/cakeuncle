@@ -31,10 +31,10 @@
                                             <div class="card shadow  h-100">
                                                 <!-- Image -->
                                                 @if(empty($course->image))
-                                                    <img src="{{ url('public'}}/img/placeholder.png"
+                                                    <img src="{{ url('public') }}/img/placeholder.png"
                                                          class="w-100 border-radius-lg shadow-sm ">
                                                 @else
-                                                    <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100  card-img-top shadow-sm ">
+                                                    <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100  card-img-top shadow-sm ">
                                             @endif
                                             <!-- Card body -->
                                                 <div class="card-body pb-0">

@@ -56,7 +56,7 @@
                                         </div>
 
                                     @else
-                                        <img src="{{ url('public'}}/uploads/{{$student->photo}}" class="rounded-circle avatar avatar-sm shadow">
+                                        <img src="{{ url('public') }}/uploads/{{$student->photo}}" class="rounded-circle avatar avatar-sm shadow">
                                     @endif
 
                                     <div class="ms-3">
@@ -118,7 +118,7 @@
 
                                         </div>
                                     @else
-                                        <img src="{{ url('public'}}/uploads/{{$selected_student->photo}}" class="rounded-circle avatar shadow">
+                                        <img src="{{ url('public') }}/uploads/{{$selected_student->photo}}" class="rounded-circle avatar shadow">
                                     @endif
                                     <div class="ms-3">
                                         <h6 class="mb-0 d-block">{{$selected_student->first_name}} {{$selected_student->last_name}}</h6>

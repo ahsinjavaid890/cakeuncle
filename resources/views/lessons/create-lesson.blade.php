@@ -85,7 +85,7 @@
                                 <div class="col-12">
 
                                     @if(!empty($lesson->video))
-                                        <iframe class="embed-responsive-item w-100  border-radius-lg shadow-lg mt-3" src="{{ url('public'}}/uploads/{{$lesson->video}}" type="video/mp4">
+                                        <iframe class="embed-responsive-item w-100  border-radius-lg shadow-lg mt-3" src="{{ url('public') }}/uploads/{{$lesson->video}}" type="video/mp4">
 
                                     @elseif(!empty($lesson->youtube_video))
 
@@ -93,7 +93,7 @@
 
 
                                      @else
-                                       <img src="{{ url('public'}}/img/placeholder.jpeg" class="w-100 border-radius-lg shadow-lg mt-3">
+                                       <img src="{{ url('public') }}/img/placeholder.jpeg" class="w-100 border-radius-lg shadow-lg mt-3">
 
                                     @endif
                                 </div>

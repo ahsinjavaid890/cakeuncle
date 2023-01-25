@@ -30,7 +30,7 @@
                                     @foreach($recent_products as $product)
                                         <div class="col-lg-3 col-6 mb-4 ">
                                             <a href="/shop/{{$product->slug}}">
-                                                <img class="w-100 border-radius-lg shadow mt-0 mt-lg-5" src="{{ url('public'}}/uploads/{{$product->image}}" alt="">
+                                                <img class="w-100 border-radius-lg shadow mt-0 mt-lg-5" src="{{ url('public') }}/uploads/{{$product->image}}" alt="">
                                             </a>
                                         </div>
                                     @endforeach
@@ -81,10 +81,10 @@
                                         <div class="position-relative">
                                             <!-- Image -->
                                             @if(empty($product->image))
-                                                <img src="{{ url('public'}}/img/placeholder.jpeg"
+                                                <img src="{{ url('public') }}/img/placeholder.jpeg"
                                                      class="w-100 border-radius-lg shadow-lg p-5">
                                             @else
-                                                <img src="{{ url('public'}}/uploads/{{$product->image}}" class="p-5 card-img-top">
+                                                <img src="{{ url('public') }}/uploads/{{$product->image}}" class="p-5 card-img-top">
                                             @endif
 
                                         </div>

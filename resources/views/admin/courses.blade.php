@@ -52,7 +52,7 @@
                                         <img src="{{ url('public/img/placeholder.png'}}"
                                              class="w-100 border-radius-lg shadow-sm mt-2">
                                     @else
-                                        <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-2 avatar-xxl">
+                                        <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-2 avatar-xxl">
                                     @endif
                                 </div>
                                 <div class="d-flex flex-column justify-content-center ms-3">

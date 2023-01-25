@@ -7,10 +7,10 @@
                 <div class="col-md-6 mt-5">
                     <div class="avatar avatar-xxl rounded-circle position-relative border-avatar ms-3">
                         @if(empty($student->photo))
-                            <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
+                            <img src="{{ url('public') }}/img/user-avatar-placeholder.png"
                                  class="w-100 border-radius-sm shadow-sm">
                         @else
-                            <img src="{{ url('public'}}/uploads/{{$student->photo}}" class="w-100 border-radius-sm ">
+                            <img src="{{ url('public') }}/uploads/{{$student->photo}}" class="w-100 border-radius-sm ">
                         @endif
 
                     </div>
@@ -127,13 +127,13 @@
                                         <div>
                                             @if(!empty($courses[$course_purchase->product_id]->image))
                                                 @if(isset($courses[$course_purchase->product_id]))
-                                                    <img src="{{ url('public'}}/uploads/{{$courses[$course_purchase->product_id]->image}}"
+                                                    <img src="{{ url('public') }}/uploads/{{$courses[$course_purchase->product_id]->image}}"
                                                          class="w-100 avatar avatar-xxl me-3">
                                                 @endif
 
                                             @else
                                                 @if(isset($courses[$course_purchase->product_id]))
-                                                    <img src="{{ url('public'}}/img/placeholder.png"
+                                                    <img src="{{ url('public') }}/img/placeholder.png"
                                                          class="w-100 avatar avatar-xxl me-3">
                                                 @endif
 

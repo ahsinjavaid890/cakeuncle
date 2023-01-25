@@ -41,7 +41,7 @@
                                                                     <img src="{{ url('public/img/placeholder.jpeg'}}" class="avatar avatar-xxl me-3" alt="product image">
 
                                                                 @else
-                                                                    <img src="{{ url('public'}}/uploads/{{$course_in_cart->image}}" class="w-100 avatar avatar-xxl me-3">
+                                                                    <img src="{{ url('public') }}/uploads/{{$course_in_cart->image}}" class="w-100 avatar avatar-xxl me-3">
                                                                 @endif
 
 
@@ -88,7 +88,7 @@
                                                                     <img src="{{ url('public/img/placeholder.jpeg'}}" class="avatar avatar-xxl me-3" alt="product image">
 
                                                                 @else
-                                                                    <img src="{{ url('public'}}/uploads/{{$ebook_in_cart->image}}" class="w-100 avatar avatar-xxl me-3 ">
+                                                                    <img src="{{ url('public') }}/uploads/{{$ebook_in_cart->image}}" class="w-100 avatar avatar-xxl me-3 ">
                                                                 @endif
 
 

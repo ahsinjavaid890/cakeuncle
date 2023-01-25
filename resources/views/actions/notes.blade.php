@@ -16,7 +16,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     @if(!empty($note->cover_photo))
-                        <img src="{{ url('public'}}/uploads/{{$note->cover_photo}}" class="card-img-top" alt="...">
+                        <img src="{{ url('public') }}/uploads/{{$note->cover_photo}}" class="card-img-top" alt="...">
                     @endif
 
                     <div class="card-body">

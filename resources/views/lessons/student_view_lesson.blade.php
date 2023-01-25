@@ -47,7 +47,7 @@
                         <div class="position-relative mb-3">
 
                             @if(!empty($lesson->video))
-                                <iframe controlsList="nodownload" class="embed-responsive-item w-100 height-400  border-radius-lg shadow-lg mt-3" src="{{ url('public'}}/uploads/{{$lesson->video}}" type="video/mp4">
+                                <iframe controlsList="nodownload" class="embed-responsive-item w-100 height-400  border-radius-lg shadow-lg mt-3" src="{{ url('public') }}/uploads/{{$lesson->video}}" type="video/mp4">
                                 </iframe>
 
                             @elseif(!empty($lesson->youtube_video))
@@ -56,7 +56,7 @@
 
 
                             @else
-                                <img src="{{ url('public'}}/img/placeholder.jpeg" class="w-100 border-radius-lg shadow-lg mt-3">
+                                <img src="{{ url('public') }}/img/placeholder.jpeg" class="w-100 border-radius-lg shadow-lg mt-3">
 
                             @endif
                         </div>

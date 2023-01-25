@@ -20,7 +20,7 @@
                                 </div>
                             @else
 
-                                <img src="{{ url('public'}}/uploads/{{$students[$order->student_id]->photo}}"
+                                <img src="{{ url('public') }}/uploads/{{$students[$order->student_id]->photo}}"
                                      class="avatar avatar-md rounded-circle  shadow-sm">
                             @endif
                         </div>

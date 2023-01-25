@@ -257,7 +257,7 @@
     </div>
 </footer>
 
-<script src="{{ url('public'}}/js/app.js?v=94"></script>
+<script src="{{ url('public') }}/js/app.js?v=94"></script>
 
 @yield('script')
 

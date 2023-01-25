@@ -7,7 +7,7 @@
             <div class="row ">
                 <div class="card ">
                     <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" @if(!empty($student->cover_photo))
-                    style="background-image: url('{{ url('public'}}/uploads/{{$student->cover_photo}}'); background-position-y: 50%;"
+                    style="background-image: url('{{ url('public') }}/uploads/{{$student->cover_photo}}'); background-position-y: 50%;"
                             @endif>
                         <span class="mask bg-dark-alt"></span>
                         <div class="card-body position-relative z-index-1 h-100 ">
@@ -45,10 +45,10 @@
                                     <div class=" card-img">
                                         <a class="d-block shadow-xl border-radius-xl">
                                             @if(empty($course->image))
-                                                <img src="{{ url('public'}}/img/placeholder.png"
+                                                <img src="{{ url('public') }}/img/placeholder.png"
                                                      class="w-100 border-radius-lg shadow-sm mt-3">
                                             @else
-                                                <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
+                                                <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
                                             @endif
                                         </a>
                                         <div class="card-body px-1 pb-0">
@@ -118,10 +118,10 @@
                                         <div class="position-relative">
                                             <!-- Image -->
                                             @if(empty($product->image))
-                                                <img src="{{ url('public'}}/img/placeholder.jpeg"
+                                                <img src="{{ url('public') }}/img/placeholder.jpeg"
                                                      class="w-100 border-radius-lg shadow-lg p-5">
                                             @else
-                                                <img src="{{ url('public'}}/uploads/{{$product->image}}" class=" p-5  card-img-top">
+                                                <img src="{{ url('public') }}/uploads/{{$product->image}}" class=" p-5  card-img-top">
                                             @endif
                                         </div>
                                         <!-- Card body -->

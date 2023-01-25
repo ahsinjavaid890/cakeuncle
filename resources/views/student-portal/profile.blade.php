@@ -4,7 +4,7 @@
 
 
     <div class="page-header card min-height-250 "@if(!empty($student->cover_photo))
-    style="background-image: url('{{ url('public'}}/uploads/{{$student->cover_photo}}'); background-position-y: 50%;"
+    style="background-image: url('{{ url('public') }}/uploads/{{$student->cover_photo}}'); background-position-y: 50%;"
             @endif
     >
 
@@ -20,7 +20,7 @@
                                 <h2 class="text-info-light text-uppercase fw-normal mt-1">{{$student->first_name['0']}}{{$student->last_name['0']}}</h2>
                             </div>
                         @else
-                            <img src="{{ url('public'}}/uploads/{{$student->photo}}" class="w-100 border-radius-sm ">
+                            <img src="{{ url('public') }}/uploads/{{$student->photo}}" class="w-100 border-radius-sm ">
                         @endif
 
                     </div>

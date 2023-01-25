@@ -8,7 +8,7 @@
                 <!-- LOGO -->
 
                 @if(!empty($super_settings['logo']))
-                    <img src="{{ url('public'}}/uploads/{{$super_settings['logo']}}" class="navbar-brand-img h-100 mb-3" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '30'}}px;" alt="...">
+                    <img src="{{ url('public') }}/uploads/{{$super_settings['logo']}}" class="navbar-brand-img h-100 mb-3" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '30'}}px;" alt="...">
                 @else
                     <span class=" font-weight-bold mb-3">{{config('app.name')}}</span>
             @endif

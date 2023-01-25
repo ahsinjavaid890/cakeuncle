@@ -25,10 +25,10 @@
                     <div class="position-relative">
                         <a class="d-block shadow-xl border-radius-xl">
                             @if(empty($course->image))
-                                <img src="{{ url('public'}}/img/placeholder.png"
+                                <img src="{{ url('public') }}/img/placeholder.png"
                                      class="w-100 border-radius-lg shadow-sm mt-3">
                             @else
-                                <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
+                                <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
                             @endif
                         </a>
                     </div>

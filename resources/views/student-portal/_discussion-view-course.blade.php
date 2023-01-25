@@ -41,10 +41,10 @@
                         <!-- Image and video -->
                         <div class="col-12 position-relative">
                             @if(empty($course->image))
-                                <img src="{{ url('public'}}/img/placeholder.jpeg"
+                                <img src="{{ url('public') }}/img/placeholder.jpeg"
                                      class="w-100 border-radius-sm">
                             @else
-                                <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100  border-radius-sm ">
+                                <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100  border-radius-sm ">
                             @endif
                         </div>
 
@@ -100,7 +100,7 @@
                                                                     <h6 class="text-info-light fw-normal text-uppercase mt-1 ">{{ $user->first_name['0']}}{{ $user->last_name['0']}}</h6>
                                                                 </div>
                                                             @else
-                                                                <img src="{{ url('public'}}/uploads/{{ $user->photo}}" class="rounded-circle avatar shadow">
+                                                                <img src="{{ url('public') }}/uploads/{{ $user->photo}}" class="rounded-circle avatar shadow">
                                                         @endif
 
                                                         <!-- Info -->
@@ -130,7 +130,7 @@
                                                                             <h6 class="text-white fw-normal text-uppercase mt-1 ">{{ $user->first_name['0']}}{{ $user->last_name['0']}}</h6>
                                                                         </div>
                                                                     @else
-                                                                        <img src="{{ url('public'}}/uploads/{{ $user->photo}}" class="rounded-circle avatar shadow">
+                                                                        <img src="{{ url('public') }}/uploads/{{ $user->photo}}" class="rounded-circle avatar shadow">
                                                                 @endif
 
                                                                 <!-- Info -->
@@ -179,7 +179,7 @@
                                                         @if(!empty($users[$comment->admin_id]->photo))
                                                             <a href="javascript:" class=" avatar avatar-md rounded-circle ">
                                                                 <img alt="" class="avatar rounded-circle flex-shrink-0"
-                                                                     src="{{ url('public'}}/uploads/{{$users[$comment->admin_id]->photo}}">
+                                                                     src="{{ url('public') }}/uploads/{{$users[$comment->admin_id]->photo}}">
                                                             </a>
                                                         @else
                                                             <div
@@ -193,7 +193,7 @@
                                                         @if(!empty($students[$comment->student_id]->photo))
                                                             <a href="javascript:" class=" avatar avatar-md rounded-circle ">
                                                                 <img alt="" class="avatar rounded-circle flex-shrink-0"
-                                                                     src="{{ url('public'}}/uploads/{{$students[$comment->student_id]->photo}}">
+                                                                     src="{{ url('public') }}/uploads/{{$students[$comment->student_id]->photo}}">
                                                             </a>
                                                         @else
                                                             <div

@@ -33,7 +33,7 @@
 
                                         </div>
                                     @else
-                                        <img src="{{ url('public'}}/uploads/{{$user->photo}}" class="w-100 border-radius-lg shadow-sm">
+                                        <img src="{{ url('public') }}/uploads/{{$user->photo}}" class="w-100 border-radius-lg shadow-sm">
                                     @endif
 
                                 </div>

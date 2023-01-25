@@ -54,7 +54,7 @@
                                                     </div>
                                                 @else
 
-                                                    <img src="{{ url('public'}}/uploads/{{$student->photo}}"
+                                                    <img src="{{ url('public') }}/uploads/{{$student->photo}}"
                                                           class="avatar avatar-md rounded-circle  shadow-sm">
                                                 @endif
                                             </div>

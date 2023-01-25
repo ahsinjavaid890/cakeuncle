@@ -35,7 +35,7 @@
                                             <h6 class="text-white fw-normal text-uppercase mt-1 ">{{ $admin->first_name['0']}}{{ $admin->last_name['0']}}</h6>
                                         </div>
                                     @else
-                                        <img src="{{ url('public'}}/uploads/{{ $admin->photo}}" class="rounded-circle avatar shadow">
+                                        <img src="{{ url('public') }}/uploads/{{ $admin->photo}}" class="rounded-circle avatar shadow">
                                     @endif
 
                                     <div class="ms-3">
@@ -87,7 +87,7 @@
                                             <h6 class="text-white  fw-normal mt-1 text-uppercase">{{$selected_admin->first_name['0']}}{{$selected_admin->last_name['0']}}</h6>
                                         </div>
                                     @else
-                                        <img src="{{ url('public'}}/uploads/{{$selected_admin->photo}}" class="rounded-circle avatar shadow">
+                                        <img src="{{ url('public') }}/uploads/{{$selected_admin->photo}}" class="rounded-circle avatar shadow">
                                     @endif
                                     <div class="ms-3">
                                         <h6 class="mb-0 d-block">{{$selected_admin->first_name}} {{$selected_admin->last_name}}</h6>

@@ -41,7 +41,7 @@
                                     <a  class="avatar avatar-sm rounded-circle"
                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
                                        title="{{$stu->first_name}}">
-                                        <img src="{{ url('public'}}/uploads/{{$stu->photo}}"
+                                        <img src="{{ url('public') }}/uploads/{{$stu->photo}}"
                                              alt="team1">
                                     </a>
 
@@ -81,7 +81,7 @@
 
                                 <div class="position-relative">
                                     @if (!empty($landingpage))
-                                        <img src="{{ url('public'}}/uploads/{{$landingpage->background_image}}" alt="" class="img-fluid  rounded-3">
+                                        <img src="{{ url('public') }}/uploads/{{$landingpage->background_image}}" alt="" class="img-fluid  rounded-3">
                                     @endif
                                 </div>
 
@@ -94,7 +94,7 @@
                                                 <a  class="avatar avatar-sm rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="{{$stu->first_name}}">
-                                                    <img src="{{ url('public'}}/uploads/{{$stu->photo}}"
+                                                    <img src="{{ url('public') }}/uploads/{{$stu->photo}}"
                                                          alt="team1">
                                                 </a>
                                             @else
@@ -147,10 +147,10 @@
                                 <div class="card-image border-radius-lg position-relative">
                                     <a href="javascript:;">
                                         @if(empty($course->image))
-                                            <img src="{{ url('public'}}/img/placeholder.jpeg"
+                                            <img src="{{ url('public') }}/img/placeholder.jpeg"
                                                  class="w-100 border-radius-lg move-on-hover shadow mt-3">
                                         @else
-                                            <img src="{{ url('public'}}/uploads/{{$course->image}}" class="w-100 border-radius-lg move-on-hover shadow mt-3">
+                                            <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100 border-radius-lg move-on-hover shadow mt-3">
                                         @endif
 
                                     </a>
@@ -194,7 +194,7 @@
                                         <div class="author align-items-center">
 
                                     @if(!empty($users[$course->admin_id]->photo))
-                                                <img alt="" class=" avatar rounded-circle " src="{{ url('public'}}/uploads/{{$users[$course->admin_id]->photo}}">
+                                                <img alt="" class=" avatar rounded-circle " src="{{ url('public') }}/uploads/{{$users[$course->admin_id]->photo}}">
                                             @else
                                                 <div class="avatar  rounded-circle bg-purple-light  border-radius-sm ">
                                             <h6 class="text-purple mt-1">{{$users[$course->admin_id]->first_name[0]}}{{$users[$course->admin_id]->last_name[0]}}</h6>
@@ -269,10 +269,10 @@
                                         <div class="col-xl-6 text-center my-auto px-7 mt-md-auto mt-4">
                                             <div class="avatar rounded-circle avatar-xxl position-relative border-avatar">
                                                 @if(empty($landingpage->testimonial1_image))
-                                                    <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
+                                                    <img src="{{ url('public') }}/img/user-avatar-placeholder.png"
                                                          class="w-100 border-radius-sm avatar-xxl shadow-sm">
                                                 @else
-                                                    <img src="{{ url('public'}}/uploads/{{$landingpage->testimonial1_image}}" class="w-100 border-radius-sm ">
+                                                    <img src="{{ url('public') }}/uploads/{{$landingpage->testimonial1_image}}" class="w-100 border-radius-sm ">
                                                 @endif
                                             </div>
                                             <h5 class="text-white"> @if (!empty($landingpage))
@@ -306,10 +306,10 @@
                                         <div class="col-xl-6 text-center my-auto px-7 mt-md-auto mt-4">
                                             <div class=" avatar rounded-circle avatar-xxl position-relative border-avatar ">
                                                 @if(empty($landingpage->testimonial2_image))
-                                                    <img src="{{ url('public'}}/img/user-avatar-placeholder.png"
+                                                    <img src="{{ url('public') }}/img/user-avatar-placeholder.png"
                                                          class="avatar mb-3 avatar-xxl rounded-circle bg-purple-light  border-radius-md ">
                                                 @else
-                                                    <img src="{{ url('public'}}/uploads/{{$landingpage->testimonial2_image}}" class=" w-100 border-radius-sm rounder-circle ">
+                                                    <img src="{{ url('public') }}/uploads/{{$landingpage->testimonial2_image}}" class=" w-100 border-radius-sm rounder-circle ">
                                                 @endif
                                             </div>
                                             <h5 class="text-white"> @if (!empty($landingpage))
@@ -349,10 +349,10 @@
 
                                     @if(empty($blog->cover_photo))
 
-                                        <img src="{{ url('public'}}/img/placeholder.jpeg"
+                                        <img src="{{ url('public') }}/img/placeholder.jpeg"
                                              class="w-100 border-radius-lg move-on-hover shadow mt-3">
                                     @else
-                                        <img src="{{ url('public'}}/uploads/{{$blog->cover_photo}}" class="img-fluid border-radius-lg">
+                                        <img src="{{ url('public') }}/uploads/{{$blog->cover_photo}}" class="img-fluid border-radius-lg">
                                     @endif
 
                                 </a>
@@ -373,7 +373,7 @@
                                 </p>
                                 <div class="author align-items-center">
                                     @if(!empty($users[$blog->admin_id]->photo))
-                                        <img alt="" class=" avatar shadow " src="{{ url('public'}}/uploads/{{$users[$blog->admin_id]->photo}}">
+                                        <img alt="" class=" avatar shadow " src="{{ url('public') }}/uploads/{{$users[$blog->admin_id]->photo}}">
                                     @else
                                         <div class="avatar mt-4 rounded-circle bg-purple-light  border-radius-md ">
                                             <h6 class="text-purple mt-1">{{$users[$blog->admin_id]->first_name[0]}}{{$users[$blog->admin_id]->last_name[0]}}</h6>
@@ -417,10 +417,10 @@
                         <div class="card card-blog card-plain">
                             <a href="javascript:;">
                                 @if(empty($ebook->image))
-                                    <img src="{{ url('public'}}/img/placeholder.jpeg"
+                                    <img src="{{ url('public') }}/img/placeholder.jpeg"
                                          class="w-100 border-radius-lg shadow-lg p-4">
                                 @else
-                                    <img src="{{ url('public'}}/uploads/{{$ebook->image}}" class=" p-5 border-radius-sm  card-img-top">
+                                    <img src="{{ url('public') }}/uploads/{{$ebook->image}}" class=" p-5 border-radius-sm  card-img-top">
                                 @endif
                             </a>
                             <div class="card-body px-0">
@@ -505,10 +505,10 @@
                         <div class="position-relative">
 
                             @if (!empty($landingpage))
-                                <img src="{{ url('public'}}/uploads/{{$landingpage->story2_image}}" alt="" class="img-fluid  rounded-3">
+                                <img src="{{ url('public') }}/uploads/{{$landingpage->story2_image}}" alt="" class="img-fluid  rounded-3">
                             @endif
                         </div>
-                        <div class="colored-shadow" style="background-image: url('{{ url('public'}}/img/feature.jpg');"></div>
+                        <div class="colored-shadow" style="background-image: url('{{ url('public') }}/img/feature.jpg');"></div>
                     </div>
                 </div>
                 <div class="col-md-5 m-auto">
