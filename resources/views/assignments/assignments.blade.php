@@ -54,7 +54,7 @@
                                                 <a href="javascript:" class="avatar avatar-sm rounded-circle"
                                                    data-bs-toggle="tooltip" data-bs-placement="top"
                                                    title="{{$students[$member]->first_name}}">
-                                                    <img src="{{PUBLIC_DIR}}/uploads/{{$students[$member]->photo}}"
+                                                    <img src="{{ url('public') }}/uploads/{{$students[$member]->photo}}"
                                                     >
                                                 </a>
 

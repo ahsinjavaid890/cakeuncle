@@ -358,8 +358,8 @@
 </main>
 
 <!--   Core JS Files   -->
-<script src="{{PUBLIC_DIR}}/js/app.js?v=81"></script>
-<script src="{{PUBLIC_DIR}}/lib/tinymce/tinymce.min.js?v=93"></script>
+<script src="{{ url('public') }}/js/app.js?v=81"></script>
+<script src="{{ url('public') }}/lib/tinymce/tinymce.min.js?v=93"></script>
 
 <script>
     "use strict"
