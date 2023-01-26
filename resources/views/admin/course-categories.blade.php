@@ -87,7 +87,7 @@
                 </div>
                 <div class="modal-body">
                     <div id="sp_result_div"></div>
-                    <form method="post" action="{{ url('category-save')}}" id="form_main" class="">
+                    <form method="post" action="{{ url('category-save') }}" id="form_main" class="">
                         <!-- Form -->
                         <div class="form-group mb-4">
                             <label for="email">{{__('Name')}}</label>
@@ -127,7 +127,7 @@
             $form_main.on('submit',function (event) {
                 event.preventDefault();
                 $btn_submit.prop('disabled',true);
-                $.post('/category-save',$form_main.serialize()).done(function () {
+                $.post('{{ url("category-save") }}',$form_main.serialize()).done(function () {
                     location.reload();
                 }).fail(function (data) {
                     let obj = $.parseJSON(data.responseText);

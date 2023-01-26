@@ -256,7 +256,7 @@
 
         <div class="offcanvas-body">
 
-            <form action="/save-testimonial-section" method="post" enctype="multipart/form-data">
+            <form action="{{ url('save-testimonial-section') }}" method="post" enctype="multipart/form-data">
 
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -474,7 +474,7 @@
         </div>
         <div class="offcanvas-body">
 
-            <form action="/save-story2-section" method="post" enctype="multipart/form-data">
+            <form action="{{ url('save-story2-section') }}" method="post" enctype="multipart/form-data">
 
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -573,7 +573,7 @@
             <h5 id="offcanvasRightLabel">{{__('Call to Action Section ')}}</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <form action="/save-calltoaction-section" method="post" enctype="multipart/form-data">
+        <form action="{{ url('save-calltoaction-section') }}" method="post" enctype="multipart/form-data">
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul class="list-unstyled">

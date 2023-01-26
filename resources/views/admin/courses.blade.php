@@ -49,7 +49,7 @@
                             <div class="d-flex px-2 py-1">
                                 <div>
                                     @if(empty($course->image))
-                                        <img src="{{ url('public/img/placeholder.png'}}"
+                                        <img src="{{ url('public/img/placeholder.png') }}"
                                              class="w-100 border-radius-lg shadow-sm mt-2">
                                     @else
                                         <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-2 avatar-xxl">

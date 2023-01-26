@@ -26,13 +26,13 @@
                         </p>
 
                         <div class="text-start buttons mb-4">
-                            <a href="{{ url('course')}}" type="button" class="btn  btn-dark-blue text-white mt-4">{{__('Buy Courses')}}</a>
-                            <a href="{{ url('signup')}}" type="button" class="btn  btn-success text-white mt-4">{{__('Get Started')}}</a>
+                            <!-- <a href="{{ url('course')}}" type="button" class="btn  btn-dark-blue text-white mt-4">{{__('Buy Courses')}}</a> -->
+                            <a style="width: 40%;" href="{{ url('signup')}}" type="button" class="btn  btn-success text-white mt-4">{{__('Get Started')}}</a>
 
                         </div>
-                        <p class="text-start  mt-2">{{__('Newly enrolled students')}}</p>
+                        <!-- <p class="text-start  mt-2">{{__('Newly enrolled students')}}</p> -->
 
-                        <div class="text-start avatar-group d-flex mt-2">
+                       <!--  <div class="text-start avatar-group d-flex mt-2">
 
 
                             @foreach($students as $stu)
@@ -60,7 +60,7 @@
                             <span class="fw-bolder"> {{__('+ more')}}</span>
 
 
-                        </div>
+                        </div> -->
 
 
                     </div>
@@ -72,12 +72,12 @@
                             <div class="position-relative d-flex flex-column align-items-center justify-content-center h-100 ">
 
 
-                                <figure class=" d-none d-md-block position-absolute bottom-0 start-50 translate-middle-x  mb-0">
+                                <!-- <figure class=" d-none d-md-block position-absolute bottom-0 start-50 translate-middle-x  mb-0">
                                     <svg  width="650px" height="658px"  id="10015.io" viewBox="0 0 480 480"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#EBF3FF" >
                                         <path fill="fill-primary" d="M452.5,292.5Q440,345,401.5,382Q363,419,314,431.5Q265,444,212,449Q159,454,125,413Q91,372,57.5,332.5Q24,293,38.5,243.5Q53,194,63.5,143.5Q74,93,116.5,59.5Q159,26,212,30.5Q265,35,314,48.5Q363,62,391.5,104Q420,146,442.5,193Q465,240,452.5,292.5Z" />
                                     </svg>
 
-                                </figure>
+                                </figure> -->
 
                                 <div class="position-relative">
                                     @if (!empty($landingpage))
@@ -85,9 +85,8 @@
                                     @endif
                                 </div>
 
-                                <div class="p-3 bg-success  border-radius-2xl d-inline-block rounded-4 shadow-lg position-absolute top-50 end-0 translate-middle-y mt-n7 z-index-1 d-none d-md-block" >
+                                <!-- <div class="p-3 bg-success  border-radius-2xl d-inline-block rounded-4 shadow-lg position-absolute top-50 end-0 translate-middle-y mt-n7 z-index-1 d-none d-md-block" >
                                     <p class="text-white">{{__('Secret of my success')}}</p>
-                                    <!-- Avatar group -->
                                     <div class="avatar-group d-flex">
                                         @foreach($students as $stu)
                                             @if(!empty($stu->photo))
@@ -105,22 +104,20 @@
                                             @endif
                                         @endforeach
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <div class="p-3 bg-info border-radius-2xl border-light shadow rounded-4 position-absolute bottom-0 start-0 z-index-9 d-none d-xl-block mb-5 ms-5">
+                                <!-- <div class="p-3 bg-info border-radius-2xl border-light shadow rounded-4 position-absolute bottom-0 start-0 z-index-9 d-none d-xl-block mb-5 ms-5">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <!-- Icon -->
                                         <span class="avatar  bg-info-light rounded-circle mx-auto">
                                             <i class="fas fa-paint-brush text-info text-center"></i>
                                         </span>
-                                        <!-- Info -->
                                         <div class="text-start ms-3">
                                             <h6 class="mb-0 text-white">{{__('Congratulations')}} <span class="ms-4"></span></h6>
                                             <p class="mb-0 small text-white">{{__('You are enrolled')}}</p>
 
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -134,8 +131,8 @@
     <section class="py-3 mt-4">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <h3 class="mb-5">{{__('Check our new courses')}}</h3>
+                <div class="col-lg-12 text-center">
+                    <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Check our new courses')}}</h1>
                 </div>
             </div>
             <div class="row">
@@ -223,10 +220,15 @@
 
     </section>
 
-    <section class="py-7 position-relative">
+    <section style="background-color: #f3dfe8;" class="py-3 position-relative">
         <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-12 text-center">
+                    <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Testimonials')}}</h1>
+                </div>
+            </div>
             <div class="row">
-                <div class="col-md-4">
+                <!-- <div class="col-md-4">
                     <div class="card bg-info-light h-100 ">
                         <div class="card-body  text-center mt-8">
                             <h2 class="mb-5">
@@ -237,8 +239,8 @@
                         </div>
                     </div>
 
-                </div>
-                <div class="col-md-8">
+                </div> -->
+                <div class="col-md-12">
                     <div id="carouselExampleTestimonials-11" class="carousel carousel-fade slide shadow-lg" data-bs-ride="carousel">
                         <ol class="carousel-indicators z-index-2">
                             <li data-bs-target="#carouselExampleTestimonials-11" data-bs-slide-to="0" class="active"></li>
@@ -246,18 +248,18 @@
 
                         </ol>
                         <div class="carousel-inner rounded-3">
-                            <div class="carousel-item  h-100 bg-cover active" >
+                            <div class="carousel-item  h-100  active" >
                                 <div class="z-index-1 my-md-8 my-6 position-relative z-index-2">
                                     <div class="row h-100">
 
 
                                         <div class="col-xl-6 my-auto px-6">
-                                            <h5 class="text-white font-weight-normal mb-3">
+                                            <h5 class="font-weight-normal mb-3">
                                                 @if (!empty($landingpage))
                                                     {!! clean($landingpage->testimonial1_paragraph) !!}
                                                 @endif
                                             </h5>
-                                            <p class="text-white font-weight-bold">
+                                            <p class="font-weight-bold">
                                                 @if (!empty($landingpage))
                                                     {{$landingpage->testimonial1_student_name}}
                                                 @endif <span class="text-xs font-weight-normal">
@@ -275,21 +277,21 @@
                                                     <img src="{{ url('public') }}/uploads/{{$landingpage->testimonial1_image}}" class="w-100 border-radius-sm ">
                                                 @endif
                                             </div>
-                                            <h5 class="text-white"> @if (!empty($landingpage))
+                                            <h5 class=""> @if (!empty($landingpage))
                                                     {{$landingpage->testimonial1_student_name}}
                                                 @endif</h5>
                                         </div>
                                     </div>
                                 </div>
-                                <span class="mask bg-info opacity-10 z-index-0 rounded-3"></span>
+                                <span class="mask  opacity-10 z-index-0 rounded-3"></span>
                             </div>
 
 
-                            <div class="carousel-item bg-cover  h-100">
+                            <div class="carousel-item   h-100">
                                 <div class="z-index-1 my-md-8 my-6 position-relative z-index-2">
                                     <div class="row h-100">
                                         <div class="col-xl-6 my-auto px-6">
-                                            <h5 class="text-white font-weight-normal mb-3">
+                                            <h5 class="font-weight-normal mb-3">
                                                 @if (!empty($landingpage))
                                                     {!! clean($landingpage->testimonial2_paragraph) !!}
                                                 @endif
@@ -312,13 +314,13 @@
                                                     <img src="{{ url('public') }}/uploads/{{$landingpage->testimonial2_image}}" class=" w-100 border-radius-sm rounder-circle ">
                                                 @endif
                                             </div>
-                                            <h5 class="text-white"> @if (!empty($landingpage))
+                                            <h5 class=""> @if (!empty($landingpage))
                                                     {{$landingpage->testimonial2_student_name}}
                                                 @endif</h5>
                                         </div>
                                     </div>
                                 </div>
-                                <span class="mask bg-indigo opacity-10 z-index-0 rounded-3"></span>
+                                <span class="mask opacity-10 z-index-0 rounded-3"></span>
                             </div>
 
                         </div>
@@ -333,11 +335,12 @@
 
     <section class="py-6 bg-gray-100">
         <div class="container">
-            <div class="col-12 text-center">
-                <h3 class="">{{__('Latest Blog Posts')}}</h3>
-                <p class="lead ">{{__('Read our blogs to increase your knowledge, we post new article every week.')}}</p>
+            <div class="row mb-5">
+                <div class="col-lg-12 text-center">
+                    <h1 class="fw-bolder display-5 text-center mt-2 mb-0">Latest Blog Posts</h1>
+                    <p class="lead ">{{__('Read our blogs to increase your knowledge, we post new article every week.')}}</p>
+                </div>
             </div>
-
             <div class="row">
 
 
@@ -400,8 +403,8 @@
 
 
 
-    <section class="py-8 bg-dark-alt position-relative overflow-hidden">
-        <img src="{{ url('public/assets/img/shapes/waves-white.svg'}}" class="position-absolute top-0 d-lg-block d-none opacity-6" alt="">
+   <!--  <section class="py-8 bg-dark-alt position-relative overflow-hidden">
+        <img src="{{ url('public/assets/img/shapes/waves-white.svg') }}" class="position-absolute top-0 d-lg-block d-none opacity-6" alt="">
 
         <div class="container">
             <div class="row mb-5">
@@ -451,8 +454,8 @@
             </svg>
         </div>
     </section>
-
-    <section class="bg-darkblue position-relative overflow-hidden">
+ -->
+<!--     <section class="bg-darkblue position-relative overflow-hidden">
         <img src="{{('public/assets/img/shapes/waves-white.svg')}}" alt="pattern-lines" class="position-absolute opacity-6">
         <div class="position-absolute w-100 z-inde-1 top-0 mt-n3">
             <svg width="100%" viewBox="0 -2 1920 157" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -479,16 +482,16 @@
                 </g>
             </svg>
         </div>
-    </section>
+    </section> -->
     <!-- START Testimonials w/ bg image & faded gradient & company logo -->
 
     <!-- END Testimonials w/ bg image & faded gradient & company logo -->
 
-    <div class="position-absolute w-100 z-inde-1 ">
+    <!-- <div class="position-absolute w-100 z-inde-1 ">
 
-    </div>
+    </div> -->
 
-    <section class="py-7 overflow-hidden">
+  <!--   <section class="py-7 overflow-hidden">
 
         <div class="container ">
             <div class="row">
@@ -529,10 +532,10 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="container mb-1 mb-md-3 mb-lg-4 mt-5">
-        <div class="bg-info-light rounded-3 overflow-hidden">
+        <div style="background-color: #f3dfe8;" class="rounded-3 overflow-hidden">
             <div class="row align-items-center">
                 <div class="col-xl-4 col-md-5 offset-lg-1">
                     <div class="pt-5 pb-3 pb-md-5 px-4 px-lg-0  text-md-start">

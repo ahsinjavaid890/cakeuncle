@@ -125,6 +125,20 @@ class FrontendController extends WebsiteBaseController
         return view('frontend.about');
     }
 
+    public function menu()
+    {
+        return view('frontend.menu');
+    }
+    public function forhomebakers()
+    {
+        return view('frontend.forhomebakers');
+    }
+    public function gallery()
+    {
+        return view('frontend.gallery');
+    }
+    
+
     public function shop(Request $request)
     {
         $request->validate([
@@ -412,7 +426,7 @@ class FrontendController extends WebsiteBaseController
 
     public function contact()
     {
-        return \view("frontend.contact");
+        return view("frontend.contact");
     }
 
     public function pricing()

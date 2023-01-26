@@ -84,6 +84,13 @@ Route::post("/save-product", [ShopController::class, "productPost"]);
 Route::get("/pricing", [FrontendController::class, "pricing"]);
 Route::get("/privacy", [FrontendController::class, "privacy"]);
 Route::get("/about", [FrontendController::class, "about"]);
+Route::get("/menu", [FrontendController::class, "menu"]);
+Route::get("/forhomebakers", [FrontendController::class, "forhomebakers"]);
+Route::get("/gallery", [FrontendController::class, "gallery"]);
+
+
+
+
 Route::get("/termsandconditions", [
     FrontendController::class,
     "termsCondition",

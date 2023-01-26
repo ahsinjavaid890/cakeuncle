@@ -20,7 +20,7 @@
 
 <nav class="navbar shadow-none border-bottom  navbar-expand-lg navbar-light fixed-top bg-white py-3">
     <div class="container">
-        <a class="navbar-brand font-weight-bold" href="/" rel="tooltip"  data-placement="bottom" target="_blank">
+        <a class="navbar-brand font-weight-bold" href="{{ url('') }}" rel="tooltip"  data-placement="bottom" >
             @if(!empty($super_settings['logo']))
                 <img src="{{ url('public') }}/uploads/{{$super_settings['logo']}}" class="navbar-brand-img h-100" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '30'}}px;" alt="...">
             @else
@@ -52,32 +52,38 @@
             <ul class="navbar-nav bg-transparent shadow-none navbar-nav-hover w-60  mx-auto">
 
                 <li class="nav-item  ms-lg-auto mx-2">
-                    <a  href="{{ url('') }}" class=" fw-bolder  ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                    <a  href="{{ url('') }}" class="   ps-2 d-flex justify-content-between cursor-pointer align-items-center">
                         {{__('Home')}}
 
                     </a>
                 </li>
 
                 <li class="nav-item   ms-lg-auto mx-2">
-                    <a class=" fw-bolder ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('about') }}" >
+                    <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('about') }}" >
                         {{__('About')}}
 
                     </a>
                 </li>
                 <li class="nav-item   ms-lg-auto mx-2">
-                    <a class=" fw-bolder ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('shop') }}" >
-                        {{__('For HomeBakers')}}
+                    <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('menu') }}" >
+                        {{__('Menu')}}
 
                     </a>
                 </li>
                 <li class="nav-item   ms-lg-auto mx-2">
-                    <a class=" fw-bolder ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('blog') }}">
+                    <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('forhomebakers') }}" >
+                        {{__('For Home Bakers')}}
+
+                    </a>
+                </li>
+                <li class="nav-item   ms-lg-auto mx-2">
+                    <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('gallery') }}">
                         {{__('Gallery')}}
 
                     </a>
                 </li>
                 <li class="nav-item  ms-lg-auto mx-2">
-                    <a class=" fw-bolder ps-2 d-flex justify-content-between cursor-pointer align-items-center me-5" href="{{ url('contact') }}" target="_blank">
+                    <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-5" href="{{ url('contact') }}" target="_blank">
 
                         {{__('Contact')}}
 
@@ -106,7 +112,7 @@
 
                     @else
 
-                        <a href="{{ url('signup') }}" class="btn btn-md  btn-dark-blue btn-rounded mb-0 me-1">{{__('Signup')}}</a>
+                        <a href="{{ url('signup') }}" class="btn btn-md  btn-dark-blue btn-rounded mb-0 me-1">{{__('Login / Sign Up ')}}</a>
 
                     @endif
 
