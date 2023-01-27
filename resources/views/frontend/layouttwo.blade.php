@@ -13,6 +13,18 @@
     </title>
     <link id="pagestyle" href="{{ url('public/css/app.css') }}?v=19" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url('public/assets/css/vendor/lastudioicons.css')}}">
+    <link rel="stylesheet" href="{{ url('public/assets/css/vendor/dliconoutline.css')}}">
+
+    <!-- Plugins CSS (All Plugins Files) -->
+    <link rel="stylesheet" href="{{ url('public/assets/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{ url('public/assets/css/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{ url('public/assets/css/ion.rangeSlider.min.css')}}">
+    <link rel="stylesheet" href="{{ url('public/assets/css/lightgallery-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{ url('public/assets/css/magnific-popup.css')}}">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{{ url('public/assets/css/style.css')}}">
     @yield('head')
 
 </head>
@@ -270,6 +282,22 @@
 </footer>
 
 <script src="{{ url('public') }}/js/app.js?v=94"></script>
+ <!-- Vendors JS -->
+    <script src="{{ url('public/assets/js/vendor/modernizr-3.11.7.min.js')}}"></script>
+    <script src="{{ url('public/assets/js/vendor/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{ url('public/assets/js/vendor/jquery-migrate-3.3.2.min.js')}}"></script>
+
+    <!-- Plugins JS -->
+    <script src="{{ url('public/assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ url('public/assets/js/countdown.min.js') }}"></script>
+    <script src="{{ url('public/assets/js/ion.rangeSlider.min.js') }}"></script>
+    <script src="{{ url('public/assets/js/lightgallery.min.js') }}"></script>
+    <script src="{{ url('public/assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url('public/assets/js/ajax.js') }}"></script>
+    <script src="{{ url('public/assets/js/jquery.validate.min.js') }}"></script>
+
+    <!-- Activation JS -->
+    <script src="{{ url('public/assets/js/main.js') }}"></script>
 
 @yield('script')
 

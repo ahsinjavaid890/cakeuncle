@@ -1,4 +1,4 @@
-@extends('frontend.layout')
+@extends('frontend.layouttwo')
 @section('title','Cake Uncle')
 @section('content') 
     <header class="py-5">
@@ -135,24 +135,24 @@
                     <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Check our new courses')}}</h1>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-5">
                 @foreach($courses as $course)
                     @if($course->status !='Draft')
 
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-4 col-sm-6">
                             <div class="card card-plain card-blog">
-                                <div class="card-image border-radius-lg position-relative">
-                                    <a href="javascript:;">
+                                <div class="card-image border-radius-lg position-relative zoom-effect-container"> 
+                                    <a href="javascript:;" class="image-card">
                                         @if(empty($course->image))
                                             <img src="{{ url('public') }}/img/placeholder.jpeg"
-                                                 class="w-100 border-radius-lg move-on-hover shadow mt-3">
+                                                 class="w-100 border-radius-lg move-on-hover shadow ">
                                         @else
-                                            <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100 border-radius-lg move-on-hover shadow mt-3">
+                                            <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100 border-radius-lg move-on-hover shadow ">
                                         @endif
 
                                     </a>
                                 </div>
-                                <div class="card-body px-0">
+                                <div class="card-body px-2">
                                     <h5>
                                         <a href="{{ url('course')}}/{{$course->slug}}" class="text-dark font-weight-bold">{{$course->name}}</a>
                                     </h5>
@@ -161,10 +161,10 @@
                                         <div class="d-flex justify-content-between mb-2">
                                             @if(!empty($categories[$course->category_id]))
                                                 <span class="badge bg-purple-light">
-                        @if(isset($categories[$course->category_id]))
+                                             @if(isset($categories[$course->category_id]))
                                                         {{$categories[$course->category_id]->name}}
                                                     @endif
-                        </span>
+                                                </span>
                                             @endif
 
                                         </div>
@@ -183,23 +183,9 @@
 
                                 </div>
 
-                                <div class=" pt-0 pb-3">
+                                <div class=" pt-0 pb-3 px-2">
 
                                     <div class="d-flex justify-content-between">
-
-                                    <span class="h6 fw-light mb-0">
-                                        <div class="author align-items-center">
-
-                                    
-
-                                    <div class="name ps-3">
-                                        <span>{{$users[$course->admin_id]->first_name}} {{$users[$course->admin_id]->last_name}}</span>
-                                        <div class="stats">
-                                            <small>{{__('Posted ')}}{{$course->updated_at->diffForHumans()}}</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                    </span>
                                         <span class="h5 fw-bolder mb-0">{{formatCurrency($course->price,getWorkspaceCurrency($super_settings))}} </span>
                                     </div>
                                 </div>
@@ -245,119 +231,86 @@
                 </div>
         </div>
     </section>
-    <section style="background-color: #f3dfe8;" class="py-3 position-relative">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-12 text-center">
-                    <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Testimonials')}}</h1>
+    <section class="py-6"style="background-color: #f3dfe8;">
+        <div class="testimonial-active-two my-0 mx-auto" >
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Testimonials')}}</h1>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <!-- <div class="col-md-4">
-                    <div class="card bg-info-light h-100 ">
-                        <div class="card-body  text-center mt-8">
-                            <h2 class="mb-5">
-                                @if (!empty($landingpage))
-                                    {{$landingpage->testimonial_sidecard}}
-                                @endif
-                            </h2>
-                        </div>
-                    </div>
-
-                </div> -->
-                <div class="col-md-12">
-                    <div id="carouselExampleTestimonials-11" class="carousel carousel-fade slide shadow-lg" data-bs-ride="carousel">
-                        <ol class="carousel-indicators z-index-2">
-                            <li data-bs-target="#carouselExampleTestimonials-11" data-bs-slide-to="0" class="active"></li>
-                            <li data-bs-target="#carouselExampleTestimonials-11" data-bs-slide-to="1"></li>
-
-                        </ol>
-                        <div class="carousel-inner rounded-3">
-                            <div class="carousel-item  h-100  active" >
-                                <div class="z-index-1 my-md-8 my-6 position-relative z-index-2">
-                                    <div class="row h-100">
-
-
-                                        <div class="col-xl-6 my-auto px-6">
-                                            <h5 class="font-weight-normal mb-3">
-                                                @if (!empty($landingpage))
-                                                    {!! clean($landingpage->testimonial1_paragraph) !!}
-                                                @endif
-                                            </h5>
-                                            <p class="font-weight-bold">
-                                                @if (!empty($landingpage))
-                                                    {{$landingpage->testimonial1_student_name}}
-                                                @endif <span class="text-xs font-weight-normal">
-                                                   @if (!empty($landingpage))
-                                                        {{$landingpage->testimonial1_occupation}}
-                                                    @endif
-                                                </span></p>
-                                        </div>
-                                        <div class="col-xl-6 text-center my-auto px-7 mt-md-auto mt-4">
-                                            <div class="avatar rounded-circle avatar-xxl position-relative border-avatar">
-                                                @if(empty($landingpage->testimonial1_image))
-                                                    <img src="{{ url('public') }}/img/user-avatar-placeholder.png"
-                                                         class="w-100 border-radius-sm avatar-xxl shadow-sm">
-                                                @else
-                                                    <img src="{{ url('public') }}/uploads/{{$landingpage->testimonial1_image}}" class="w-100 border-radius-sm ">
-                                                @endif
-                                            </div>
-                                            <h5 class=""> @if (!empty($landingpage))
-                                                    {{$landingpage->testimonial1_student_name}}
-                                                @endif</h5>
-                                        </div>
-                                    </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-two text-center">
+                                <div class="testimonial-two_quote">
+                                    <svg width="30" height="30" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.203 16c2.034 0 3.594-1.7 3.594-3.752 0-2.124-1.356-3.61-3.255-3.61-.339 0-.813.07-.881.07C3.864 6.442 5.831 3.611 8 2.124L5.492 0C2.372 2.336 0 6.3 0 10.62 0 14.087 1.966 16 4.203 16zm11 0c2.034 0 3.661-1.7 3.661-3.752 0-2.124-1.423-3.61-3.322-3.61-.339 0-.813.07-.881.07.271-2.266 2.17-5.097 4.339-6.584L16.492 0C13.372 2.336 11 6.3 11 10.62c0 3.468 1.966 5.38 4.203 5.38z" fill="currentColor" fill-rule="nonzero"></path>
+                                    </svg>
                                 </div>
-                                <span class="mask  opacity-10 z-index-0 rounded-3"></span>
-                            </div>
-
-
-                            <div class="carousel-item   h-100">
-                                <div class="z-index-1 my-md-8 my-6 position-relative z-index-2">
-                                    <div class="row h-100">
-                                        <div class="col-xl-6 my-auto px-6">
-                                            <h5 class="font-weight-normal mb-3">
-                                                @if (!empty($landingpage))
-                                                    {!! clean($landingpage->testimonial2_paragraph) !!}
-                                                @endif
-                                            </h5>
-                                            <p class="text-white font-weight-bold">@if (!empty($landingpage))
-                                                    {{$landingpage->testimonial2_student_name}}
-                                                @endif <span class="text-xs font-weight-normal">
-                                                    @if (!empty($landingpage))
-                                                        {{$landingpage->testimonial2_occupation}}
-                                                    @endif</span>
-                                            </p>
-                                        </div>
-
-                                        <div class="col-xl-6 text-center my-auto px-7 mt-md-auto mt-4">
-                                            <div class=" avatar rounded-circle avatar-xxl position-relative border-avatar ">
-                                                @if(empty($landingpage->testimonial2_image))
-                                                    <img src="{{ url('public') }}/img/user-avatar-placeholder.png"
-                                                         class="avatar mb-3 avatar-xxl rounded-circle bg-purple-light  border-radius-md ">
-                                                @else
-                                                    <img src="{{ url('public') }}/uploads/{{$landingpage->testimonial2_image}}" class=" w-100 border-radius-sm rounder-circle ">
-                                                @endif
-                                            </div>
-                                            <h5 class=""> @if (!empty($landingpage))
-                                                    {{$landingpage->testimonial2_student_name}}
-                                                @endif</h5>
-                                        </div>
-                                    </div>
+                                <p class="testimonial-two_text">
+                                    @if (!empty($landingpage))
+                                        {!! clean($landingpage->testimonial2_paragraph) !!}
+                                    @endif
+                                </p>
+                                <div class="testimonial-two_image">
+                                    @if(empty($landingpage->testimonial2_image))
+                                        <img width="56" height="56" src="{{ url('public') }}/img/user-avatar-placeholder.png" alt="Author">
+                                    @else
+                                        <img width="56" height="56" src="{{ url('public') }}/uploads/{{$landingpage->testimonial2_image}}" alt="Author">
+                                    @endif
                                 </div>
-                                <span class="mask opacity-10 z-index-0 rounded-3"></span>
+                                <span class="testimonial-two_name">
+                                    @if (!empty($landingpage))
+                                        {{$landingpage->testimonial2_student_name}}
+                                    @endif 
+                                </span>
+                                <span class="testimonial-two_position">
+                                    @if (!empty($landingpage))
+                                        {{$landingpage->testimonial2_occupation}}
+                                    @endif
+                                </span>
                             </div>
-
                         </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-two text-center">
+                                <div class="testimonial-two_quote">
+                                    <svg width="30" height="30" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.203 16c2.034 0 3.594-1.7 3.594-3.752 0-2.124-1.356-3.61-3.255-3.61-.339 0-.813.07-.881.07C3.864 6.442 5.831 3.611 8 2.124L5.492 0C2.372 2.336 0 6.3 0 10.62 0 14.087 1.966 16 4.203 16zm11 0c2.034 0 3.661-1.7 3.661-3.752 0-2.124-1.423-3.61-3.322-3.61-.339 0-.813.07-.881.07.271-2.266 2.17-5.097 4.339-6.584L16.492 0C13.372 2.336 11 6.3 11 10.62c0 3.468 1.966 5.38 4.203 5.38z" fill="currentColor" fill-rule="nonzero"></path>
+                                    </svg>
+                                </div>
+                                <p class="testimonial-two_text">
+                                    @if (!empty($landingpage))
+                                        {!! clean($landingpage->testimonial1_paragraph) !!}
+                                    @endif
+                                </p>
+                                <div class="testimonial-two_image">
+                                    @if(empty($landingpage->testimonial1_image))
+                                    <img width="56" height="56" src="{{ url('public') }}/img/user-avatar-placeholder.png" alt="Author">
+                                    @else
+                                        <img width="56" height="56" src="{{ url('public') }}/uploads/{{$landingpage->testimonial1_image}}" alt="Author">
+                                    @endif
+                                </div>
+                                <span class="testimonial-two_name"> 
+                                    @if (!empty($landingpage))
+                                        {{$landingpage->testimonial1_student_name}}
+                                    @endif
+                                </span>
+                                <span class="testimonial-two_position">
+                                    @if (!empty($landingpage))
+                                        {{$landingpage->testimonial1_occupation}}
+                                    @endif
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Testimonial Item End -->
+                        <!-- swiper-slide end-->
 
                     </div>
-
                 </div>
             </div>
         </div>
-
     </section>
-
     <section class="py-6 bg-gray-100">
         <div class="container">
             <div class="row mb-5">
@@ -371,7 +324,7 @@
 
                 @foreach($blogs as $blog)
                     <div class="col-lg-4 mb-lg-0 mb-4">
-                        <div class="card">
+                        <div class="card blog-card">
                             <div class="card-header p-0 position-relative z-index-1">
                                 <a href="{{ url('blog')}}/{{$blog->slug}}" class="d-block">
 
