@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ContactSection;
 use App\Models\CookiePolicy;
 use App\Models\Course;
-
+use App\Models\gallary_images;
 use App\Models\LandingPage;
 use App\Models\Lesson;
 
@@ -294,6 +294,28 @@ class AdminController extends AdminBaseController
             "selected_navigation" => "themes",
             "landingpage" => $landingpage,
         ]);
+    }
+
+    public function gallaryimages()
+    {
+        $data = gallary_images::all();
+        return \view("admin.gallaryimages", [
+            "selected_navigation" => "gallaryimages",
+            "data" => $data,
+        ]);
+    }
+
+    public function addnewgallaeryimage(Request $request)
+    {
+        $file = $request->image;
+        $filename = rand() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path('images'), $filename);
+        
+        $newimage = new gallary_images();
+        $newimage->image = $filename;
+        $newimage->save();
+
+        return back()->with('success','Image Added succesfully');
     }
     public function themePages()
     {

@@ -60,6 +60,16 @@ Route::get("/landingpage", [AdminController::class, "landingPage"]);
 Route::get("/themes", [AdminController::class, "themes"]);
 Route::get("/theme-pages", [AdminController::class, "themePages"]);
 
+Route::get("/gallaryimages", [AdminController::class, "gallaryimages"]);
+Route::post("addnewgallaeryimage", [AdminController::class, "addnewgallaeryimage"]);
+
+
+
+
+
+
+
+
 Route::get("/termspage", [AdminController::class, "termsPage"]);
 Route::get("/privacypage", [AdminController::class, "privacyPage"]);
 Route::get("/contactpage", [AdminController::class, "contactPage"]);
