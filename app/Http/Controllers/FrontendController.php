@@ -20,7 +20,7 @@ use App\Models\Setting;
 use App\Models\Student;
 use App\Models\JobType;
 use App\Models\CareerLevel;
-
+use App\Models\gallary_images;
 use App\Models\Terms;
 use App\Models\User;
 use Illuminate\Support\Str;
@@ -135,7 +135,9 @@ class FrontendController extends WebsiteBaseController
     }
     public function gallery()
     {
-        return view('frontend.gallery');
+        $data = gallary_images::all();
+        return view('frontend.gallery', [
+            "data" => $data,]);
     }
     
 

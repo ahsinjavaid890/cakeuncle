@@ -12,6 +12,7 @@
         @yield('title')
     </title>
     <link id="pagestyle" href="{{ url('public/css/app.css') }}?v=19" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @yield('head')
 
 </head>
@@ -22,7 +23,7 @@
     <div class="container">
         <a class="navbar-brand font-weight-bold" href="{{ url('') }}" rel="tooltip"  data-placement="bottom" >
             @if(!empty($super_settings['logo']))
-                <img src="{{ url('public') }}/uploads/{{$super_settings['logo']}}" class="navbar-brand-img h-100" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '30'}}px;" alt="...">
+                <img src="{{ url('public') }}/uploads/{{$super_settings['logo']}}" class="navbar-brand-img h-100" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '50'}}px; width: 150px; " alt="...">
             @else
                 <span class=" font-weight-bold">{{config('app.name')}}</span>
             @endif
@@ -61,12 +62,6 @@
                 <li class="nav-item   ms-lg-auto mx-2">
                     <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('about') }}" >
                         {{__('About')}}
-
-                    </a>
-                </li>
-                <li class="nav-item   ms-lg-auto mx-2">
-                    <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('menu') }}" >
-                        {{__('Menu')}}
 
                     </a>
                 </li>
@@ -112,7 +107,7 @@
 
                     @else
 
-                        <a href="{{ url('signup') }}" class="btn btn-md  btn-dark-blue btn-rounded mb-0 me-1">{{__('Login / Sign Up ')}}</a>
+                        <a href="{{ url('signup') }}" class="btn  btn-success text-white">{{__('Login / Sign Up ')}}</a>
 
                     @endif
 
@@ -127,38 +122,36 @@
 
 <!-- -------- START FOOTER 5 w/ DARK BACKGROUND ------- -->
 
-<footer class="footer pt-5 mt-5">
+<footer class="footer">
     <hr class="horizontal dark mb-5">
     <div class="container">
         <div class=" row">
-            <div class="col-md-5 mb-4 ms-auto">
+            <div class="col-md-3 mb-4 ms-auto">
                 <div>
-                    <h6 class="text-gradient text-dark font-weight-bolder">
-                        @if (!empty($contact))
-                            {{$contact->title}}
-                        @endif
-                    </h6>
-                    @if (!empty($contact))
+                    <div class="footer-logo" >
+                        <img src="{{ url('public') }}/uploads/{{$super_settings['logo']}}" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '50'}}px; width: 150px; ">
+                    </div>
+                    <div class="footer-description">
+                        <p class="text-white">@if (!empty($contact))
 
                         {{$contact->address_1}}
                     @endif
-                    <br>
                     @if (!empty($contact))
 
                         {{$contact->email}}
                     @endif
-                    <br>
                     @if (!empty($contact))
 
                         {{$contact->phone_number}}
-                    @endif
+                    @endif</p>
+                    </div>
                 </div>
 
             </div>
-            <div class="col-md-2 col-sm-6 col-6 mb-4 me-auto ">
-                <div>
-                    <h6 class="text-gradient text-dark ms-3">{{__('Pages')}}</h6>
-                    <ul class="flex-column  nav">
+            <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto ">
+                <div class="footer-list">
+                    <h3 style="border-bottom:4px solid #62317b;width: 160px;" class="text-white">{{__('Pages')}}</h3>
+                    <ul class="flex-column  nav text-white">
                         <li class="nav-item">
                             <a class="nav-link" href="/home" target="_blank">
                                 {{__('Home Page')}}
@@ -184,9 +177,9 @@
                 </div>
             </div>
 
-            <div class="col-md-2 col-sm-6 col-6 mb-4 me-auto">
-                <div>
-                    <h6 class="text-gradient text-dark ms-3">{{__('Connect')}}</h6>
+            <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto">
+                <div class="footer-list">
+                    <h3 style="border-bottom:4px solid #62317b;width: 160px;" class=" text-white">{{__('Connect')}}</h3>
                     <ul class="flex-column  nav">
                         @if (!empty($contact->facebook))
 
@@ -223,11 +216,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-2 col-sm-6 col-6 mb-4 me-auto">
-                <div>
-                    <h6 class="text-gradient text-dark ms-3">{{__('Legal')}}</h6>
+            <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto">
+                <div class="footer-list">
+                    <h3 style="border-bottom:4px solid #62317b;width: 160px;" class="text-white">{{__('Legal')}}</h3>
                     <ul class="flex-column  nav">
-
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('privacy')}}" target="_blank">
                                 {{__(' Privacy Policy')}}
@@ -248,15 +240,30 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-12">
-                <div class="text-start ">
-                    <p class="my-4 ms-3 text-sm">
-                        All rights reserved. Copyright © <script>
-                            document.write(new Date().getFullYear())
-                        </script>  by @if (!empty($contact))
-                            {{$contact->title}}
-                        @endif
-                    </p>
+        </div>
+    </div>
+    <div style=" border-top: 1px solid #64317c;">
+        <div class="container">
+            <div class="row mx-2 align-items-baseline">
+                <div class="col-md-6">
+                    <div class="footer-icon">
+                        <ul class="d-flex my-4 ms-3 text-sm" style="color: #06346e">
+                            <li class="mx-2"><a href="#"><i class="fa fa-twitter mr-2 favicon"></i></a></li>
+                            <li class="mx-2"><a href="#"><i class="fa fa-instagram mr-2 favicon"></i></a></li>
+                            <li class="mx-2"><a href="#"><i class="fa fa-facebook mr-2 favicon"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-start ">
+                        <p class="my-4 ms-3 text-sm text-white">
+                            All rights reserved. Copyright © <script>
+                                document.write(new Date().getFullYear())
+                            </script>  by @if (!empty($contact))
+                                {{$contact->title}}
+                            @endif
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

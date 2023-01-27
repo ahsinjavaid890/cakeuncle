@@ -18,17 +18,33 @@
             </div>
         </div>
     </section>
-
     <section class="py-5 position-relative">
-        <div id="carousel-testimonials" class="carousel slide carousel-team">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-12 col-md-7 me-lg-auto position-relative">
-                                <p class="mb-1">
-                                    
-                                </p>
+        <div class="container">
+            <div class="row">
+                @foreach($data as $r)
+                <div class="col-md-3">
+                    <div class="card gallery-card">
+                        <div class="card-body">
+                            <img src="{{ url('public') }}/images/{{ $r->images }}">
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    <section class="py-5 position-relative">
+        <div class="container">
+            <div id="carousel-testimonials" class="carousel slide carousel-team">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12 col-md-7 me-lg-auto position-relative">
+                                    <p class="mb-1">
+                                        
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
