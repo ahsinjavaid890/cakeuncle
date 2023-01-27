@@ -211,7 +211,7 @@
 
                             <li class="nav-item">
                                 <a class="nav-link " href="{{$contact->twitter}}" target="_blank">
-                                    {{__(' Twitter')}}
+                                    {{__(' Instagram')}}
                                 </a>
                             </li>
 
