@@ -12594,8 +12594,8 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 .aboutus-image {
     height: 100%;
-    width: calc((100vw - 100%) / 2 + 100%);
-    min-width: calc((100vw - 100%) / 2 + 100%);
+    width: calc((56vw - 91%) / 2 + 96%);
+    min-width: calc((56vw - 91%) / 2 + 96%);
     position: relative;
 }
 
@@ -12653,8 +12653,8 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 }
 
 .aboutus-image-two {
-    width: 127%;
-    right: 33%;
+    width: 100%;
+/*    right: 33%;*/
     position: relative;
 }
 

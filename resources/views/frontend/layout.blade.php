@@ -13,6 +13,18 @@
     </title>
     <link id="pagestyle" href="{{ url('public/css/app.css') }}?v=19" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url('public/assets/css/vendor/lastudioicons.css')}}">
+    <link rel="stylesheet" href="{{ url('public/assets/css/vendor/dliconoutline.css')}}">
+
+    <!-- Plugins CSS (All Plugins Files) -->
+    <link rel="stylesheet" href="{{ url('public/assets/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{ url('public/assets/css/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{ url('public/assets/css/ion.rangeSlider.min.css')}}">
+    <link rel="stylesheet" href="{{ url('public/assets/css/lightgallery-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{ url('public/assets/css/magnific-popup.css')}}">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{{ url('public/assets/css/style.css')}}">
     @yield('head')
 
 </head>
@@ -131,14 +143,14 @@
                         <img src="{{ url('public') }}/uploads/{{$super_settings['logo']}}" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '50'}}px; width: 150px; ">
                     </div>
                     <div class="footer-description">
-                        <p class="text-white">Life Insurance Insurance has been a trusted name in insurance for more than 10 years. Today, we proudly serve insurance provincewide.</p>
+                        <p class="text-white">CAPA was born as a small enterprise with big dreams in Chandigarh in 2017. We aimed to introduce the bakery as a career choice for entrepreneur.</p>
                     </div>
                 </div>
 
             </div>
             <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto ">
                 <div class="footer-list">
-                    <h3 style="border-bottom:4px solid #62317b;width: 160px;" class="text-white">{{__('Pages')}}</h3>
+                    <h3 style="border-bottom:4px solid #ffffff;width: 160px;" class="text-white">{{__('Pages')}}</h3>
                     <ul class="flex-column  nav ">
                         <li class="nav-item">
                             <a class="nav-link" href="/home" target="_blank">
@@ -167,7 +179,7 @@
 
             <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto">
                 <div class="footer-list">
-                    <h3 style="border-bottom:4px solid #62317b;width: 160px;" class="text-white">{{__('Connect')}}</h3>
+                    <h3 style="border-bottom:4px solid #ffffff;width: 160px;" class="text-white">{{__('Connect')}}</h3>
                     <ul class="flex-column  nav">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('privacy')}}" target="_blank">
@@ -192,24 +204,22 @@
             </div>
             <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto">
                 <div class="footer-list">
-                    <h3 style="border-bottom:4px solid #62317b;width: 160px;" class="text-white">{{__('Legal')}}</h3>
+                    <h3 style="border-bottom:4px solid #ffffff;width: 160px;" class="text-white">{{__('Legal')}}</h3>
                     <ul class="flex-column  nav contact-list">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_blank">
-                                <i class="fa fa-location-arrow"></i>
-                                <p class="pl-3">Address: Life Advice Insurance Inc, 912 Isaiah Place, Kitchener, ON, N2E0B6</p>
-                            </a>
+                            <i class="fa fa-location-arrow"></i>
+                            <p class="pl-3">CAPA Chandigarh - Quite Office No. 1, First Floor, ( Flower Market, Opposite Khukhrain Bhawan) Sector 35-A Chandigarh!</p>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="tel:+18555008999" target="_blank">
                                 <i class="fa fa-phone"></i>
-                                <p class="pl-3"><span>Phone: </span>+18555008999</p>
+                                <p class="pl-3"><span>Phone: </span>+91 79732-45822</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" target="_blank">
-                                <i class="fa fa-location-arrow"></i>
-                                <p class="pl-3"><span>Email: </span> contact@lifeadvice.ca</p>
+                                <i class="fa fa-envelope"></i>
+                                <p class="pl-3"><span>Email: </span> cakeuncle.com@gmail.com</p>
                             </a>
                         </li>
                     </ul>
@@ -222,7 +232,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="footer-icon">
-                        <ul class="d-flex my-4 ms-3 text-sm" style="color: #06346e">
+                        <ul class="d-flex my-4 " style="color: #06346e">
                             <li class="mx-2"><a href="#"><i class="fa fa-twitter mr-2 favicon"></i></a></li>
                             <li class="mx-2"><a href="#"><i class="fa fa-instagram mr-2 favicon"></i></a></li>
                             <li class="mx-2"><a href="#"><i class="fa fa-facebook mr-2 favicon"></i></a></li>
@@ -245,7 +255,24 @@
     </div>
 </footer>
 
+
 <script src="{{ url('public') }}/js/app.js?v=94"></script>
+ <!-- Vendors JS -->
+    <script src="{{ url('public/assets/js/vendor/modernizr-3.11.7.min.js')}}"></script>
+    <script src="{{ url('public/assets/js/vendor/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{ url('public/assets/js/vendor/jquery-migrate-3.3.2.min.js')}}"></script>
+
+    <!-- Plugins JS -->
+    <script src="{{ url('public/assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ url('public/assets/js/countdown.min.js') }}"></script>
+    <script src="{{ url('public/assets/js/ion.rangeSlider.min.js') }}"></script>
+    <script src="{{ url('public/assets/js/lightgallery.min.js') }}"></script>
+    <script src="{{ url('public/assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url('public/assets/js/ajax.js') }}"></script>
+    <script src="{{ url('public/assets/js/jquery.validate.min.js') }}"></script>
+
+    <!-- Activation JS -->
+    <script src="{{ url('public/assets/js/main.js') }}"></script>
 
 @yield('script')
 

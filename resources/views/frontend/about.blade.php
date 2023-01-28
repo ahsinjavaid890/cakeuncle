@@ -1,4 +1,4 @@
-@extends('frontend.layouttwo')
+@extends('frontend.layout')
 @section('title','About Us')
 @section('content')
 <style type="text/css">

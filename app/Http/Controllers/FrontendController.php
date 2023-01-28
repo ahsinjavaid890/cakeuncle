@@ -168,7 +168,44 @@ class FrontendController extends WebsiteBaseController
     }
     public function forhomebakers()
     {
-        return view('frontend.forhomebakers');
+
+        $landingpage = LandingPage::first();
+        $categories = CourseCategory::all()
+            ->keyBy("id")
+            ->all();
+
+        $courses = Course::orderBy("id", "desc")
+            ->limit(4)
+            ->get();
+        $blogs = Blog::orderBy("id", "desc")
+            ->limit(3)
+            ->get();
+        $ebooks = Product::orderBy("id", "desc")
+            ->limit(4)
+            ->get();
+        $users = User::all()
+            ->keyBy("id")
+            ->all();
+        $students = Student::orderBy("id", "desc")
+            ->limit(6)
+            ->get();
+        $contact = ContactSection::first();
+
+        if (($this->super_settings["landingpage"] ?? null) === "Default") {
+            return \view("frontend.forhomebakers", [
+                "landingpage" => $landingpage,
+                "categories" => $categories,
+                "courses" => $courses,
+                "users" => $users,
+                "blogs" => $blogs,
+                "ebooks" => $ebooks,
+                "students" => $students,
+                "contact" => $contact,
+            ]);
+        }
+        return view('frontend.forhomebakers', [
+            "landingpage" => $landingpage,
+        ]);
     }
     public function gallery()
     {

@@ -191,7 +191,7 @@
 }
 .footer-list ul li::before {
     content: "\2022";
-    color: #62317b;
+    color: #ffffff;
     font-weight: bold;
     display: inline-block;
     width: 1em;
@@ -216,6 +216,7 @@
     padding-bottom: 15px;
 }
 .footer-icon ul{
+    margin-left: -35px;
     list-style: none;
 }
 .footer-icon .favicon{
@@ -249,7 +250,6 @@
   left: 0;*/
   
 }
-
 .image-card img {
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
@@ -284,15 +284,15 @@
     display: flex;
     padding: 0;
 }
-.contact-list li .nav-link i{
+.contact-list li  i{
     font-size: 30px;
 }
-.contact-list li .nav-link p{
+.contact-list li  p{
     padding-left: 10px;
-    font-size: 20px;
+    font-size: 19px;
 }
 .footer-description p{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     margin-top: 12px;
 }

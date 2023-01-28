@@ -1,4 +1,4 @@
-@extends('frontend.layouttwo')
+@extends('frontend.layout')
 @section('title','Contact Us')
 @section('content')
 
@@ -27,8 +27,8 @@
                         <p class="contact-section2__text">Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt</p>
                         <ul class="contact-section2_list">
                             <li>
-                                <span class="contact-section2_list__icon"><i class="lastudioicon lastudioicon-pin-3-2"></i></span>
-                                <span class="contact-section2_list__text">Life Advice Insurance Inc, 912 Isaiah Place, Kitchener, ON, N2E0B6</span>
+                                <span class="contact-section2_list__icon" style="width: 103px !important;"><i class="lastudioicon lastudioicon-pin-3-2"></i></span>
+                                <span class="contact-section2_list__text">CAPA Chandigarh - Quite Office No. 1, First Floor, ( Flower Market, Opposite Khukhrain Bhawan) Sector 35-A Chandigarh!</span>
                             </li>
                             <li>
                                 <span class="contact-section2_list__icon"><i class="lastudioicon lastudioicon-phone-2"></i></span>
@@ -88,7 +88,7 @@
         <div class="section">
             <!-- Google Map Area Start -->
             <div class="google-map-area w-100" data-aos="fade-up" data-aos-duration="1000">
-                <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2136.986005919501!2d-73.9685579655238!3d40.75862446708152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258e4a1c884e5%3A0x24fe1071086b36d5!2sThe%20Atrium!5e0!3m2!1sen!2sbd!4v1585132512970!5m2!1sen!2sbd">
+                <iframe class="contact-map" src="https://maps.google.com/maps?q=CAPA Chandigarh - Quite Office No. 1, First Floor, ( Flower Market, Opposite Khukhrain Bhawan) Sector 35-A Chandigarh!&t=&z=10&ie=UTF8&iwloc=&output=embed">
 
                 </iframe>
             </div>

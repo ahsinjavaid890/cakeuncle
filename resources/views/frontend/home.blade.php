@@ -1,4 +1,4 @@
-@extends('frontend.layouttwo')
+@extends('frontend.layout')
 @section('title','Cake Uncle')
 @section('content') 
     <header class="py-5">

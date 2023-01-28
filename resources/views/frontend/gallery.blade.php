@@ -33,7 +33,7 @@
                         <div class="card-body p-0">
                             <div class="zoom-effect-container">
                                 <div class="image-card">
-                                    <img src="{{ url('public') }}/images/{{ $r->image }}">
+                                    <img  src="{{ url('public') }}/images/{{ $r->image }}">
                                 </div>
                             </div>
                         </div>
