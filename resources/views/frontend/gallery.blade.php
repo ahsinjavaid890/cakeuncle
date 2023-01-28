@@ -18,14 +18,24 @@
             </div>
         </div>
     </section>
+    <style>
+        .zoom-effect-container{
+            width: 100%;
+            height: auto;
+        }
+    </style>
     <section class="py-5 position-relative">
         <div class="container">
             <div class="row">
                 @foreach($data as $r)
                 <div class="col-md-3">
                     <div class="card gallery-card">
-                        <div class="card-body">
-                            <img src="{{ url('public') }}/images/{{ $r->image }}">
+                        <div class="card-body p-0">
+                            <div class="zoom-effect-container">
+                                <div class="image-card">
+                                    <img src="{{ url('public') }}/images/{{ $r->image }}">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

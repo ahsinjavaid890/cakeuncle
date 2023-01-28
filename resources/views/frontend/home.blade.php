@@ -138,7 +138,6 @@
             <div class="row mt-5">
                 @foreach($courses as $course)
                     @if($course->status !='Draft')
-
                         <div class="col-lg-4 col-sm-6">
                             <div class="card card-plain card-blog">
                                 <div class="card-image border-radius-lg position-relative zoom-effect-container"> 

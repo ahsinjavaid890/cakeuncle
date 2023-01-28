@@ -145,7 +145,7 @@ class FrontendController extends WebsiteBaseController
         $contact = ContactSection::first();
 
         if (($this->super_settings["landingpage"] ?? null) === "Default") {
-            return \view("frontend.home", [
+            return \view("frontend.about", [
                 "landingpage" => $landingpage,
                 "categories" => $categories,
                 "courses" => $courses,

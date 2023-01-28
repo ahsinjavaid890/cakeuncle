@@ -135,7 +135,7 @@
 <!-- -------- START FOOTER 5 w/ DARK BACKGROUND ------- -->
 
 <footer class="footer pt-5">
-    <div class="container">
+    <div class="container-homepage">
         <div class=" row">
             <div class="col-md-3 mb-4 ms-auto">
                 <div>
@@ -143,25 +143,14 @@
                         <img src="{{ url('public') }}/uploads/{{$super_settings['logo']}}" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '50'}}px; width: 150px; ">
                     </div>
                     <div class="footer-description">
-                        <p>@if (!empty($contact))
-
-                        {{$contact->address_1}}
-                    @endif
-                    @if (!empty($contact))
-
-                        {{$contact->email}}
-                    @endif
-                    @if (!empty($contact))
-
-                        {{$contact->phone_number}}
-                    @endif</p>
+                        <p class="text-white">Life Insurance Insurance has been a trusted name in insurance for more than 10 years. Today, we proudly serve insurance provincewide.</p>
                     </div>
                 </div>
 
             </div>
             <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto ">
                 <div class="footer-list">
-                    <h3 style="border-bottom:4px solid #62317b;width: 160px;" class="text-gradient text-dark">{{__('Pages')}}</h3>
+                    <h3 style="border-bottom:4px solid #62317b;width: 160px;" class="text-white">{{__('Pages')}}</h3>
                     <ul class="flex-column  nav ">
                         <li class="nav-item">
                             <a class="nav-link" href="/home" target="_blank">
@@ -190,46 +179,7 @@
 
             <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto">
                 <div class="footer-list">
-                    <h3 style="border-bottom:4px solid #62317b;width: 160px;" class="text-gradient text-dark">{{__('Connect')}}</h3>
-                    <ul class="flex-column  nav">
-                        @if (!empty($contact->facebook))
-
-                            <li class="nav-item">
-                                <a class="nav-link " href="{{$contact->facebook}}" target="_blank">
-                                    {{__(' Facebook')}}
-                                </a>
-                            </li>
-
-                        @endif
-
-                        @if (!empty($contact->youtube))
-                            <li class="nav-item">
-                                <a class="nav-link " href="{{$contact->youtube}}" target="_blank">
-                                    {{__(' Youtube')}}
-                                </a>
-                            </li>
-
-                        @endif
-
-                        @if (!empty($contact->twitter))
-
-                            <li class="nav-item">
-                                <a class="nav-link " href="{{$contact->twitter}}" target="_blank">
-                                    {{__(' Instagram')}}
-                                </a>
-                            </li>
-
-
-                        @endif
-
-
-
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto">
-                <div class="footer-list">
-                    <h3 style="border-bottom:4px solid #62317b;width: 160px;" class="text-gradient text-dark">{{__('Legal')}}</h3>
+                    <h3 style="border-bottom:4px solid #62317b;width: 160px;" class="text-white">{{__('Connect')}}</h3>
                     <ul class="flex-column  nav">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('privacy')}}" target="_blank">
@@ -245,17 +195,43 @@
                             <a class="nav-link" href="{{ url('cookie-policy')}}" target="_blank">
                                 {{__(' Cookie Policy')}}
                             </a>
+                        
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto">
+                <div class="footer-list">
+                    <h3 style="border-bottom:4px solid #62317b;width: 160px;" class="text-white">{{__('Legal')}}</h3>
+                    <ul class="flex-column  nav contact-list">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="_blank">
+                                <i class="fa fa-location-arrow"></i>
+                                <p class="pl-3">Address: Life Advice Insurance Inc, 912 Isaiah Place, Kitchener, ON, N2E0B6</p>
+                            </a>
                         </li>
-
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="tel:+18555008999" target="_blank">
+                                <i class="fa fa-phone"></i>
+                                <p class="pl-3"><span>Phone: </span>+18555008999</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="_blank">
+                                <i class="fa fa-location-arrow"></i>
+                                <p class="pl-3"><span>Email: </span> contact@lifeadvice.ca</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     <div style=" border-top: 1px solid #64317c;">
-        <div class="container">
-            <div class="row mx-2">
+        <div class="container-homepage">
+            <div class="row">
                 <div class="col-md-6">
                     <div class="footer-icon">
                         <ul class="d-flex my-4 ms-3 text-sm" style="color: #06346e">
@@ -266,8 +242,8 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="text-start ">
-                        <p class="my-4 ms-3 text-sm">
+                    <div class="text-end ">
+                        <p class="my-4 ms-3 text-sm text-white">
                             All rights reserved. Copyright © <script>
                                 document.write(new Date().getFullYear())
                             </script>  by @if (!empty($contact))
@@ -280,6 +256,7 @@
         </div>
     </div>
 </footer>
+
 
 <script src="{{ url('public') }}/js/app.js?v=94"></script>
  <!-- Vendors JS -->

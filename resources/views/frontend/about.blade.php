@@ -17,24 +17,6 @@
             </div>
         </div>
     </section>
-
-    <section class="about-section">
-        <div style="background-image: url('https://previews.123rf.com/images/wstockstudio/wstockstudio1701/wstockstudio170100339/70017129-baking-a-cake-or-pizza-ingredients-background-top-view-photograph-with-kitchen-utensils-on-vintage-n.jpg');height: 400px;background-repeat: no-repeat;background-size: cover;">
-            <div class="container">
-                <div class="row">
-                  <div class="col-sm-12 grad3 txt-white team-div">
-                    <h1 class="fw-bolder display-5 mb-3 text-center mt-4 mb-0">Heading Two</h1>
-                    <p style="color:black;">CAPA was born as a small enterprise with big dreams in Chandigarh in 2017. We aimed to introduce the bakery as a career choice for entrepreneur. Have you ever wanted to ditch the 9 to 5 to start your own cake business or have you started already and looking for help and advice? This course will guide you through all there is know about starting your cake business from home or opening your own shop.CAPA was born as a small enterprise with big dreams in Chandigarh in 2017. We aimed to introduce the bakery as a career choice for entrepreneur. Have you ever wanted to ditch the 9 to 5 to start your own cake business or have you started already and looking for help and advice? This course will guide you through all there is know about starting your cake business from home or opening your own shop.
-
-                      </p>
-                      <div class="text-center buttons mb-4">
-                            <a style="width: 40%;" href="{{ url('signup') }}" type="button" class="btn  btn-success text-white mt-4">Contact US</a>
-                        </div>
-                  </div>
-                </div>
-            </div>  
-        </div>
-    </section>
     <div class="section-padding-03 overflow-hidden">
         <div class="container">
             <div class="row align-items-center">
