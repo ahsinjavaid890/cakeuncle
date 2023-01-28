@@ -25,7 +25,7 @@
                 <div class="col-md-3">
                     <div class="card gallery-card">
                         <div class="card-body">
-                            <img src="{{ url('public') }}/images/{{ $r->images }}">
+                            <img src="{{ url('public') }}/images/{{ $r->image }}">
                         </div>
                     </div>
                 </div>
