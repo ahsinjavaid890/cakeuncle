@@ -33,7 +33,7 @@
 
 <nav class="navbar shadow-none border-bottom  navbar-expand-lg navbar-light fixed-top bg-white py-3">
     <div class="container">
-        <a class="navbar-brand font-weight-bold" href="{{ url('') }}" rel="tooltip"  data-placement="bottom" >
+        <a style="background-color:white;" class="navbar-brand font-weight-bold" href="{{ url('') }}" rel="tooltip"  data-placement="bottom" >
             @if(!empty($super_settings['logo']))
                 <img src="{{ url('public') }}/uploads/{{$super_settings['logo']}}" class="navbar-brand-img h-100" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '50'}}px; width: 150px; " alt="...">
             @else
@@ -90,9 +90,9 @@
                     </a>
                 </li>
                 <li class="nav-item  ms-lg-auto mx-2">
-                    <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-5" href="{{ url('contact') }}" target="_blank">
+                    <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-5" href="{{ url('contact') }}">
 
-                        {{__('Contact')}}
+                        {{__('Contact Us')}}
 
                     </a>
                 </li>
@@ -100,7 +100,7 @@
 
 
             </ul>
-            <ul class="navbar-nav  d-lg-block  d-none">
+            <ul style="background-color:white;" class="navbar-nav  d-lg-block  d-none">
 
                 <li class="nav-item">
                    <!--  <a href="/cart" class=" me-2 btn btn-md btn-icon-only btn-info btn-rounded position-relative">
@@ -140,7 +140,7 @@
             <div class="col-md-3 mb-4 ms-auto">
                 <div>
                     <div class="footer-logo" >
-                        <img src="{{ url('public') }}/uploads/{{$super_settings['logo']}}" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '50'}}px; width: 150px; ">
+                        <img src="{{ url('public/uploads/footerlogo.png') }}" style="max-height: {{$super_settings['frontend_logo_max_height'] ?? '50'}}px; width: 150px; ">
                     </div>
                     <div class="footer-description">
                         <p class="text-white">CAPA was born as a small enterprise with big dreams in Chandigarh in 2017. We aimed to introduce the bakery as a career choice for entrepreneur.</p>
@@ -150,7 +150,7 @@
             </div>
             <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto ">
                 <div class="footer-list">
-                    <h3 style="border-bottom:4px solid #ffffff;width: 160px;" class="text-white">{{__('Pages')}}</h3>
+                    <h3 style="border-bottom:4px solid #ffffff;width: 160px;" class="text-white">UseFull Links</h3>
                     <ul class="flex-column  nav ">
                         <li class="nav-item">
                             <a class="nav-link" href="/home" target="_blank">
@@ -179,7 +179,7 @@
 
             <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto">
                 <div class="footer-list">
-                    <h3 style="border-bottom:4px solid #ffffff;width: 160px;" class="text-white">{{__('Connect')}}</h3>
+                    <h3 style="border-bottom:4px solid #ffffff;width: 160px;" class="text-white">Company Links</h3>
                     <ul class="flex-column  nav">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('privacy')}}" target="_blank">
@@ -195,16 +195,12 @@
                             <a class="nav-link" href="{{ url('cookie-policy')}}" target="_blank">
                                 {{__(' Cookie Policy')}}
                             </a>
-                        
-
-
-
                     </ul>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto">
                 <div class="footer-list">
-                    <h3 style="border-bottom:4px solid #ffffff;width: 160px;" class="text-white">{{__('Legal')}}</h3>
+                    <h3 style="border-bottom:4px solid #ffffff;width: 160px;" class="text-white">Contact Us</h3>
                     <ul class="flex-column  nav contact-list">
                         <li class="nav-item">
                             <i class="fa fa-location-arrow"></i>
@@ -227,7 +223,7 @@
             </div>
         </div>
     </div>
-    <div style=" border-top: 1px solid #64317c;">
+    <div style=" border-top: 1px solid white;">
         <div class="container-homepage">
             <div class="row">
                 <div class="col-md-6">

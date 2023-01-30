@@ -131,7 +131,7 @@
 
                         </ul>
 
-                        <a class="btn btn-info  mb-5 mt-3" href="{{ url('student/edit-profile')}}?id={{$student->id}}">{{__('Edit Profile')}}</a>
+                        <a class="btn btn-success text-white  mb-5 mt-3" href="{{ url('student/edit-profile')}}?id={{$student->id}}">{{__('Edit Profile')}}</a>
 
                     </div>
                 </div>

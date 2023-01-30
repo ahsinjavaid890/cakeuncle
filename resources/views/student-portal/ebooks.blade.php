@@ -12,7 +12,7 @@
 
         </div>
         <div class="col text-end">
-            <a href="{{ url('shop')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Buy More ')}}</a>
+            <a href="{{ url('shop')}}" type="button" class="btn btn-success text-white text-white"><i class="fas fa-plus"></i> {{__('Buy More ')}}</a>
 
         </div>
     </div>

@@ -9,7 +9,7 @@
             </h5>
         </div>
         <div class="col text-end">
-            <a href="{{ url('student/profile')}}" type="button" class="btn btn-info text-white">{{__('My Profile')}}</a>
+            <a href="{{ url('student/profile')}}" type="button" class="btn btn-success text-white text-white">{{__('My Profile')}}</a>
         </div>
     </div>
 
@@ -197,7 +197,7 @@
 
                                     <!-- Step 1 button -->
                                     <div class="d-flex justify-content-end mt-3">
-                                        <button type="button" class="btn btn-blue next-btn mb-0">Next</button>
+                                        <button type="button" class="btn btn-success text-white next-btn mb-0">Next</button>
                                     </div>
                                 </div>
                                 <!-- Basic information START -->
@@ -263,7 +263,7 @@
                                     <!-- Step 2 button -->
                                     <div class="d-flex justify-content-between mt-3">
                                         <button type="button" class="btn btn-dark prev-btn mb-0">{{__('Previous')}}</button>
-                                        <button type="button" class="btn btn-blue next-btn mb-0">{{__('Next')}}</button>
+                                        <button type="button" class="btn btn-success text-white next-btn mb-0">{{__('Next')}}</button>
                                     </div>
                                 </div>
                             </div>
@@ -321,7 +321,7 @@
                                     <div class="d-flex justify-content-between mt-4">
 
                                         <button type="button" class="btn btn-dark prev-btn mb-0">{{__('Previous')}}</button>
-                                        <button type="button" class="btn btn-blue next-btn mb-0">{{__('Next')}}</button>
+                                        <button type="button" class="btn btn-success text-white next-btn mb-0">{{__('Next')}}</button>
                                     </div>
                                 </div>
                             </div>
@@ -372,7 +372,7 @@
                                             <input type="hidden" name="id" value="{{$student->id}}">
                                             <input type="hidden" name="admin_id" value="{{$student->admin_id}}">
                                         @endif
-                                        <button type="submit" id="" class="btn btn-blue mb-0">{{__('Submit')}}</button>
+                                        <button type="submit" id="" class="btn btn-success text-white mb-0">{{__('Submit')}}</button>
                                     </div>
 
                                 </div>

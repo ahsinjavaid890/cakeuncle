@@ -13,7 +13,7 @@
             </spna>
         </div>
         <div class="col text-end">
-            <a href="{{ url('students')}}" type="button" class="btn btn-info text-white">{{__('Student List')}}</a>
+            <a href="{{ url('students')}}" type="button" class="btn btn-success text-white text-white">{{__('Student List')}}</a>
         </div>
     </div>
     <!--begin::Stepper-->

@@ -46,7 +46,7 @@
 
                         <div class="mb-4 d-flex justify-content-between mb-4">
                             <div class="form-check">
-                                <input class="form-check-input" name="remember" type="checkbox" id="rememberMe" checked="">
+                                <input class="form-check-input" name="remember" type="checkbox" id="exampleCheck1" >
                                 <label class="form-check-label" for="exampleCheck1">{{__('Remember me')}}</label>
                             </div>
                             <div class="text-primary-hover">
@@ -64,8 +64,7 @@
 
                         <div class="text-center">
                             @csrf
-                            <button type="submit"
-                                    class="btn btn-info btn-rounded w-100  mb-0">{{__('Sign in')}}</button>
+                            <button type="submit" class="btn  btn-success text-white">{{__('Sign in')}}</button>
                         </div>
                     </form>
                 

@@ -117,7 +117,7 @@
 
                                                     <div class="mb-3">
 
-                                                        <button class="btn btn-sm btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <button class="btn btn-sm btn-success text-white dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                                             {{__('Details')}}
                                                         </button>
                                                         <div class="dropdown-menu p-4 text-muted bg-info-light" style="max-width: 300px;"><div  class= " d-sm-flex justify-content-between align-items-center mb-3">

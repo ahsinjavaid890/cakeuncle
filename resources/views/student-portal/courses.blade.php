@@ -13,7 +13,7 @@
         </div>
         <div class="col text-end">
 
-            <a href="{{ url('course')}}" type="button" class="btn btn-info btn-rounded"><i class="fas fa-plus"></i>&nbsp;{{__('Enroll for more')}}</a>
+            <a href="{{ url('course')}}" type="button" class="btn btn-success text-white btn-rounded"><i class="fas fa-plus"></i>&nbsp;{{__('Enroll for more')}}</a>
 
         </div>
     </div>

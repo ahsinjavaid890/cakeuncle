@@ -56,7 +56,7 @@
                             @endif
                         @csrf
                         <div class="text-start">
-                            <button type="submit" class="btn btn-blue btn-rounded  my-4 mb-2">{{__('Sign up')}}</button>
+                            <button type="submit" class="btn  btn-success text-white">{{__('Sign up')}}</button>
                         </div>
 
                     </form>

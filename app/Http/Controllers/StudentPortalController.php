@@ -18,19 +18,35 @@ use App\Models\EbookReview;
 use App\Models\Lesson;
 use App\Models\Message;
 use App\Models\Product;
-
+use App\Models\Setting;
 use App\Models\Student;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
-
+use Illuminate\Support\Facades\View;
 class StudentPortalController extends StudentBaseController
 {
     public function __construct()
     {
         parent::__construct();
+
+
+        $this->middleware(function ($request, $next) {
+            $super_settings = [];
+
+            $super_settings_data = Setting::where("workspace_id", 1)->get();
+            foreach ($super_settings_data as $super_setting) {
+                $super_settings[$super_setting->key] = $super_setting->value;
+            }
+
+            $this->super_settings = $super_settings;
+            View::share("super_settings", $super_settings);
+            return $next($request);
+        });
+
+        
     }
 
     public function dashboard(Request $request)
@@ -66,7 +82,7 @@ class StudentPortalController extends StudentBaseController
     }
 
     public function login()
-    {
+    { 
         if ($this->student) {
             return redirect()->route("student.dashboard");
         }

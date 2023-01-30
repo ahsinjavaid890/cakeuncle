@@ -104,7 +104,7 @@
 
                         <div class="card card-body shadow  mb-4">
                             @if(!empty($course->id))
-                                <a class="btn btn-blue mb-3 ms-lg-auto me-lg-0 me-auto mt-lg-0 mt-2 "
+                                <a class="btn btn-success text-white mb-3 ms-lg-auto me-lg-0 me-auto mt-lg-0 mt-2 "
                                    href="{{ url('student/my-course-details')}}?id={{$course->id}}" >
                                     {{__('Go to Course Page')}}
                                 </a>

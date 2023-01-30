@@ -109,7 +109,7 @@
 
 
                     </ul>
-                    <a class="btn btn-info btn-sm mb-0 mt-3" href="{{ url('new-student')}}?id={{$student->id}}">{{__('Edit')}}</a>
+                    <a class="btn btn-success text-white btn-sm mb-0 mt-3" href="{{ url('new-student')}}?id={{$student->id}}">{{__('Edit')}}</a>
 
 
                 </div>

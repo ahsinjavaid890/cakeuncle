@@ -50,7 +50,7 @@
                                 <div class="alert text-danger bg-pink-light alert-dismissible d-flex align-items-center fade show py-3 pe-2" role="alert">
                                     <div>
                                         <span class="fs-5 me-1 "></span>
-                                        {{__(' Already have an account?')}} <a href="/student/login" class="text-reset btn-link mb-0 fw-bold">{{__('Log in')}}</a></div><strong class="text-danger ms-1"></strong>
+                                        {{__(' Already have an account?')}} <a href="{{ url('student/login') }}" class="text-reset btn-link mb-0 fw-bold">{{__('Log in')}}</a></div><strong class="text-danger ms-1"></strong>
                                 </div>
                                 <button type="button" class="btn btn-link mb-0 text-end" data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x-lg text-dark"></i></button>
                             </div>
@@ -401,8 +401,6 @@
         Page content END -->
 
     </main>
-
-
 @endsection
 
 

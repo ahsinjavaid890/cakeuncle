@@ -38,10 +38,10 @@
                                                             <!-- Image -->
                                                             <div>
                                                                 @if(empty($course_in_cart->image))
-                                                                    <img src="{{ url('public/img/placeholder.jpeg'}}" class="avatar avatar-xxl me-3" alt="product image">
+                                                                    <img src="{{ url('public/img/placeholder.jpeg')}}" class="img-thumbnail avatar avatar-xxl me-3" alt="product image">
 
                                                                 @else
-                                                                    <img src="{{ url('public') }}/uploads/{{$course_in_cart->image}}" class="w-100 avatar avatar-xxl me-3">
+                                                                    <img src="{{ url('public') }}/uploads/{{$course_in_cart->image}}" class="img-thumbnail w-100 avatar avatar-xxl me-3">
                                                                 @endif
 
 
@@ -66,7 +66,7 @@
                                                     </td>
                                                     <!-- Action item -->
                                                     <td>
-                                                        <a href="{{ url('remove-item-from-cart')}}/{{$course_in_cart->id}}" class="btn btn-md bg-pink-light text-danger px-2 mb-0"><i class="fas fa-fw fa-times"></i></a>
+                                                        <a href="{{ url('remove-item-from-cart')}}/{{$course_in_cart->id}}" class="btn btn-success text-white"><i class="fas fa-fw fa-times"></i></a>
                                                     </td>
                                                 </tr>
 
@@ -85,7 +85,7 @@
                                                             <!-- Image -->
                                                             <div>
                                                                 @if(empty($ebook_in_cart->image))
-                                                                    <img src="{{ url('public/img/placeholder.jpeg'}}" class="avatar avatar-xxl me-3" alt="product image">
+                                                                    <img src="{{ url('public/img/placeholder.jpeg')}}" class="avatar avatar-xxl me-3" alt="product image">
 
                                                                 @else
                                                                     <img src="{{ url('public') }}/uploads/{{$ebook_in_cart->image}}" class="w-100 avatar avatar-xxl me-3 ">
@@ -112,7 +112,7 @@
                                                     </td>
                                                     <!-- Action item -->
                                                     <td>
-                                                        <a href="{{ url('remove-item-from-cart')}}/{{$ebook_in_cart->id}}" class="btn btn-md bg-pink-light text-danger px-2 mb-0"><i class="fas fa-fw fa-times"></i></a>
+                                                        <a href="{{ url('remove-item-from-cart')}}/{{$ebook_in_cart->id}}" class="btn btn-success text-white"><i class="fas fa-fw fa-times"></i></a>
                                                     </td>
                                                 </tr>
 

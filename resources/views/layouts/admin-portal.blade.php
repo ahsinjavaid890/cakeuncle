@@ -22,11 +22,7 @@
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute right-0 top-0 d-none d-xl-none"
            aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand m-0 text-center" href="{{ url('admin/dashboard') }}">
-            @if(!empty($settings['logo']))
-                <img src="{{ url('public') }}/uploads/{{$settings['logo']}}" class="navbar-brand-img h-100" alt="...">
-            @else
-                <span class="ms-1 font-weight-bold"> {{config('app.name')}}</span>
-            @endif
+            <img src="{{ url('public/uploads/footerlogo.png') }}" class="navbar-brand-img h-100" alt="...">
         </a>
     </div>
     <hr class="horizontal dark mt-0">
@@ -52,7 +48,7 @@
                 </a>
             </li>
             <li class="nav-item mt-4 mb-2">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs  text-muted font-weight-bolder opacity-6">{{__('Students ')}}  </h6>
+                <h6 class="ps-4 ms-2 text-uppercase text-xs  text-white font-weight-bolder opacity-6">{{__('Students ')}}  </h6>
             </li>
             <li class="nav-item">
                 <a data-bs-toggle="collapse" href="#ecommerceExamples" class="nav-link " aria-controls="ecommerceExamples" role="button" aria-expanded="false">
@@ -102,7 +98,7 @@
             </li>
 
             <li class="nav-item mt-4 mb-2">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs text-muted font-weight-bolder opacity-6">{{__('Courses & Ebooks')}}  </h6>
+                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-6">{{__('Courses & Ebooks')}}  </h6>
             </li>
             <li class="nav-item">
                 <a class="nav-link @if(($selected_navigation ?? '') === 'course-categories') active @endif "
@@ -147,7 +143,7 @@
                 </a>
             </li>
             <li class="nav-item mt-4 mb-2">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs text-muted font-weight-bolder opacity-6">{{__('Earnings')}}  </h6>
+                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-6">{{__('Earnings')}}  </h6>
             </li>
 
             <li class="nav-item">
@@ -162,7 +158,7 @@
 
 
             <li class="nav-item mt-4 mb-2">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs text-muted font-weight-bolder opacity-6">{{__('Productivity')}}  </h6>
+                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-6">{{__('Productivity')}}  </h6>
             </li>
 
             @if(empty($modules) || in_array('documents',$modules))
@@ -199,7 +195,7 @@
             </li>
 
             <li class="nav-item mt-3 mb-2">
-                <h6 class="ps-4 ms-2 text-uppercase text-muted text-xs opacity-6">{{__('CMS')}}</h6>
+                <h6 class="ps-4 ms-2 text-uppercase text-white text-xs opacity-6">{{__('CMS')}}</h6>
             </li>
             <li class="nav-item">
                 <a class="nav-link @if(($selected_navigation ?? '') === 'themes') active @endif "
@@ -251,7 +247,7 @@
             </li>
 
             <li class="nav-item mt-4 mb-2">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs text-muted font-weight-bolder opacity-6">{{__('Settings')}}  </h6>
+                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-6">{{__('Settings')}}  </h6>
             </li>
             <li class="nav-item">
                 <a class="nav-link @if(($selected_navigation ?? '') === 'profile') active @endif "

@@ -289,9 +289,9 @@ class AuthController extends Controller
             $user->last_login = Carbon::now()->toDateTimeString();
             $user->save();
 
-            return redirect(
-                config("app.url") . "/" . config("student.dashboard")
-            );
+            return redirect()->intended("student/dashboard");
+
+            // return redirect(config("app.url") . "/" . config("student.dashboard"));
         }
 
         return back()->withErrors([
@@ -488,7 +488,9 @@ class AuthController extends Controller
             }
         }
 
-        return redirect(config("app.url") . "/student/login");
+        return redirect()->intended('/student/login')->with('warning', 'This Portal is Only for Drivers');
+
+        // return redirect(config("app.url") . "/student/login");
     }
 
     public function logout(Request $request)

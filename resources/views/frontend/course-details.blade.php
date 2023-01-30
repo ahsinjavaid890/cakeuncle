@@ -290,8 +290,8 @@
 
                             <!-- Buttons -->
                             <div class="mt-3 d-grid">
-                                <a href="{{ url('add-to-cart')}}/{{$course->id}}?type=course" class="btn  bg-purple-light text-purple shadow-none mb-2">{{__('Add to cart')}}</a>
-                                <a href="{{ url('add-to-cart')}}/{{$course->id}}?type=course" class="btn btn-dark">{{__('Buy now')}}</a>
+                                <a href="{{ url('add-to-cart')}}/{{$course->id}}?type=course" class="btn btn-success text-white">{{__('Add to cart')}}</a>
+                                <a href="{{ url('add-to-cart')}}/{{$course->id}}?type=course" class="mt-3 btn btn-success text-white">{{__('Buy now')}}</a>
                             </div>
                             <!-- Divider -->
                             <hr>

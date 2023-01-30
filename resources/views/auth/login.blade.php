@@ -65,8 +65,7 @@
 
                         <div class="text-center mt-3">
                             @csrf
-                            <button type="submit"
-                                    class="btn btn-info w-100  mb-0">{{__('Sign in')}}</button>
+                            <button type="submit" class="btn  btn-success text-white">{{__('Sign in')}}</button>
                         </div>
                     </form>
                 

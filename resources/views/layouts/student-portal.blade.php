@@ -25,12 +25,8 @@
     <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute right-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
 
-        <a class="navbar-brand text-center m-0" href="{{config('app.url')}}/dashboard">
-            @if(!empty($super_settings['logo']))
-                <img src="{{ url('public') }}/uploads/{{$super_settings['logo']}}" class="navbar-brand-img h-100" alt="...">
-            @else
-                <span class="ms-1 font-weight-bold"> {{config('app.name')}}</span>
-            @endif
+        <a class="navbar-brand text-center m-0" href="{{ url('student/dashboard') }}">
+            <img src="{{ url('public/uploads/footerlogo.png') }}" class="navbar-brand-img h-100" alt="...">
         </a>
     </div>
 
@@ -123,7 +119,7 @@
             </li>
 
             <li class="nav-item mt-3 mb-2">
-                <h6 class="ps-4 ms-2 text-uppercase text-muted text-xs opacity-6">{{__('Account Settings')}}  </h6>
+                <h6 class="ps-4 ms-2 text-uppercase text-white text-xs opacity-6">{{__('Account Settings')}}  </h6>
             </li>
 
             <li class="nav-item">
@@ -164,7 +160,7 @@
     </div>
 
     <div class="sidenav-footer mx-3 mb-3 ">
-        <div class="card shadow-none bg-dark-alt" id="sidenavCard">
+        <div class="card shadow-none" id="sidenavCard">
 
             <div class="card-body  text-start p-3 w-100">
                 <div class="icon icon-shape icon-sm bg-purple-light shadow text-center mb-3 d-flex align-items-center justify-content-center border-radius-md">
@@ -172,9 +168,9 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg>
                 </div>
                 <div class="docs-info">
-                    <h6 class="text-white up mb-2">{{__('Browse Courses')}}</h6>
+                    <h6 class="up mb-2">{{__('Browse Courses')}}</h6>
 
-                    <a href="{{ url('home') }}" target="_blank" class="btn btn-info btn-sm w-100 mb-0">{{__('Go to website')}}</a>
+                    <a href="{{ url('home') }}" target="_blank" class="btn btn-success text-white btn-sm w-100 mb-0">{{__('Go to website')}}</a>
                 </div>
             </div>
         </div>

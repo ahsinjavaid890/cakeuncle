@@ -53,7 +53,6 @@ class BillingController extends WebsiteBaseController
         $payment_gateways = PaymentGateway::get()
             ->keyBy("api_name")
             ->all();
-
         if (empty($payment_gateways)) {
             return response("No payment gateway is configured");
         }

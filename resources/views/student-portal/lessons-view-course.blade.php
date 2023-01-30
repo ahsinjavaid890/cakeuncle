@@ -97,7 +97,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- Button -->
-                                                    <a href="{{ url('student/view-mylesson')}}?id={{$less->id}}" class="btn btn-sm btn-info mb-0">{{__('Learn')}}</a>
+                                                    <a href="{{ url('student/view-mylesson')}}?id={{$less->id}}" class="btn btn-sm btn-success text-white mb-0">{{__('Learn')}}</a>
                                                 </div>
                                                 <p class="">{!! $less->summary !!}</p>
                                                 <!-- Divider -->
