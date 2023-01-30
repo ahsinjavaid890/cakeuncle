@@ -118,6 +118,7 @@ Route::get("/remove-item-from-cart/{id}", [
 Route::get("/course", [FrontendController::class, "courses"]);
 
 Route::get("/course/{slug}", [FrontendController::class, "viewCourse"]);
+Route::post("/purchasediploma", [FrontendController::class, "purchasediploma"]);
 //Route::get("/home/{slug}", [FrontendController::class, "viewCourse"]);
 Route::get("/shop/{slug}", [FrontendController::class, "viewEbook"]);
 Route::get("/course-details", [FrontendController::class, "courseDetails"]);
@@ -185,6 +186,7 @@ Route::get("/orders", [BillingController::class, "orders"]);
 Route::get("/view-order", [BillingController::class, "viewOrder"]);
 
 Route::get("/earnings", [EarningController::class, "earnings"]);
+Route::get("/requests", [EarningController::class, "requests"]);
 Route::get("/order-details", [EarningController::class, "orderDetails"]);
 
 Route::get("/payment-gateways", [AdminController::class, "paymentGateways"]);

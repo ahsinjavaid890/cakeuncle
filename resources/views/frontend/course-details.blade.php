@@ -290,8 +290,17 @@
 
                             <!-- Buttons -->
                             <div class="mt-3 d-grid">
-                                <a href="{{ url('add-to-cart')}}/{{$course->id}}?type=course" class="btn btn-success text-white">{{__('Add to cart')}}</a>
-                                <a href="{{ url('add-to-cart')}}/{{$course->id}}?type=course" class="mt-3 btn btn-success text-white">{{__('Buy now')}}</a>
+                                <form method="POST" action="{{ url('purchasediploma')}}">
+                                    @csrf
+                                    <input type="hidden" value="{{$course->name}}" name="diploma_name">
+                                    <input type="hidden" value="{{ $course->id }}" name="diploma_id">
+                                    <input type="hidden" value="{{  Auth::user()->id }}" name="user_id">
+                                @if(Auth::check()) 
+                                <button type="submit"  class="mt-3 btn btn-success text-white">{{__('Purchase Now')}}</button>
+                               @else
+                                <a href="{{ url('student/login')}}" class="btn btn-success text-white">{{__('Login')}}</a>
+                                 @endif
+                                 </form>
                             </div>
                             <!-- Divider -->
                             <hr>

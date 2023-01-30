@@ -6,6 +6,8 @@ use App\Models\Blog;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Student;
+use App\Models\purchase_diploma;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class EarningController extends AdminBaseController
@@ -47,4 +49,12 @@ class EarningController extends AdminBaseController
             "students" => $students,
         ]);
     }
+    public function requests()
+  {
+    $requests = purchase_diploma::all();
+        $users = User::all()
+            ->keyBy("id")
+            ->all();
+    return \view("earnings.request", [ "selected_navigation" => "earnings", "requests" => $requests, "users" => $users, ]);
+  }
 }

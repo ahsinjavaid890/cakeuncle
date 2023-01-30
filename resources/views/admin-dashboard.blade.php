@@ -267,9 +267,9 @@
             <div class="card">
                 <div class="card-header border-bottom">
                     <div class="d-flex justify-content-between">
-                        <h6 class="mb-0 text-capitalize">{{__('Recent Orders')}}</h6>
+                        <h6 class="mb-0 text-capitalize">{{__('Recent Requests')}}</h6>
                         @if(count($recent_orders))
-                            <a href="{{ url('earnings')}}" class="btn  bg-purple-light text-purple shadow-none mb-0 ms-2 d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="">
+                            <a href="{{ url('requests')}}" class="btn  bg-purple-light text-purple shadow-none mb-0 ms-2 d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="">
                                 {{__('View All')}}
                             </a>
                         @endif

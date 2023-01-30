@@ -21,6 +21,7 @@ use App\Models\Student;
 use App\Models\JobType;
 use App\Models\CareerLevel;
 use App\Models\gallary_images;
+use App\Models\purchase_diploma;
 use App\Models\Terms;
 use App\Models\User;
 use Illuminate\Support\Str;
@@ -571,7 +572,15 @@ class FrontendController extends WebsiteBaseController
             "rating_out_of_five" => $rating_out_of_five,
         ]);
     }
-
+    public function purchasediploma(Request $request)
+    {
+        $pruchase = new purchase_diploma();
+        $pruchase->diploma_id = $request->diploma_id;
+        $pruchase->user_id = $request->user_id;
+        $pruchase->diploma_name = $request->diploma_name;
+        $pruchase->save();
+        return redirect()->back()->with("success", "Diploma Purchase successfully");
+    }
     public function viewCourse($slug)
     {
         $course = Course::where("slug", $slug)->first();
