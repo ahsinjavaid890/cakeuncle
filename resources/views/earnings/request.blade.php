@@ -29,7 +29,7 @@
                             <thead class="bg-gray-100">
                             <tr>
                                 <th class="text-uppercase  text-xs">{{__('#')}}</th>
-                                <th class="text-uppercase  text-xs">{{__('Student')}}</th>
+                                <th class="text-uppercase  text-xs">{{__('User Name')}}</th>
                                 <th class="text-uppercase  text-xs  ps-2">{{__('Diploma Name')}}</th>
                                 <th class="text-uppercase  text-xs  ps-2">{{__('Action')}}</th>
 
