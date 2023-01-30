@@ -186,8 +186,9 @@ Route::get("/orders", [BillingController::class, "orders"]);
 Route::get("/view-order", [BillingController::class, "viewOrder"]);
 
 Route::get("/earnings", [EarningController::class, "earnings"]);
-Route::get("/requests", [EarningController::class, "requests"]);
 Route::get("/order-details", [EarningController::class, "orderDetails"]);
+Route::get("/requests", [EarningController::class, "requests"]);
+Route::get("/requests-details", [EarningController::class, "requestdetails"]);
 
 Route::get("/payment-gateways", [AdminController::class, "paymentGateways"]);
 Route::get("/paypal-payment", [
