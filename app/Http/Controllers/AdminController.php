@@ -8,7 +8,7 @@ use App\Models\Course;
 use App\Models\gallary_images;
 use App\Models\LandingPage;
 use App\Models\Lesson;
-
+use App\Models\purchase_diploma;
 use App\Models\Order;
 use App\Models\PaymentGateway;
 use App\Models\PrivacyPolicy;
@@ -52,7 +52,7 @@ class AdminController extends AdminBaseController
         $students = Student::all()
             ->keyBy("id")
             ->all();
-
+        $requests = purchase_diploma::all();
         return \view("admin-dashboard", [
             "selected_navigation" => "dashboard",
             "total_users" => $total_users,
@@ -66,6 +66,7 @@ class AdminController extends AdminBaseController
             "recent_orders" => $recent_orders,
             "recent_ebooks" => $recent_ebooks,
             "students" => $students,
+            "requests" => $requests,
         ]);
     }
 
@@ -444,7 +445,6 @@ class AdminController extends AdminBaseController
     public function privacyPage()
     {
         $privacy = PrivacyPolicy::first();
-
         return \view("admin.privacy-page-editor", [
             "selected_navigation" => "privacy-page-editor",
 
@@ -475,7 +475,7 @@ class AdminController extends AdminBaseController
         $post->description = clean($request->description);
         $post->save();
 
-        return redirect(config("app.url") . "/privacypage");
+        return redirect()->back();
     }
 
     public function saveTerms(Request $request)
@@ -491,7 +491,7 @@ class AdminController extends AdminBaseController
         $post->description = clean($request->description);
         $post->save();
 
-        return redirect(config("app.url") . "/termspage");
+        return redirect()->back();
     }
 
     public function footer()
@@ -548,7 +548,7 @@ class AdminController extends AdminBaseController
         $post->description = $request->description;
         $post->save();
 
-        return redirect(config("app.url") . "/cookiepage");
+        return redirect()->back();
     }
 
     public function updateSchema()

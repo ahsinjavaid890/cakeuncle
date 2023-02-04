@@ -162,7 +162,10 @@ class FrontendController extends WebsiteBaseController
             "landingpage" => $landingpage,
         ]);
     }
-
+    public function admission()
+    {
+        return view('frontend.admission');
+    }
     public function menu()
     {
         return view('frontend.menu');

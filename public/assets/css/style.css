@@ -17970,3 +17970,69 @@ only screen and (max-width: 767px) {
         min-width: 100%;
     }
 }
+
+.item {
+  background-color: #64317c;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 12px 1px;
+  font-size: 20px;
+  opacity: 0.8;
+  box-shadow: 4px 8px 20px rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  height: 50px;
+  transition: all 0.4s;
+  margin: 16px 0;
+}
+.item p{
+    padding: 0px 20px;
+    border-top:  1px solid white;
+    color: white;
+}
+.ye {
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.ye h4{
+    color: white;
+    font-size: 17px;
+}
+.ye img {
+  width: 30px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+
+.active {
+  height: 130px;
+}
+
+.act_img {
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 668px) {
+  .item {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 608px) {
+  .item {
+    font-size: 15px;
+  }
+}
+.fee-table{
+    background-color: #fdf7ff;
+}
+.table tbody tr:last-child td{
+    border-width: 1px !important;
+}

@@ -3,7 +3,7 @@
 @section('content')
 
     <div class=" row mb-2">
-        <div class="col">
+        <div class="col-md-6">
             <span>
                 <h5 class="  fw-bolder">
                     {{__('Users')}} /<span class="text-secondary">
@@ -14,7 +14,7 @@
 
             </span>
         </div>
-        <div class="col text-end">
+        <div class="col-md-6 text-end">
         </div>
     </div>
     <div class="row">

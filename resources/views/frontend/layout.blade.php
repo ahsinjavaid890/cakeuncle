@@ -41,7 +41,7 @@
             @endif
         </a>
 
-        <a href="/cart" class=" btn btn-md btn-icon-only btn-info btn-rounded position-relative d-lg-none d-block">
+        <a href="{{ url('cart')}}" class=" btn btn-md btn-icon-only btn-info btn-rounded position-relative d-lg-none d-block">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
 
             @if(!empty($cart))
@@ -49,8 +49,6 @@
                 </span>
             @endif
         </a>
-
-        <a href="/signup" class="btn btn-sm  btn-dark-blue  btn-round mb-0 ms-auto d-lg-none d-block">{{__('Signup')}}</a>
 
 
         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,39 +60,42 @@
         </button>
         <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
 
-            <ul class="navbar-nav bg-transparent shadow-none navbar-nav-hover w-60  mx-auto">
+            <ul class="navbar-nav bg-transparent shadow-none navbar-nav-hover w-100  mx-auto">
 
-                <li class="nav-item  ms-lg-auto mx-2">
-                    <a  href="{{ url('') }}" class="   ps-2 d-flex justify-content-between cursor-pointer align-items-center">
+                <li class="nav-item  ms-lg-auto mx-1">
+                    <a  href="{{ url('') }}" class="ps-2 d-flex justify-content-between cursor-pointer align-items-center">
                         {{__('Home')}}
 
                     </a>
                 </li>
 
-                <li class="nav-item   ms-lg-auto mx-2">
+                <li class="nav-item   ms-lg-auto mx-1">
                     <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('about') }}" >
                         {{__('About')}}
 
                     </a>
                 </li>
-                <li class="nav-item   ms-lg-auto mx-2">
-                    <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('forhomebakers') }}" >
-                        {{__('For Home Bakers')}}
-
-                    </a>
-                </li>
-                <li class="nav-item   ms-lg-auto mx-2">
+                <li class="nav-item   ms-lg-auto mx-1">
                     <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('gallery') }}">
-                        {{__('Gallery')}}
+                        {{__('Media')}}
 
                     </a>
                 </li>
-                <li class="nav-item  ms-lg-auto mx-2">
+                <li class="nav-item   ms-lg-auto mx-1">
+                    <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('admission') }}">
+                        {{__('How to Admission')}}
+
+                    </a>
+                </li>
+                <li class="nav-item  ms-lg-auto mx-1">
                     <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-5" href="{{ url('contact') }}">
 
                         {{__('Contact Us')}}
 
                     </a>
+                </li>
+                <li class="nav-item ms-lg-auto mx-1">
+                    <a href="{{ url('signup')}}" class="btn btn-sm  btn-dark-blue  btn-round mb-0 ms-auto d-lg-none d-block">{{__('Signup')}}</a>
                 </li>
 
 
@@ -115,7 +116,7 @@
 
                     @if(!empty($student))
 
-                        <a href="{{ url('student/dashboard') }}" class="btn btn-md  btn-dark-blue btn-rounded mb-0 me-1">{{__('Welcome')}} {{$student->first_name}}</a>
+                        <a href="{{ url('student/dashboard') }}" class="btn  btn-success text-white">{{__('Welcome')}} {{$student->first_name}}</a>
 
                     @else
 
@@ -229,9 +230,8 @@
                 <div class="col-md-6">
                     <div class="footer-icon">
                         <ul class="d-flex my-4 " style="color: #06346e">
-                            <li class="mx-2"><a href="#"><i class="fa fa-twitter mr-2 favicon"></i></a></li>
-                            <li class="mx-2"><a href="#"><i class="fa fa-instagram mr-2 favicon"></i></a></li>
-                            <li class="mx-2"><a href="#"><i class="fa fa-facebook mr-2 favicon"></i></a></li>
+                            <li class="mx-2"><a href="https://www.facebook.com/cakeuncleindia"><i class="fa fa-facebook mr-2 favicon"></i></a></li>
+                            <li class="mx-2"><a href="https://www.instagram.com/cakeuncle/"><i class="fa fa-instagram mr-2 favicon"></i></a></li>
                         </ul>
                     </div>
                 </div>

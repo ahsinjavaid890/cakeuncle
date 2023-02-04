@@ -4,7 +4,7 @@
 @section('content')
 
     <div class=" row mb-3">
-        <div class="col">
+        <div class="col-md-12">
             <h5 class="fw-bolder">
                 {{__('Messages')}} /<span class="text-secondary">
                             {{__(" Message to the team members from")}} {{config('app.name')}}
@@ -17,8 +17,8 @@
 
 
 
-        <div class="row">
-            <div class="col-4">
+        <div class="row" id="chatparent">
+            <div class="col-md-4" id="chatprofiles">
                 <div class="card blur shadow-blur h-100-vh overflow-auto overflow-x-hidden mb-5 mb-lg-0">
                     <div class="card-header p-3">
                         <h6>{{__("Team Members from")}}  {{config('app.name')}} </h6>
@@ -75,7 +75,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-8">
+            <div class="col-md-8" id="chatbox">
                 <div class="card shadow-blur h-100-vh overflow-auto overflow-x-hidden">
                     <div class="card-header  border-bottom">
                         <div class="row">

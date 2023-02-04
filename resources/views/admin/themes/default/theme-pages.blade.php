@@ -37,7 +37,7 @@
                 </thead>
                 <tbody>
 
-                    <tr>
+                    <!-- <tr>
                         <td>
                             <h6 class=" mb-0 ">{{__('Landing Page')}}</h6>
                         </td>
@@ -52,7 +52,7 @@
                             </a>
 
                         </td>
-                    </tr>
+                    </tr> -->
                     <tr>
                         <td>
                             <h6 class=" mb-0 ">{{__('Footer')}}</h6>

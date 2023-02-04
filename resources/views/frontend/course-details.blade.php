@@ -290,15 +290,20 @@
 
                             <!-- Buttons -->
                             <div class="mt-3 d-grid">
+                                @if(!empty($student))
+                                @if(DB::table('purchase_diplomas')->where('user_id' , $student->id)->where('diploma_id' , $course->id)->count() > 0)
+                                <a style="background-color:#64317c;color: white !important;" href="javascript:void(0)" class="btn btn-success text-white">Already REquested</a>
+                                @else
                                 <form method="POST" action="{{ url('purchasediploma')}}">
                                     @csrf
                                     <input type="hidden" value="{{$course->name}}" name="diploma_name">
                                     <input type="hidden" value="{{ $course->id }}" name="diploma_id">
-                                    <input type="hidden" value="{{  Auth::user()->id }}" name="user_id">
-                                @if(Auth::check()) 
-                                <button type="submit"  class="mt-3 btn btn-success text-white">{{__('Purchase Now')}}</button>
+                                    <input type="hidden" value="{{  $student->id }}" name="user_id">
+                                
+                                <button type="submit"  class="btn btn-success text-white">{{__('Request for Buy')}}</button>
+                                @endif
                                @else
-                                <a href="{{ url('student/login')}}" class="btn btn-success text-white">{{__('Login')}}</a>
+                                <a href="{{ url('student/login')}}" class="btn btn-success text-white">{{__('Login to Request for Buy')}}</a>
                                  @endif
                                  </form>
                             </div>

@@ -28,7 +28,7 @@ class SettingController extends BaseController
         $request->validate([
             "logo" => "nullable|file|mimes:jpg,png",
             "favicon" => "nullable|file|mimes:jpg,png",
-            "currency" => "nullable|string|size:3",
+            "currency" => "nullable",
             "landingpage" => "nullable",
         ]);
 

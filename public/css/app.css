@@ -299,3 +299,50 @@
 .contact-card{
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 }
+@media screen and (min-width: 270px) and (max-width: 760px){
+    .input-group-text {
+    /* display: flex; */
+    /* align-items: center; */
+    padding: 0.5rem 0.75rem;
+    font-size: .875rem;
+    font-weight: 400 !important;
+    line-height: 1.4rem;
+    color: #252f40;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #fff;
+    border: 1px solid #d2d6da;
+    border-radius: 0.5rem;
+    width: 61%;
+    }
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+        padding: 0 !important;
+    }
+     #chatparent{
+        display:flex;
+        flex-flow: column;
+    }
+    #chatprofiles{order:2; margin-top: 20px}
+    #chatbox{order:1;}
+    .navbar-collapse .nav-item{
+        font-size: 25px;
+    }
+    .btn.btn-icon-only{
+        padding: 10px !important;
+    }
+    .row>*{
+        padding-right: unset !important;
+    }
+    div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter{
+        text-align: left !important;
+    }
+    .action_btns{
+        display: flex;
+    }
+}
+.card-img img {
+    height: 280px;
+}
+.card-blog img {
+    height: 280px;
+}

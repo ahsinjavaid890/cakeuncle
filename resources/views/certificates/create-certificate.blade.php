@@ -3,7 +3,7 @@
 
 @section('content')
     <div class=" row mb-2">
-        <div class="col">
+        <div class="col-md-6">
             <h5 class="  fw-bolder">
                 {{__('Certificates')}} /<span class="text-secondary">
                            {{__(' Create Certificate templates')}}
@@ -11,7 +11,7 @@
             </h5>
             <p class="text-muted">{{__('Create, edit or delete certificate templates.')}}</p>
         </div>
-        <div class="col text-end">
+        <div class="col-md-6 text-end">
 
             <a href="{{ url('certificates')}}" type="button" class="btn btn-info text-white"> {{__('Certificate Templates')}}</a>
 

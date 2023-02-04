@@ -28,7 +28,7 @@
         <div class="container">
             <div class="row">
                 @foreach($data as $r)
-                <div class="col-md-3">
+                <div class="col-md-4 mt-4">
                     <div class="card gallery-card">
                         <div class="card-body p-0">
                             <div class="zoom-effect-container">

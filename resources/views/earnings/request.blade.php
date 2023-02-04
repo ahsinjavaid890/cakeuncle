@@ -48,25 +48,28 @@
                                     <td>
                                         <div class="d-flex">
                                             <div>
-                                                @if(empty($users[$request->user_id]->photo))
+                                                @php
+                                                    $user = DB::table('students')->where('id' , $request->user_id)->first();
+                                                @endphp
+                                                @if(empty($user->photo))
                                                     <div class="avatar avatar-md rounded-circle bg-info-light border-radius-md p-2 ">
-                                                        <h6 class="text-info-light text-uppercase mt-1">{{$users[$request->user_id]->first_name['0']}}{{$users[$request->user_id]->last_name['0']}}
+                                                        <h6 class="text-info-light text-uppercase mt-1">
+
+                                                            {{ substr($user->first_name, 0, 1) }}
+                                                            {{ substr($user->last_name, 0, 1) }}
 
                                                         </h6>
-
                                                     </div>
                                                 @else
-
-                                                    <img src=""
-                                                         class="avatar avatar-md rounded-circle  shadow-sm">
+                                                    <img src="" class="avatar avatar-md rounded-circle  shadow-sm">
                                                 @endif
                                             </div>
                                             <div class="d-flex flex-column justify-content-center ms-3">
-                                                <a href="/student-about?id={{$users[$request->user_id]->id}}">
-                                                    <h6 class="mb-0">{{$users[$request->user_id]->first_name}} {{$users[$request->user_id]->last_name}}</h6>
+                                                <a href="{{ url('student-about') }}?id={{$user->id}}">
+                                                    <h6 class="mb-0">{{$user->first_name}} {{$user->last_name}}</h6>
                                                 </a>
 
-                                                <p class=" text-sm text-muted mb-0">{{$users[$request->user_id]->email}}</p>
+                                                <p class=" text-sm text-muted mb-0">{{$user->email}}</p>
                                             </div>
                                         </div>
                                     </td>
@@ -75,7 +78,7 @@
                                     </td>
                                     <td class="align-middle text-right">
                                         <a class=" btn btn-info"
-                                           href="/order-details?id={{$request->id}}">{{__('View Order')}}</a>
+                                           href="{{ url('student-about') }}?id={{$user->id}}">{{__('View Student')}}</a>
 
                                     </td>
                                 </tr>

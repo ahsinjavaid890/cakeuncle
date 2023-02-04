@@ -5,7 +5,7 @@
 
 
     <div class="row mb-2">
-        <div class="col">
+        <div class="col-md-12">
             <h5 class="  fw-bolder">
                 {{__('Settings')}} /<span class="text-secondary">
                           {{__('Payment Gateways')}}
@@ -14,7 +14,6 @@
             <p class="text-muted">{{__('Select a payment gateway and configure to get payments from students')}}</p>
 
         </div>
-
     </div>
     <div class="row">
 

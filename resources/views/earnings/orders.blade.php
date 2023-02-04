@@ -84,7 +84,7 @@
                                     </td>
                                     <td class="align-middle text-right">
                                         <a class=" btn btn-info"
-                                           href="/order-details?id={{$order->id}}">{{__('View Order')}}</a>
+                                           href="{{ url('order-details') }}?id={{$order->id}}">{{__('View Order')}}</a>
 
                                     </td>
                                 </tr>

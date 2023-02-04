@@ -27,11 +27,6 @@
                 </h5>
             </div>
 
-            <div class="col-lg-6 text-right ">
-
-                <button type="submit" class="btn btn-blue">{{__('Save')}}</button>
-            </div>
-
         </div>
 
 
@@ -249,7 +244,12 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-12 mt-3 mb-3">
+            <div class="text-right ">
 
+                <button type="submit" class="btn btn-blue">{{__('Save')}}</button>
+            </div>
+        </div>
 
     </div>
     </form>

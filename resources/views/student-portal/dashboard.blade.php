@@ -35,6 +35,7 @@
                     </div>
                 </div>
                 <div class="row">
+                    @if(!empty($courses))
                     @foreach($courses as $course)
                     
                         
@@ -89,10 +90,13 @@
                             </div>
                         </div>
                     @endforeach
+                    @else
+                    <h2>You are not enrolled in any course. </h2>
+                    @endif
                 </div>
             </div>
 
-            <div class="row mt-4">
+            <div class="row " style="margin-top: 270px !important;">
 
                 <div class="card mb-4">
                     <div class="card-header pb-0 p-2">
@@ -104,6 +108,7 @@
 
                         <div class="row g-4">
                             <!-- Card item START -->
+                            @if(!empty($ebooks))
                             @foreach($ebooks as $product)
 
                                 <div class="col-sm-6 col-lg-4 col-xl-3">
@@ -142,6 +147,9 @@
                                     </div>
                                 </div>
                         @endforeach
+                        @else
+                        <h2>You are not enrolled in any Ebooks. </h2>
+                        @endif
                         <!-- Card item END -->
                         </div>
                     </div>

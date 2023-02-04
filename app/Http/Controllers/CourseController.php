@@ -185,7 +185,7 @@ class CourseController extends BaseController
             ->keyBy("id")
             ->all();
         $lessons = Lesson::where("course_id", $request->id)->get();
-
+ 
         if ($request->id) {
             $course = Course::where("workspace_id", $this->user->workspace_id)
                 ->where("id", $request->id)
@@ -231,7 +231,6 @@ class CourseController extends BaseController
             "workspaces" => $workspaces,
         ]);
     }
-
     public function categoryPost(Request $request)
     {
         $request->validate([
@@ -239,33 +238,18 @@ class CourseController extends BaseController
             "category_id" => "nullable|integer",
         ]);
 
-        $category = false;
-
-        if ($request->category_id) {
-            $category = CourseCategory::find($request->category_id);
-        }
-
-        if (!$category) {
-            $category = new CourseCategory();
-        }
-
-        $category->name = $request->name;
-
+        $category = new CourseCategory;
+        $category->name=$request->name;
         $category->save();
-
         return redirect()->back();
     }
-    public function categoryEdit(Request $request)
-    {
-        $request->validate([
-            "id" => "required|integer",
-        ]);
 
-        $category = CourseCategory::find($request->id);
-
-        if ($category) {
-            return response($category);
-        }
+    public function categoryupdate(Request $request)
+    {   
+        $update = CourseCategory::find($request->id);
+        echo$update->name = $request->name;exit;
+        $update->save();
+        return redirect()->back();
     }
 
     public function createLesson(Request $request)

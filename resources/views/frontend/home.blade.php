@@ -26,8 +26,8 @@
                         </p>
 
                         <div class="text-start buttons mb-4">
-                            <!-- <a href="{{ url('course')}}" type="button" class="btn  btn-dark-blue text-white mt-4">{{__('Buy Courses')}}</a> -->
-                            <a style="width: 40%;" href="{{ url('signup')}}" type="button" class="btn  btn-success text-white mt-4">{{__('Get Started')}}</a>
+                            <a href="{{ url('course')}}" type="button" class="btn  btn-success text-white mt-4">{{__('For Indian Students')}}</a>
+                            <a href="{{ url('signup')}}" type="button" class="btn  btn-success text-white mt-4">{{__('For International Students')}}</a>
 
                         </div>
                         <!-- <p class="text-start  mt-2">{{__('Newly enrolled students')}}</p> -->
@@ -185,7 +185,7 @@
                                 <div class=" pt-0 pb-3 px-2">
 
                                     <div class="d-flex justify-content-between">
-                                        <span class="h5 fw-bolder mb-0">{{formatCurrency($course->price,getWorkspaceCurrency($super_settings))}} </span>
+                                        <span class="h5 fw-bolder mb-0">INR {{ $course->price }} </span>
                                     </div>
                                 </div>
                             </div>
@@ -201,9 +201,8 @@
     <section class="mt-4 background-img">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content position-relative">
-                    <h4 class="text-white">OUR CERTIFICATE IS APPROVED BY GOVERNMENT OF INDIA
-                     &amp; ISO 9001:2015: CERTIFIED
+                <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content position-relative text-center">
+                    <h4 class="text-white">Our Certificate is Approved by Government of India & ISO 9001:2015 certified.
                     </h4>
                                          
                                 
@@ -221,11 +220,6 @@
                     * Feel Free to Call Us at 79732-45822 
 
                     </p>
-                  </div>
-                  <div class="col-lg-6 order-1 order-lg-2 text-center aos-init aos-animate position-relative">
-                    <div class="bakery">
-                      <img class="img-responsive" src="{{ url('public/images/one.jpg')}}" alt="">
-                    </div>
                   </div>
                 </div>
         </div>
@@ -315,7 +309,6 @@
             <div class="row mb-5">
                 <div class="col-lg-12 text-center">
                     <h1 class="fw-bolder display-5 text-center mt-2 mb-0">Latest Blog Posts</h1>
-                    <p class="lead ">{{__('Read our blogs to increase your knowledge, we post new article every week.')}}</p>
                 </div>
             </div>
             <div class="row">

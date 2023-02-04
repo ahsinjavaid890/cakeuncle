@@ -97,6 +97,7 @@ Route::get("/about", [FrontendController::class, "about"]);
 Route::get("/menu", [FrontendController::class, "menu"]);
 Route::get("/forhomebakers", [FrontendController::class, "forhomebakers"]);
 Route::get("/gallery", [FrontendController::class, "gallery"]);
+Route::get("/admission", [FrontendController::class, "admission"]);
 
 
 
@@ -162,6 +163,7 @@ Route::post("/save-blog", [BlogController::class, "blogPost"]);
 Route::get("/course-categories", [CourseController::class, "categories"]);
 Route::get("/product-categories", [ShopController::class, "categories"]);
 Route::post("/category-save", [CourseController::class, "categoryPost"]);
+Route::post("/categoryupdate/{id}", [CourseController::class, "categoryupdate"]);
 Route::post("/product-category-save", [ShopController::class, "categoryPost"]);
 
 Route::get("/courses", [CourseController::class, "courses"]);

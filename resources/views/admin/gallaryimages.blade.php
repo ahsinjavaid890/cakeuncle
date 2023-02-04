@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="row mb-2">
-        <div class="col">
+        <div class="col-md-6">
             <span>
 
                 <h5 class="  fw-bolder">
@@ -16,7 +16,7 @@
             </span>
 
         </div>
-        <div class="col text-end">
+        <div class="col-md-8 text-end">
             <button type="button" class="btn btn-info  mb-3" data-bs-toggle="modal" data-bs-target="#kt_modal_1"  id="btn_add_new_category"><i class="fas fa-plus"></i>&nbsp;&nbsp; {{__(' Add New Gallary Images')}}</button>
         </div>
     </div>

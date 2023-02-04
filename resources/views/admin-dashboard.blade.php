@@ -290,7 +290,7 @@
                                 <tr>
 
                                     <th class="text-uppercase  text-xs">{{__('Student')}}</th>
-                                    <th class="text-uppercase  text-xs  ps-2">{{__('Amount')}}</th>
+                                    <th class="text-uppercase  text-xs  ps-2">{{__('Diploma Name')}}</th>
                                     <th class="text-uppercase  text-xs  ps-2">{{__('Date')}}</th>
 
                                     <th class=""></th>
@@ -299,61 +299,51 @@
                                 </thead>
 
                                 <tbody>
-                                @foreach($recent_orders as $order)
+                                    @foreach($requests as $request)
 
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex">
-                                                <div>
-                                                    @if(empty($students[$order->student_id]->photo))
-                                                        <div class="avatar avatar-md rounded-circle bg-info-light border-radius-md p-2 ">
-                                                            <h6 class="text-info-light text-uppercase mt-1">{{$students[$order->student_id]->first_name['0']}}{{$students[$order->student_id]->last_name['0']}}
+                                <tr>
+                                    <td>
+                                        <div class="d-flex">
+                                            <div>
+                                                @php
+                                                    $user = DB::table('students')->where('id' , $request->user_id)->first();
+                                                @endphp
+                                                @if(empty($user->photo))
+                                                    <div class="avatar avatar-md rounded-circle bg-info-light border-radius-md p-2 ">
+                                                        <h6 class="text-info-light text-uppercase mt-1">
 
-                                                            </h6>
+                                                            {{ substr($user->first_name, 0, 1) }}
+                                                            {{ substr($user->last_name, 0, 1) }}
 
-                                                        </div>
-                                                    @else
-
-                                                        <img src="{{ url('public') }}/uploads/{{$students[$order->student_id]->photo}}"
-                                                             class="avatar avatar-md rounded-circle  shadow-sm">
-                                                    @endif
-                                                </div>
-
-                                                @if(!empty($students[$order->student_id]->id))
-                                                    <div class="d-flex flex-column justify-content-center ms-3">
-                                                        <a href="{{ url('student-about')}}?id={{$students[$order->student_id]->id}}">
-                                                            <h6 class="mb-0">{{$students[$order->student_id]->first_name}} {{$students[$order->student_id]->last_name}}</h6>
-                                                        </a>
-
-                                                        <p class=" text-sm text-muted mb-0">{{$students[$order->student_id]->email}}</p>
+                                                        </h6>
                                                     </div>
-
+                                                @else
+                                                    <img src="" class="avatar avatar-md rounded-circle  shadow-sm">
                                                 @endif
-
                                             </div>
-                                        </td>
+                                            <div class="d-flex flex-column justify-content-center ms-3">
+                                                <a href="{{ url('student-about') }}?id={{$user->id}}">
+                                                    <h6 class="mb-0">{{$user->first_name}} {{$user->last_name}}</h6>
+                                                </a>
 
-                                        <td class="align-middle text-start">
-                                        <span class="">
-                                        {{$order->order_total}}
-                                        </span>
-                                        </td>
-                                        <td class="align-middle text-start">
-                                        <span class="">
-                                             {{(\App\Supports\DateSupport::parse($order->created_at))->format(config('app.date_format'))}}
+                                                <p class=" text-sm text-muted mb-0">{{$user->email}}</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>{{ $request->diploma_name}}</p>
+                                    </td>
+                                    <td>
+                                        <p>{{ $request->created_at}}</p>
+                                    </td>
+                                    <td class="align-middle text-right">
+                                        <a class=" btn btn-info"
+                                           href="{{ url('student-about') }}?id={{$user->id}}">{{__('View Student')}}</a>
 
-                                        </span>
-                                        </td>
-                                        <td class="align-middle text-right">
-                                            <a class=" btn bg-purple-light text-purple btn-icon-only  shadow-none"
-                                               href="{{ url('order-details')}}?id={{$order->id}}">
-
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
-                                            </a>
-
-                                        </td>
-                                    </tr>
-                                @endforeach
+                                    </td>
+                                </tr>
+                            @endforeach
+                               
                                 </tbody>
                             </table>
                         </div>

@@ -3,7 +3,7 @@
 @section('content')
 
     <div class=" row mb-2">
-        <div class="col">
+        <div class="col-md-6">
             <h5 class="  fw-bolder">
                 {{__('Assignments')}} /<span class="text-secondary">
                           {{__('Assignment List')}}
@@ -12,7 +12,7 @@
             <p class="text-muted">{{__('Create, edit or delete assignments.')}}</p>
 
         </div>
-        <div class="col text-end">
+        <div class="col-md-6 text-end">
             <a href="{{ url('create-assignment')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i>&nbsp;&nbsp; {{__('Create Assignment ')}}</a>
 
 

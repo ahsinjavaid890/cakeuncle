@@ -142,7 +142,7 @@
                     <span class="nav-link-text ms-3">{{__('eBooks')}}</span>
                 </a>
             </li>
-            <li class="nav-item mt-4 mb-2">
+            <!-- <li class="nav-item mt-4 mb-2">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-6">{{__('Earnings')}}  </h6>
             </li>
 
@@ -154,10 +154,10 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
                     <span class="nav-link-text ms-3">{{__('Earnings')}}</span>
                 </a>
-            </li>
+            </li> -->
 
 
-            <li class="nav-item mt-4 mb-2">
+           <!--  <li class="nav-item mt-4 mb-2">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-6">{{__('Productivity')}}  </h6>
             </li>
 
@@ -193,7 +193,7 @@
                     <span class="nav-link-text ms-3">{{__('Calendar')}}</span>
                 </a>
             </li>
-
+ -->
             <li class="nav-item mt-3 mb-2">
                 <h6 class="ps-4 ms-2 text-uppercase text-white text-xs opacity-6">{{__('CMS')}}</h6>
             </li>
@@ -212,7 +212,7 @@
 
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dribbble"><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path></svg>
-                    <span class="nav-link-text ms-3">{{__('Gallary Images')}}</span>
+                    <span class="nav-link-text ms-3">{{__('Gallery Images')}}</span>
                 </a>
             </li>
 
@@ -276,7 +276,7 @@
                     <span class="nav-link-text ms-3">{{__('Users')}}</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link @if(($selected_navigation ?? '') === 'payment-gateways') active @endif "
                    href="{{ url('payment-gateways')}}">
 
@@ -288,7 +288,7 @@
                     </svg>
                     <span class="nav-link-text ms-3">{{__('Payment Gateways')}}</span>
                 </a>
-            </li>
+            </li> -->
 
 
             <li class="nav-item mb-4 ">

@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="row mb-2">
-        <div class="col">
+        <div class="col-md-12">
             <div>
                 <h5 class="fw-bolder">
                     {{__('Messages')}} /<span class="text-secondary">
@@ -24,8 +24,8 @@
 
 </div>
 
-    <div class="row">
-        <div class="col-4">
+    <div class="row" id="chatparent">
+        <div class="col-md-4" id="chatprofiles">
             <div class="card h-100-vh  overflow-auto overflow-x-hidden mb-4 mb-lg-0">
                 <div class="card-header p-3">
                     <h6>{{__('Students')}}</h6>
@@ -97,7 +97,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-8">
+        <div class="col-md-8" id="chatbox">
             @if(!$selected_student)
                 <p class="text-muted">{{__('Add student to start chat.')}}</p>
                 <a href="{{ url('new-student')}}" class="btn btn-info">{{__('Add Student')}}</a>

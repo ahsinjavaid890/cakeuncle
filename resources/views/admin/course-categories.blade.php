@@ -3,7 +3,7 @@
 @section('content')
 
     <div class=" row mb-2">
-        <div class="col">
+        <div class="col-md-6">
             <h5 class="  fw-bolder">
                 {{__('Courses')}} /<span class="text-secondary">
                          {{__('Course Categories')}}
@@ -12,7 +12,7 @@
             <p class="text-muted">{{__('Create, edit or delete the course categories.')}}</p>
 
         </div>
-        <div class="col text-end">
+        <div class="col-md-6 text-end">
 
             <button type="button" class="btn btn-info  mb-3" data-bs-toggle="modal" data-bs-target="#kt_modal_1"  id="btn_add_new_category"><i class="fas fa-plus"></i>&nbsp;&nbsp; {{__(' Add New Course Category')}}</button>
 
@@ -50,10 +50,10 @@
 
                             </td>
 
-                            <td class="text-end ms-2">
+                            <td class="text-end ms-2 action_btns">
 
-                                <a class="btn btn-link text-dark ms-4 mb-0 category_edit"
-                                   href="#" data-id="{{$category->id}}">
+                                <a class="btn btn-link text-dark ms-4 mb-0"
+                                   href="#" data-bs-toggle="modal" data-bs-target="#update-category{{$category->id }}"  >
 
                                     <i class="far fa-edit "></i> {{__('Edit')}}
 
@@ -68,6 +68,45 @@
 
                             </td>
                         </tr>
+                        <div class="modal fade" id="update-category{{$category->id }}" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="h6 modal-title">{{__('Update Category')}}</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="sp_result_div"></div>
+                                        <form method="post" action="{{ url('categoryupdate') }}" id="form_main" class="">
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{ $category->id }}">
+                                            <!-- Form -->
+                                            <div class="form-group mb-4">
+                                                <label for="name">{{__('Name')}}</label>
+                                                <div class="input-group">
+                                                    <input type="text" value="{{ $category->name }}" name="name" class="form-control"  id="input_name" autofocus>
+                                                </div>
+                                            </div>
+                                            <!-- End of Form -->
+
+                                            <button  type="submit" id="btn_submit" class="btn btn-info">{{__('Update')}}</button>
+
+                                        </form>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
 
                     @endforeach
 
