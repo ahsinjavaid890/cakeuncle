@@ -57,4 +57,13 @@ class EarningController extends AdminBaseController
             ->all();
     return \view("earnings.request", [ "selected_navigation" => "earnings", "requests" => $requests, "users" => $users, ]);
   }
+  public function requestdetails(Request $request)
+  {
+      return \view("earnings.view-request", [
+            "selected_navigation" => "orders",
+            "order" => $order,
+            "order_items" => $order_items,
+            "students" => $students,
+        ]);
+  }
 }
