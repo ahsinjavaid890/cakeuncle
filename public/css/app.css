@@ -339,6 +339,13 @@
     .action_btns{
         display: flex;
     }
+    .container-homepage {
+        width: 100%;
+        padding-right: 35px;
+        padding-left: 35px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 .card-img img {
     height: 280px;
