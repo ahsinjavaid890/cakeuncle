@@ -98,7 +98,7 @@
                                     <div class="col">
                                         <div class="card bg-success-light">
                                             <div class="card-body">
-                                                <span class="mb-0 h4 me-2 text-success"> {{formatCurrency($product->price,getWorkspaceCurrency($super_settings))}}</span>
+                                                <span class="mb-0 h4 me-2 text-success"> INR {{$product->price}}</span>
 
                                             </div>
                                         </div>

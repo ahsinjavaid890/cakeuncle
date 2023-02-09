@@ -301,7 +301,7 @@
                                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                                         <!-- Price -->
                                                         <span class="text-success">@if(!empty($course_in_cart->price))
-                                                                {{formatCurrency($course_in_cart->price,getWorkspaceCurrency($super_settings))}}
+                                                               INR {{$course_in_cart->price}}
 
                                                             @endif
                                                         </span>

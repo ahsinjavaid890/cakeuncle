@@ -105,7 +105,7 @@
                                                     <span class="h6 fw-light mb-0">{{__('By')}} <span class="fw-bolder">{{$product->author_name}}</span></span>
                                                     <!-- Price -->
                                                     <h5 class="text-success mb-0">
-                                                        {{formatCurrency($product->price,getWorkspaceCurrency($super_settings))}}
+                                                        INR {{$product->price}}
                                                     </h5>
                                                 </div>
                                             </div>

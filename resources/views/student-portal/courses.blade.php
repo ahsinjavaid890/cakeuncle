@@ -62,7 +62,7 @@
                             <hr>
                             <div class="d-flex justify-content-between">
 
-                                <span class="h5 fw-bolder mb-0">{{formatCurrency($course->price,getWorkspaceCurrency($settings))}} </span>
+                                <span class="h5 fw-bolder mb-0">INR {{$course->price}} </span>
 
                                 <span class="h6 fw-light mb-0">
 

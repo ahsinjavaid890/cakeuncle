@@ -281,7 +281,7 @@
                                 <!-- Price -->
                                 <h3 class="fw-bold mb-0 me-2"
                                 >@if(!empty($course->price))
-                                        {{formatCurrency($course->price,getWorkspaceCurrency($super_settings))}}
+                                       INR {{$course->price}}
 
                                     @endif
                                 </h3>

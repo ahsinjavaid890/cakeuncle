@@ -28,7 +28,7 @@
         <div class="container">
             <div class="row">
                 @foreach($data as $r)
-                <div class="col-md-4 mt-4">
+                <div class="col-md-3 mt-5">
                     <div class="card gallery-card">
                         <div class="card-body p-0">
                             <div class="zoom-effect-container">
@@ -38,6 +38,13 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="img-popup">
+                  <img src="" alt="Popup Image">
+                  <div class="close-btn">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                  </div>
                 </div>
                 @endforeach
             </div>
@@ -62,4 +69,33 @@
             </div>
         </div>
     </section>
+@endsection
+@section('script')
+<script type="text/javascript">
+    $(document).ready(function() {
+
+  // required elements
+  var imgPopup = $('.img-popup');
+  var imgCont  = $('.image-card');
+  var popupImage = $('.img-popup img');
+  var closeBtn = $('.close-btn');
+
+  // handle events
+  imgCont.on('click', function() {
+    var img_src = $(this).children('img').attr('src');
+    imgPopup.children('img').attr('src', img_src);
+    imgPopup.addClass('opened');
+  });
+
+  $(imgPopup, closeBtn).on('click', function() {
+    imgPopup.removeClass('opened');
+    imgPopup.children('img').attr('src', '');
+  });
+
+  popupImage.on('click', function(e) {
+    e.stopPropagation();
+  });
+  
+});
+</script>
 @endsection

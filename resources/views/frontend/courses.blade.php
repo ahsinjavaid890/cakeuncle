@@ -72,7 +72,7 @@
 
                                                          <span class="h6 fw-light mb-0">
                                                              <i class="fas fa-book text-orange me-2"></i>{{getTotalLesson($course->id)}} {{__('Lessons')}}</span>
-                                                        <span class="h5 fw-bolder mb-0">{{formatCurrency($course->price,getWorkspaceCurrency($super_settings))}} </span>
+                                                        <span class="h5 fw-bolder mb-0">INR {{$course->price}} </span>
                                                     </div>
                                                 </div>
                                             </div>

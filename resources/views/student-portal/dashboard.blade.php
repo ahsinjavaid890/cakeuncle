@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    @if(!empty($courses))
+                    @if($courses)
                     @foreach($courses as $course)
                     
                         
@@ -76,7 +76,7 @@
                                         <div class=" pt-0 pb-3">
                                             <hr>
                                             <div class="d-flex justify-content-between">
-                                                <span class="h5 fw-bolder mb-0">{{formatCurrency($course->price,getWorkspaceCurrency($settings))}} </span>
+                                                <span class="h5 fw-bolder mb-0">INR {{$course->price}} </span>
                                                 <span class="h6 fw-light mb-0">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
                                                     @if(!empty($course))
@@ -108,7 +108,7 @@
 
                         <div class="row g-4">
                             <!-- Card item START -->
-                            @if(!empty($ebooks))
+                            @if($ebooks)
                             @foreach($ebooks as $product)
 
                                 <div class="col-sm-6 col-lg-4 col-xl-3">

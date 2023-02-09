@@ -414,7 +414,7 @@
                                             <div class=" pt-0 pb-3">
                                                 <hr>
                                                 <div class="d-flex justify-content-between">
-                                                    <span class="h5 fw-bolder mb-0">{{formatCurrency($course->price,getWorkspaceCurrency($settings))}} </span>
+                                                    <span class="h5 fw-bolder mb-0">INR {{$course->price}} </span>
                                                     <span class="h6 fw-light mb-0">
 
 
@@ -437,71 +437,7 @@
     </div>
 
 
-    <div class="row">
-        <div class="col-12">
-            <div class="card mb-4">
-                <div class="card-header pb-0 p-3">
 
-                    <div class="d-flex justify-content-between">
-
-                        <h6 class="mb-1  ">{{__('Recent eBooks')}}</h6>
-                        <a href="{{ url('products')}}"  class="btn  bg-purple-light text-purple shadow-none mb-0 ms-2 d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="">
-                            {{__('View All')}}
-                        </a>
-                    </div>
-
-                </div>
-
-
-                <div class="card-body p-3">
-
-                    <div class="row">
-
-                        @foreach($recent_ebooks as $ebook)
-                            <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                                <div class="card card-img">
-                                    <a class="d-block shadow-xl border-radius-xl">
-                                        @if(empty($ebook->image))
-                                            <img src="{{ url('public') }}/img/placeholder.png"
-                                                 class="w-100 border-radius-lg shadow-sm mt-3">
-                                        @else
-                                            <img src="{{ url('public') }}/uploads/{{$ebook->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
-                                        @endif
-                                    </a>
-                                    <div class="card-body text-center px-1 pb-0">
-
-                                        <a href="{{ url('view-product')}}?id={{$ebook->id}}">
-                                            <h5>
-                                                <strong>{{$ebook->name}}</strong>
-                                            </h5>
-                                        </a>
-                                        <div class="row mb-0">
-                                            <div class="col text-center">
-                                                {!! renderEbookRating($ebook->id) !!}
-                                            </div>
-
-
-                                        </div>
-                                        <div class="card-footer pt-0 px-3 mt-1">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <span class="h6 fw-light mb-0">{{__('By')}} <span class="fw-bolder">{{$ebook->author_name}}</span></span>
-                                                <!-- Price -->
-                                                <h5 class="text-success mb-0">
-                                                    {{formatCurrency($ebook->price,getWorkspaceCurrency($settings))}}
-                                                </h5>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 @endsection
 

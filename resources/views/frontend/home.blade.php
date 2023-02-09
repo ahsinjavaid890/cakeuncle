@@ -204,22 +204,6 @@
                 <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content position-relative text-center">
                     <h4 class="text-white">Our Certificate is Approved by Government of India & ISO 9001:2015 certified.
                     </h4>
-                                         
-                                
-                                            
-                    <p class="text-white">
-                                  USE  AS SUPPORTIVE DOCUMENT:<br>
-                    <br>
-                    *       Students going abroad for study or work basis <br>
-
-                    *   While taking business loan (Start-up) to open a bakery  
-                    <br>
-                    * After completion of the course you can work in any industry related to hotel, hospitality, catering, bakery &amp; many more....<br>
-                    * Are you looking for some advice on a particular topic –  how to find a bit of direction of your career or something else? 
-                    <br>
-                    * Feel Free to Call Us at 79732-45822 
-
-                    </p>
                   </div>
                 </div>
         </div>

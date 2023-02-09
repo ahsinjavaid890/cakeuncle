@@ -59,7 +59,7 @@
                                                     <td class="text-center">
                                                         <h5 class="text-info mb-0">
                                                             @if(!empty($course_in_cart->price))
-                                                                {{formatCurrency($course_in_cart->price,getWorkspaceCurrency($super_settings))}}
+                                                              INR  {{$course_in_cart->price}}
 
                                                             @endif
                                                         </h5>

@@ -99,7 +99,7 @@
                                             <div class="text-center">{!! renderEbookRating($product->id) !!}</div>
 
                                             <h5 class=" text-center mb-0">
-                                                {{formatCurrency($product->price,getWorkspaceCurrency($super_settings))}}
+                                               INR {{$product->price}}
                                             </h5>
 
                                         </div>
