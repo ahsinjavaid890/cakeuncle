@@ -149,7 +149,7 @@
                 </div>
 
             </div>
-            <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto ">
+            <div class="col-md-3 mb-4 me-auto ">
                 <div class="footer-list">
                     <h3 style="border-bottom:4px solid #ffffff;width: 160px;" class="text-white">UseFull Links</h3>
                     <ul class="flex-column  nav ">
@@ -178,7 +178,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto">
+            <div class="col-md-3 mb-4 me-auto">
                 <div class="footer-list">
                     <h3 style="border-bottom:4px solid #ffffff;width: 160px;" class="text-white">Company Links</h3>
                     <ul class="flex-column  nav">
@@ -199,7 +199,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-6 mb-4 me-auto">
+            <div class="col-md-3 mb-4 me-auto">
                 <div class="footer-list">
                     <h3 style="border-bottom:4px solid #ffffff;width: 160px;" class="text-white">Contact Us</h3>
                     <ul class="flex-column  nav contact-list">
