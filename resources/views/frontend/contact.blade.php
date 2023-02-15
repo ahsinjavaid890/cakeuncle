@@ -24,7 +24,7 @@
                 <div class="col-md-6">
                     <div class="contact-section2_content">
                         <h2 class="contact-section2__title">Information</h2>
-                        <p class="contact-section2__text">Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt</p>
+                        <p class="contact-section2__text">Leave your Message</p>
                         <ul class="contact-section2_list">
                             <li>
                                 <span class="contact-section2_list__icon" style="width: 103px !important;"><i class="lastudioicon lastudioicon-pin-3-2"></i></span>
@@ -32,11 +32,11 @@
                             </li>
                             <li>
                                 <span class="contact-section2_list__icon"><i class="lastudioicon lastudioicon-phone-2"></i></span>
-                                <span class="contact-section2_list__text">+1-855-500-8999</span>
+                                <span class="contact-section2_list__text">+91 79732 45822</span>
                             </li>
                             <li>
                                 <span class="contact-section2_list__icon"><i class="lastudioicon lastudioicon-mail"></i></span>
-                                <span class="contact-section2_list__text">contact@lifeadvice.ca</span>
+                                <span class="contact-section2_list__text">cakeuncle.com@gmail.com</span>
                             </li>
                         </ul>
                     </div>

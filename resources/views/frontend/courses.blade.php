@@ -4,21 +4,7 @@
     <section class="section section-lg bg-white line-bottom-soft mt-7 ">
         <div class="container">
             <div class="row mb-10">
-                <div class="col-md-3">
-                    <div class="vertical me-2 ms-2"></div>
-                    <div class="ms-4 mt-6">
-                        <h6>{{__('Categories')}}</h6>
-                        <div class="d-flex align-items-start mt-3">
-                            <div class="nav flex-column  me-3" id="v-pills-tab">
-                                @foreach($categories as $category)
-                                    <h5><a href="{{ url('course')}}?category_id={{$category->id}}" class="nav-link fw-bolder badge bg-purple-light mb-2 text-purple   active  " id="v-pills-home-tab">{{$category->name}}</a></h5>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-9 ">
+                <div class="col-md-12 ">
                     <div class="row mt-6">
                         <!-- Main content START -->
                         <div class="col-12">
@@ -53,28 +39,9 @@
                                                     <h5 class="card-title"><a href="{{ url('course')}}/{{$course->slug}}">{{$course->name}}</a></h5>
                                                     <!-- Rating star -->
 
-                                                    <div class="row mb-0">
-                                                        <div class="col">
-                                                            {!! renderRating($course->id) !!}
-                                                        </div>
-                                                        <div class="col text-end me-2">
-                                                            {!! getCourseRating($course->id) !!}.0/5.0
-
-                                                        </div>
-
-                                                    </div>
 
                                                 </div>
                                                 <!-- Card footer -->
-                                                <div class="card-footer pt-0 pb-3">
-                                                    <hr>
-                                                    <div class="d-flex justify-content-between">
-
-                                                         <span class="h6 fw-light mb-0">
-                                                             <i class="fas fa-book text-orange me-2"></i>{{getTotalLesson($course->id)}} {{__('Lessons')}}</span>
-                                                        <span class="h5 fw-bolder mb-0">INR {{$course->price}} </span>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
 

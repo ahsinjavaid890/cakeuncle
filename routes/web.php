@@ -61,9 +61,12 @@ Route::get("/themes", [AdminController::class, "themes"]);
 Route::get("/theme-pages", [AdminController::class, "themePages"]);
 
 Route::get("/gallaryimages", [AdminController::class, "gallaryimages"]);
+Route::get("/delete/gallaery/{id}", [AdminController::class, "deletegallaery"]);
 Route::post("addnewgallaeryimage", [AdminController::class, "addnewgallaeryimage"]);
-
-
+Route::get("/testimonials", [AdminController::class, "testimonials"]);
+Route::post("addtestimonials", [AdminController::class, "addtestimonials"]);
+Route::post("edittestimonials", [AdminController::class, "edittestimonials"]);
+Route::get("testimonial/{id}", [AdminController::class, "testimonial"]);
 
 
 
@@ -98,6 +101,7 @@ Route::get("/menu", [FrontendController::class, "menu"]);
 Route::get("/forhomebakers", [FrontendController::class, "forhomebakers"]);
 Route::get("/gallery", [FrontendController::class, "gallery"]);
 Route::get("/admission", [FrontendController::class, "admission"]);
+Route::get("/testimonial", [FrontendController::class, "testimonial"]);
 
 
 
@@ -401,6 +405,10 @@ Route::get("/certificates", [CertificateController::class, "certificates"]);
 Route::get("/create-certificate", [
     CertificateController::class,
     "newCertificate",
+]);
+Route::get("/createappreciationcertificate", [
+    CertificateController::class,
+    "createappreciationcertificate",
 ]);
 Route::post("/save-certificate-template", [
     CertificateController::class,

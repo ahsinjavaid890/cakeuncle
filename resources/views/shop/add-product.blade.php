@@ -5,11 +5,11 @@
     <div class="row">
         <div class="col">
             <h5 class=" fw-bolder">
-                {{__('Add eBook')}}
+                {{__('Add Recipes')}}
             </h5>
         </div>
         <div class="col text-end">
-            <a href="{{ url('products')}}" type="button" class="btn btn-info text-white">{{__('eBook List')}}</a>
+            <a href="{{ url('products')}}" type="button" class="btn btn-info text-white">{{__('Recipes List')}}</a>
         </div>
     </div>
     <!--begin::Stepper-->
@@ -85,9 +85,9 @@
                                 <!-- Basic information START -->
                                 <div class="card card-body ">
                                     <!-- Course title -->
-                                    <h4>{{__('eBook details')}}</h4>
+                                    <h4>{{__('Recipes details')}}</h4>
                                     <div class="mb-3">
-                                        <label  for="ebookTitle" class="form-label">{{__('eBook Name')}}</label>
+                                        <label  for="ebookTitle" class="form-label">{{__('Recipes Name')}}</label>
                                         <input class="form-control" type="text" name="name" value="{{$product->name ?? old('name') ?? ''}}" id="ebookTitle">
                                     </div>
 

@@ -60,7 +60,7 @@
         </button>
         <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
 
-            <ul class="navbar-nav bg-transparent shadow-none navbar-nav-hover w-100  mx-auto">
+            <ul class="navbar-nav bg-transparent shadow-none navbar-nav-hover w-70  mx-auto">
 
                 <li class="nav-item  ms-lg-auto mx-1">
                     <a  href="{{ url('') }}" class="ps-2 d-flex justify-content-between cursor-pointer align-items-center">
@@ -77,13 +77,13 @@
                 </li>
                 <li class="nav-item   ms-lg-auto mx-1">
                     <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('gallery') }}">
-                        {{__('Media')}}
+                        {{__('Gallery')}}
 
                     </a>
                 </li>
                 <li class="nav-item   ms-lg-auto mx-1">
                     <a class="  ps-2 d-flex justify-content-between cursor-pointer align-items-center me-2" href="{{ url('admission') }}">
-                        {{__('How to Admission')}}
+                        {{__('How to Enrol')}}
 
                     </a>
                 </li>
@@ -104,16 +104,6 @@
             <ul style="background-color:white;" class="navbar-nav  d-lg-block  d-none">
 
                 <li class="nav-item">
-                   <!--  <a href="/cart" class=" me-2 btn btn-md btn-icon-only btn-info btn-rounded position-relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-
-                        @if(!empty($cart))
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{$cart_count}}</span>
-                        @endif
-
-                    </a> -->
-
-
                     @if(!empty($student))
 
                         <a href="{{ url('student/dashboard') }}" class="btn  btn-success text-white">{{__('Welcome')}} {{$student->first_name}}</a>
@@ -240,9 +230,7 @@
                         <p class="my-4 ms-3 text-sm text-white">
                             All rights reserved. Copyright © <script>
                                 document.write(new Date().getFullYear())
-                            </script>  by @if (!empty($contact))
-                                {{$contact->title}}
-                            @endif
+                            </script>  by Capa College
                         </p>
                     </div>
                 </div>
@@ -271,7 +259,16 @@
     <script src="{{ url('public/assets/js/main.js') }}"></script>
 
 @yield('script')
-
+<script type="text/javascript">
+     $('.moreless-button').click(function() {
+      $('.moretext').slideToggle();
+      if ($('.moreless-button').text() == "Read more") {
+        $(this).text("Read less")
+      } else {
+        $(this).text("Read more")
+      }
+    });
+</script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 @extends('frontend.layout')
-@section('title','Cake Uncle')
+@section('title','Capa College')
 @section('content') 
     <header class="py-5">
         <div class="page-header bg-white min-vh-70 ">
@@ -16,108 +16,33 @@
                                 {{$landingpage->hero_title}}
                             @endif
                         </h1>
-
                         <p class="text-start lead  mt-3 mb-4">
-
-                            @if (!empty($landingpage))
-                                {!!clean($landingpage->hero_paragraph) !!}
-                            @endif
-
+                            <div class="article">
+                                <p>Welcome to the world of sweetness, where flour, sugar, and creativity come together in harmony! At CAPA - The Cakeuncle Academy of Pastry Arts, we take baking, pastry, and cake-making to new heights From the bustling streets of India to the distant shores of the world, we welcome students from all corners of the globe to experience the sweetest education in the land. Our "Advance Diploma in Patisserie" is not just a piece of paper, it's a passport to a world of Pastry delight, approved by the Government of India and offering a comprehensive education of international standards. 
+                                </p>
+                                <p class="moretext">
+                                   With an experience of 15 years in the field providing international levels skills and knowledge for every part, personal attention and assistance to everyone all this at very economic rates, and accommodation benefits for international students So if looking to turn your passion for baking into a thriving career, look no further than CAPA ! Join us today and let us help you create a sweet future for yourself! 
+                                </p>
+                                <a class="moreless-button" href="javascript:void(0)">Read more</a>
+                            </div>
                         </p>
-
-                        <div class="text-start buttons mb-4">
-                            <a href="{{ url('course')}}" type="button" class="btn  btn-success text-white mt-4">{{__('For Indian Students')}}</a>
-                            <a href="{{ url('signup')}}" type="button" class="btn  btn-success text-white mt-4">{{__('For International Students')}}</a>
-
-                        </div>
-                        <!-- <p class="text-start  mt-2">{{__('Newly enrolled students')}}</p> -->
-
-                       <!--  <div class="text-start avatar-group d-flex mt-2">
-
-
-                            @foreach($students as $stu)
-
-                                @if(!empty($stu->photo))
-                                    <a  class="avatar avatar-sm rounded-circle"
-                                       data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                       title="{{$stu->first_name}}">
-                                        <img src="{{ url('public') }}/uploads/{{$stu->photo}}"
-                                             alt="team1">
-                                    </a>
-
-                                @else
-                                    <div class="avatar avatar-sm rounded-circle bg-purple-light mb-4 ">
-                                        <p class="mt-3 text-info"><span>{{$stu->first_name[0]}}{{$stu->last_name[0]}}</span>
-                                        </p>
-                                    </div>
-
-
-                                @endif
-
-
-                            @endforeach
-
-                            <span class="fw-bolder"> {{__('+ more')}}</span>
-
-
-                        </div> -->
-
-
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a style="width:100%;" href="{{ url('login')}}" type="button" class="mt-2 btn btn-success text-white">{{__('Indian Students')}}</a>
+                            </div>
+                            <div class="col-md-6">
+                                <a style="width:100%;" href="{{ url('signup')}}" type="button" class="mt-2 btn btn-success text-white">{{__('International Students')}}</a>
+                            </div>
+                        </div>                       
                     </div>
-
-                    <div class="col-lg-6 col-md-6 ps-5 pe-0  d-flex">
-
+                    <div class="col-lg-6 col-md-6 ps-10 pe-0  d-flex">
                         <div class="row ">
-
                             <div class="position-relative d-flex flex-column align-items-center justify-content-center h-100 ">
-
-
-                                <!-- <figure class=" d-none d-md-block position-absolute bottom-0 start-50 translate-middle-x  mb-0">
-                                    <svg  width="650px" height="658px"  id="10015.io" viewBox="0 0 480 480"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#EBF3FF" >
-                                        <path fill="fill-primary" d="M452.5,292.5Q440,345,401.5,382Q363,419,314,431.5Q265,444,212,449Q159,454,125,413Q91,372,57.5,332.5Q24,293,38.5,243.5Q53,194,63.5,143.5Q74,93,116.5,59.5Q159,26,212,30.5Q265,35,314,48.5Q363,62,391.5,104Q420,146,442.5,193Q465,240,452.5,292.5Z" />
-                                    </svg>
-
-                                </figure> -->
-
                                 <div class="position-relative">
                                     @if (!empty($landingpage))
                                         <img src="{{ url('public') }}/uploads/{{$landingpage->background_image}}" alt="" class="img-fluid  rounded-3">
                                     @endif
                                 </div>
-
-                                <!-- <div class="p-3 bg-success  border-radius-2xl d-inline-block rounded-4 shadow-lg position-absolute top-50 end-0 translate-middle-y mt-n7 z-index-1 d-none d-md-block" >
-                                    <p class="text-white">{{__('Secret of my success')}}</p>
-                                    <div class="avatar-group d-flex">
-                                        @foreach($students as $stu)
-                                            @if(!empty($stu->photo))
-                                                <a  class="avatar avatar-sm rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                    title="{{$stu->first_name}}">
-                                                    <img src="{{ url('public') }}/uploads/{{$stu->photo}}"
-                                                         alt="team1">
-                                                </a>
-                                            @else
-                                                <div class="avatar avatar-sm rounded-circle bg-purple-light ">
-                                                    <p class="mt-3 text-info"><span>{{$stu->first_name[0]}}{{$stu->last_name[0]}}</span>
-                                                    </p>
-                                                </div>
-                                            @endif
-                                        @endforeach
-                                    </div>
-                                </div> -->
-
-                                <!-- <div class="p-3 bg-info border-radius-2xl border-light shadow rounded-4 position-absolute bottom-0 start-0 z-index-9 d-none d-xl-block mb-5 ms-5">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="avatar  bg-info-light rounded-circle mx-auto">
-                                            <i class="fas fa-paint-brush text-info text-center"></i>
-                                        </span>
-                                        <div class="text-start ms-3">
-                                            <h6 class="mb-0 text-white">{{__('Congratulations')}} <span class="ms-4"></span></h6>
-                                            <p class="mb-0 small text-white">{{__('You are enrolled')}}</p>
-
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -128,17 +53,20 @@
 
 
 
-    <section class="py-3 mt-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Check our new courses')}}</h1>
+    <section class="py-6"style="background-color: white; ">
+        <div class="testimonial-active-two my-0 mx-auto" >
+            
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Check our new courses')}}</h1>
+                    </div>
                 </div>
-            </div>
-            <div class="row mt-5">
-                @foreach($courses as $course)
-                    @if($course->status !='Draft')
-                        <div class="col-lg-4 col-sm-6">
+                <div class="swiper pb-3">
+                    <div class="swiper-wrapper">
+                        @foreach($courses as $course)
+                        @if($course->status !='Draft')
+                        <div class="swiper-slide">
                             <div class="card card-plain card-blog">
                                 <div class="card-image border-radius-lg position-relative zoom-effect-container"> 
                                     <a href="javascript:;" class="image-card">
@@ -167,50 +95,64 @@
                                             @endif
 
                                         </div>
-
-                                        <!-- Rating star -->
-                                        <div class="row mb-0">
-                                            <div class="col">
-                                                {!! renderRating($course->id) !!}
-                                            </div>
-                                            <div class="col text-end me-2">
-                                                {!! getCourseRating($course->id) !!}.0/5.0
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class=" pt-0 pb-3 px-2">
-
-                                    <div class="d-flex justify-content-between">
-                                        <span class="h5 fw-bolder mb-0">INR {{ $course->price }} </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    @endif
-                @endforeach
-
+                        @endif
+                        @endforeach
+                    </div>
+                </div>
             </div>
-
         </div>
-
     </section>
-    <section class="mt-4 background-img">
+    <section class="mt-4 background-img" style=" background-image: url('{{ url('public/images/franchise.png')  }}');">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content position-relative text-center">
-                    <h4 class="text-white">Our Certificate is Approved by Government of India & ISO 9001:2015 certified.
-                    </h4>
-                  </div>
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 style="text-align: center;color: #64317c; font-size: 50px;">Why Choose Us ? </h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="custom-list">
+                                      <li>Career Consultancy Free</li>
+                                      <li>Business Guidance</li>
+                                      <li>Hands on practice for each student</li>
+                                      <li>Tools kit provided free to every student</li>
+                                      <li>Dress provided free to every student</li>
+                                      <li>Extra classes to students if required</li>
+                                      <li>Emi options to all the students</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8">
+                                    <ul class="custom-list">
+                                      
+                                      <li>Cakeuncle Franchise free to our student for first year to help getting business online</li>
+                                      <li>Digital Marketing Classes provided to students for thier startups</li>
+                                      <li>One year membership free to all our students for doubts or query related to the course.</li>
+                                      <li>Check your certificate online here anytime</li>
+                                      <li>We give you access to all our recipes online</li>
+                                      <li>That's it buddy what all you need 👍😊</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
+            </div>
         </div>
     </section>
     <section class="py-6"style="background-color: #f3dfe8;">
         <div class="testimonial-active-two my-0 mx-auto" >
+            
             <div class="container">
+                <div class="viewall_btn text-end">
+                    <a href="{{ url('testimonial') }}" class="btn btn-blue">View All</a>
+                </div>
                 <div class="row mb-5">
                     <div class="col-lg-12 text-center">
                         <h1 class="fw-bolder display-5 text-center mt-2 mb-0">{{__('Testimonials')}}</h1>
@@ -218,6 +160,7 @@
                 </div>
                 <div class="swiper">
                     <div class="swiper-wrapper">
+                        @foreach(DB::table('testimonials')->get() as $r)
                         <div class="swiper-slide">
                             <div class="testimonial-two text-center">
                                 <div class="testimonial-two_quote">
@@ -226,60 +169,17 @@
                                     </svg>
                                 </div>
                                 <p class="testimonial-two_text">
-                                    @if (!empty($landingpage))
-                                        {!! clean($landingpage->testimonial2_paragraph) !!}
-                                    @endif
+                                    {{ Str::limit($r->testimonial , 250); }}
                                 </p>
                                 <div class="testimonial-two_image">
-                                    @if(empty($landingpage->testimonial2_image))
-                                        <img width="56" height="56" src="{{ url('public') }}/img/user-avatar-placeholder.png" alt="Author">
-                                    @else
-                                        <img width="56" height="56" src="{{ url('public') }}/uploads/{{$landingpage->testimonial2_image}}" alt="Author">
-                                    @endif
+                                    <img width="56" height="56" src="{{ url('public/images') }}/{{ $r->image }}" alt="Author">
                                 </div>
                                 <span class="testimonial-two_name">
-                                    @if (!empty($landingpage))
-                                        {{$landingpage->testimonial2_student_name}}
-                                    @endif 
-                                </span>
-                                <span class="testimonial-two_position">
-                                    @if (!empty($landingpage))
-                                        {{$landingpage->testimonial2_occupation}}
-                                    @endif
+                                    {{ $r->name }}
                                 </span>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial-two text-center">
-                                <div class="testimonial-two_quote">
-                                    <svg width="30" height="30" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.203 16c2.034 0 3.594-1.7 3.594-3.752 0-2.124-1.356-3.61-3.255-3.61-.339 0-.813.07-.881.07C3.864 6.442 5.831 3.611 8 2.124L5.492 0C2.372 2.336 0 6.3 0 10.62 0 14.087 1.966 16 4.203 16zm11 0c2.034 0 3.661-1.7 3.661-3.752 0-2.124-1.423-3.61-3.322-3.61-.339 0-.813.07-.881.07.271-2.266 2.17-5.097 4.339-6.584L16.492 0C13.372 2.336 11 6.3 11 10.62c0 3.468 1.966 5.38 4.203 5.38z" fill="currentColor" fill-rule="nonzero"></path>
-                                    </svg>
-                                </div>
-                                <p class="testimonial-two_text">
-                                    @if (!empty($landingpage))
-                                        {!! clean($landingpage->testimonial1_paragraph) !!}
-                                    @endif
-                                </p>
-                                <div class="testimonial-two_image">
-                                    @if(empty($landingpage->testimonial1_image))
-                                    <img width="56" height="56" src="{{ url('public') }}/img/user-avatar-placeholder.png" alt="Author">
-                                    @else
-                                        <img width="56" height="56" src="{{ url('public') }}/uploads/{{$landingpage->testimonial1_image}}" alt="Author">
-                                    @endif
-                                </div>
-                                <span class="testimonial-two_name"> 
-                                    @if (!empty($landingpage))
-                                        {{$landingpage->testimonial1_student_name}}
-                                    @endif
-                                </span>
-                                <span class="testimonial-two_position">
-                                    @if (!empty($landingpage))
-                                        {{$landingpage->testimonial1_occupation}}
-                                    @endif
-                                </span>
-                            </div>
-                        </div>
+                        @endforeach
                         <!-- Testimonial Item End -->
                         <!-- swiper-slide end-->
 
@@ -292,7 +192,7 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-lg-12 text-center">
-                    <h1 class="fw-bolder display-5 text-center mt-2 mb-0">Latest Blog Posts</h1>
+                    <h1 class="fw-bolder display-5 text-center mt-2 mb-0">Student Preneurs </h1>
                 </div>
             </div>
             <div class="row">
@@ -520,5 +420,3 @@
     </script>
 
 @endsection
-
-

@@ -5,7 +5,7 @@
    <div class="container mt-8 mb-5">
       <div class="row justify-content-center">
          <div class="col-lg-4 mb-lg-0 mb-4">
-            <div class="card">
+            <div class="card sign-up">
                <div class="card-body pt-3">
                     <div class="row text-left signin-card">
                         <div class="col-md-12">

@@ -33,7 +33,33 @@ class CertificateController extends BaseController
             "courses" => $courses,
         ]);
     }
+    public function createappreciationcertificate(Request $request)
+    {
+        $certificate = false;
 
+        if ($request->id) {
+            $certificate = CertificateTemplate::where(
+                "workspace_id",
+                $this->user->workspace_id
+            )
+                ->where("id", $request->id)
+                ->first();
+        }
+
+        $students = Student::all()
+            ->keyBy("id")
+            ->all();
+        $courses = Course::all()
+            ->keyBy("id")
+            ->all();
+
+        return \view("certificates.createappreciationcertificate", [
+            "selected_navigation" => "certificates",
+            "certificate" => $certificate,
+            "students" => $students,
+            "courses" => $courses,
+        ]);
+    }
     public function newCertificate(Request $request)
     {
         $certificate = false;

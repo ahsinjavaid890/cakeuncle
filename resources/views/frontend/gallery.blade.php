@@ -1,101 +1,103 @@
 @extends('frontend.layout')
 @section('title','Gallery')
 @section('content')
+<style type="text/css">
+    .gallaerysection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 
-    <section class="">
-        <div class="bg-dark-alt position-relative">
-            <div class="pb-lg-6 pb-5 pt-7 postion-relative z-index-2">
-                <div class="row mt-5">
-                    <div class="col-md-8 mx-auto text-center mt-4">
-                            <h2 class="text-white">
-                                Gallery
-                            </h2>
-                        <p class="text-muted">
-                           Gallery
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <style>
-        .zoom-effect-container{
-            width: 100%;
-            height: auto;
+    @media (min-width: 45em) {
+        .gallaerysection {
+            flex-wrap: nowrap;
         }
-    </style>
-    <section class="py-5 position-relative">
-        <div class="container">
-            <div class="row">
-                @foreach($data as $r)
-                <div class="col-md-3 mt-5">
-                    <div class="card gallery-card">
-                        <div class="card-body p-0">
-                            <div class="zoom-effect-container">
-                                <div class="image-card">
-                                    <img  src="{{ url('public') }}/images/{{ $r->image }}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    }
+
+    .cardgallaery {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+        background: #CCC;
+        transform: rotateX(0) rotateY(0);
+        transform-style: preserve-3d;
+        transition-duration: 0.1s;
+        transition-timing-function: ease !important;
+        backface-visibility: hidden;
+        will-change: tranform;
+    }
+
+    .card__overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(http://alexandrebuffet.fr/codepen/parallax-cards/blur-overlay.jpg) no-repeat center center;
+        background-size: cover;
+        mix-blend-mode: lighten;
+        opacity: 0.5;
+    }
+
+    .card__image img {
+        max-width: 100%;
+        width: 250px;
+        height: 250px;
+        mix-blend-mode: lighten;
+    }
+</style>
+<section class="">
+    <div class="bg-dark-alt position-relative">
+        <div class="pb-lg-6 pb-5 pt-7 postion-relative z-index-2">
+            <div class="row mt-5">
+                <div class="col-md-8 mx-auto text-center mt-4">
+                        <h2 class="text-white">
+                            Gallery
+                        </h2>
+                    <p class="text-muted">
+                       Gallery
+                    </p>
                 </div>
-                <div class="img-popup">
-                  <img src="" alt="Popup Image">
-                  <div class="close-btn">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                  </div>
-                </div>
-                @endforeach
             </div>
         </div>
-    </section>
-    <section class="py-5 position-relative">
-        <div class="container">
-            <div id="carousel-testimonials" class="carousel slide carousel-team">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="container">
-                            <div class="row align-items-center">
-                                <div class="col-lg-12 col-md-7 me-lg-auto position-relative">
-                                    <p class="mb-1">
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    </div>
+</section>
+<section class="py-5 position-relative">
+    <div class="container">
+        <section class="gallaerysection">
+            @foreach($data as $r)
+            <div id="card-1" class="cardgallaery rounded">
+                <div class="card__overlay">
                 </div>
+                <a href="{{ url('public/images') }}/{{ $r->image }}" class="card__image gallaery">
+                    <img src="{{ url('public/images') }}/{{ $r->image }}" alt="" />
+                </a>
             </div>
-        </div>
-    </section>
+            @endforeach
+        </section>
+    </div>
+</section>
 @endsection
 @section('script')
-<script type="text/javascript">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script>
     $(document).ready(function() {
 
-  // required elements
-  var imgPopup = $('.img-popup');
-  var imgCont  = $('.image-card');
-  var popupImage = $('.img-popup img');
-  var closeBtn = $('.close-btn');
-
-  // handle events
-  imgCont.on('click', function() {
-    var img_src = $(this).children('img').attr('src');
-    imgPopup.children('img').attr('src', img_src);
-    imgPopup.addClass('opened');
-  });
-
-  $(imgPopup, closeBtn).on('click', function() {
-    imgPopup.removeClass('opened');
-    imgPopup.children('img').attr('src', '');
-  });
-
-  popupImage.on('click', function(e) {
-    e.stopPropagation();
-  });
-  
+    $('.gallaery').fancybox({
+      buttons: [
+        "slideShow",
+        "thumbs",
+        "zoom",
+        "fullScreen",
+        "share",
+        "close"
+      ],
+      loop: false,
+      protect: true
+    });
 });
 </script>
 @endsection

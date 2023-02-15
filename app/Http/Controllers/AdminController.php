@@ -15,7 +15,7 @@ use App\Models\PrivacyPolicy;
 use App\Models\Product;
 use App\Models\Setting;
 use App\Models\Student;
-
+use App\Models\testimonials;
 use App\Models\Terms;
 use App\Models\User;
 use App\Models\Workspace;
@@ -305,7 +305,11 @@ class AdminController extends AdminBaseController
             "data" => $data,
         ]);
     }
-
+    public function deletegallaery($id)
+    {
+        gallary_images::where('id' , $id)->delete();
+        return back()->with('success','Gallaery Image succesfully');
+    }
     public function addnewgallaeryimage(Request $request)
     {
         $file = $request->image;
@@ -318,6 +322,53 @@ class AdminController extends AdminBaseController
 
         return back()->with('success','Image Added succesfully');
     }
+     public function testimonials()
+    {
+        $data = testimonials::all();
+        return view("admin.testimonials")->with(array('data' => $data));
+    }
+
+    public function addtestimonials(Request $request)
+    {
+        $file = $request->image;
+        $filename = rand() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path('images'), $filename);
+        
+        $newimage = new testimonials();
+        $newimage->image = $filename;
+        $newimage->name = $request->name;
+        $newimage->testimonial = $request->testimonial;
+        $newimage->save();
+
+        return back()->with('success','Testimonial Added succesfully');
+    }
+
+
+    public function edittestimonials(Request $request)
+    {
+        $newimage = testimonials::find($request->id);
+        if ($request->image) {
+            $file = $request->image;
+            $filename = rand() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('images'), $filename);
+            $newimage->image = $filename;
+        }
+        $newimage->name = $request->name;
+        $newimage->testimonial = $request->testimonial;
+        $newimage->save();
+
+        return back()->with('success','Testimonial Added succesfully');
+    }
+    
+    public function testimonial(Request $request)
+    {
+        $testimonial_delete = testimonials::where('id','=',$request->id)->delete();
+        if($testimonial_delete==true){
+            return back()->with('success','Blog Delete successfull');
+        }else{
+        return back()->with('error','something went wrong');
+        }
+}
     public function themePages()
     {
         $landingpage = LandingPage::first();
@@ -327,7 +378,7 @@ class AdminController extends AdminBaseController
             "landingpage" => $landingpage,
         ]);
     }
-
+ 
     public function heroSection(Request $request)
     {
         $request->validate([
@@ -354,7 +405,7 @@ class AdminController extends AdminBaseController
 
         $post->save();
 
-        return redirect(config("app.url") . "/landingpage");
+        return redirect()->back()->with('message', 'heroSection Updated Successfully');
     }
 
     public function story2Section(Request $request)
