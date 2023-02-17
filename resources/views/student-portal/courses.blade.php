@@ -18,6 +18,7 @@
         </div>
     </div>
 
+    @if($courses->count() > 0)
     <div class="row">
         @foreach($courses as $course)
             <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
@@ -81,4 +82,14 @@
         @endforeach
 
     </div>
+    @else
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron text-center">
+                      <h1>You are not enrolled in any course.</h1>
+                    </div>
+        </div>
+    </div>
+    @endif
 @endsection

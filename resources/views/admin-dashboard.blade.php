@@ -115,7 +115,7 @@
                     <div class="row">
                         <div class="col-8">
                             <div class="numbers">
-                                <p class="mb-0 text-capitalize font-weight-bold">{{__('Total Lessons')}}</p><h5 class="font-weight-bolder mt-4 ">
+                                <p class="mb-0 text-capitalize font-weight-bold">{{__('Total Session')}}</p><h5 class="font-weight-bolder mt-4 ">
                                     {{$total_lessons}}
                                 </h5>
                             </div>
@@ -145,7 +145,7 @@
                     <div class="row">
                         <div class="col-8">
                             <div class="numbers">
-                                <p class="mb-0   font-weight-bold">{{__('Total eBooks')}}</p>
+                                <p class="mb-0   font-weight-bold">{{__('Total Recipes')}}</p>
 
                                 <h5 class="font-weight text-white-bolder mt-4">
                                     {{$total_products}}
@@ -353,93 +353,4 @@
             </div>
         </div>
     </div>
-
-
-    <div class="">
-        <div class="row">
-
-            <div class="col-12 mt-4">
-                <div class="card mb-4">
-                    <div class="card-header pb-0 p-3">
-                        <div class="d-flex justify-content-between">
-
-                            <h6 class="mb-1 text-capitalize ">{{__('Recent Courses')}}</h6>
-                            <a href="{{ url('courses')}}"  class="btn  bg-purple-light text-purple shadow-none mb-0 ms-2 d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="">
-                                {{__('View All')}}
-                            </a>
-                        </div>
-
-
-                    </div>
-
-                    <div class="card-body p-3">
-
-                        <div class="row">
-
-                            @foreach($recent_courses as $course)
-                                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                                    <div class="card card-img">
-                                        <a class="d-block shadow-xl border-radius-xl">
-                                            @if(empty($course->image))
-                                                <img src="{{ url('public') }}/img/placeholder.png"
-                                                     class="w-100 border-radius-lg shadow-sm mt-3">
-                                            @else
-                                                <img src="{{ url('public') }}/uploads/{{$course->image}}" class="w-100 border-radius-lg shadow-sm mt-3">
-                                            @endif
-                                        </a>
-                                        <div class="card-body px-1 pb-0">
-                                            <p class="text-purple mb-2 text-sm">
-                                                @if(!empty($categories[$course->category_id]))
-                                                    <span class="badge bg-purple-light">
-                                                    @if(isset($categories[$course->category_id]))
-                                                        {{$categories[$course->category_id]->name}}
-                                                    @endif
-                                                @endif
-                                            </p>
-                                            <a href="{{ url('view-course')}}?id={{$course->id}}">
-                                                <h5>
-                                                    <strong>{{$course->name}}</strong>
-                                                </h5>
-                                            </a>
-                                            <div class="row mb-0">
-                                                <div class="col">
-                                                    {!! renderRating($course->id) !!}
-                                                </div>
-                                                <div class="col text-end me-2">
-                                                    {!! getCourseRating($course->id) !!}.0/5.0
-
-                                                </div>
-
-                                            </div>
-                                            <div class=" pt-0 pb-3">
-                                                <hr>
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="h5 fw-bolder mb-0">INR {{$course->price}} </span>
-                                                    <span class="h6 fw-light mb-0">
-
-
-<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-                                               {{getTotalLesson($course->id)}} {{__('Lessons')}}</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-
-
 @endsection
-
-
-

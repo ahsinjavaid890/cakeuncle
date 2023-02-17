@@ -51,9 +51,9 @@
 
                                 <select class="form-control" aria-label="Default select example" name="level">
                                     <option value="Beginner"
-                                            @if(($course->level ?? null) === 'Beginner') selected @endif>{{__('Beginner')}}</option>
+                                            @if(($course->level ?? null) === 'Beginner to Intermediate') selected @endif>{{__('Beginner to Intermediate')}}</option>
                                     <option value="Intermediate"
-                                            @if(($course->level ?? null) === 'Intermediate') selected @endif>{{__('Intermediate')}}</option>
+                                            @if(($course->level ?? null) === 'Intermediate to Advanced') selected @endif>{{__('Intermediate to Advanced')}}</option>
                                     <option value="Advanced"
                                             @if(($course->level ?? null) === 'Advanced') selected @endif>{{__('Advanced')}}</option>
                                 </select>

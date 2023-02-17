@@ -51,7 +51,7 @@ return [
     |
     */
 
-    "url" => env("APP_URL", "https://aweentechnologies.com/cakeuncle/"),
+    "url" => env("APP_URL", "https://capacollege.in/"),
 
     "asset_url" => env("ASSET_URL", null),
 

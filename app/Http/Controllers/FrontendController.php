@@ -18,6 +18,7 @@ use App\Models\Product;
 use App\Models\ProductCategories;
 use App\Models\Setting;
 use App\Models\Student;
+use App\Models\testimonials;
 use App\Models\JobType;
 use App\Models\CareerLevel;
 use App\Models\gallary_images;
@@ -165,6 +166,11 @@ class FrontendController extends WebsiteBaseController
     public function admission()
     {
         return view('frontend.admission');
+    }
+    public function testimonial()
+    {
+        $data = testimonials::all();
+        return view('frontend.testimonial')->with(array('data' => $data));
     }
     public function menu()
     {

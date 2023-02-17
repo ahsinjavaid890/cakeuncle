@@ -7,16 +7,16 @@
 
                 <h5 class="fw-bolder">
                     {{__('Shop')}} /<span class="text-secondary">
-                            {{__('eBooks')}}
+                            {{__('Recipes')}}
                     </span>
                 </h5>
-                <p class="text-muted">{{__('Create, edit or delete ebooks.')}}</p>
+                <p class="text-muted">{{__('Create, edit or delete recipes.')}}</p>
 
             </div>
 
         </div>
         <div class="col text-end">
-            <a href="{{ url('add-product')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Add eBook ')}}</a>
+            <a href="{{ url('add-product')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Add Recipes ')}}</a>
 
         </div>
     </div>
@@ -30,7 +30,7 @@
                         <div class="card-body">
                             <p>{{__('No items to display. Get started by adding an item.')}}</p>
 
-                            <a href="{{ url('add-product')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Add eBook ')}}</a>
+                            <a href="{{ url('add-product')}}" type="button" class="btn btn-info text-white"><i class="fas fa-plus"></i> {{__('Add Recipes ')}}</a>
                         </div>
                     </div>
 

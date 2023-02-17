@@ -18,7 +18,7 @@
                         <li class="list-inline-item text-success fw-bold h6  mb-1 mb-sm-0">{{__('Last updated')}} {{$course->updated_at}}</li>
 
                     </ul>
-                    <div class="row mb-4 mt-3">
+                    <!-- <div class="row mb-4 mt-3">
                         <div class="col-auto">
                             <span class="h6 text-white">{{$rating_out_of_five}}/5</span>
 
@@ -67,7 +67,7 @@
                         </div>
 
 
-                    </div>
+                    </div> -->
                     @if(!empty($categories[$course->category_id]))
                         <span class="badge bg-purple-light">
                         @if(isset($categories[$course->category_id]))
@@ -141,12 +141,12 @@
                                 @endif
 
                             </div>
-                            <div class="row card-body">
+                            <!-- <div class="row card-body">
                                 <div class="col-md-6 col-12">
                                     <h6 class="text-dark text-uppercase">{{__('What you will learn')}}</h6>
                                 </div>
 
-                            </div>
+                            </div> -->
 
                             <div class="row ms-3">
                                 @if($course->outcomes)
@@ -177,9 +177,9 @@
                     <div class="col-12 mt-3">
                         <div class="card rounded-3">
                             <!-- Card header START -->
-                            <div class="card-header border-bottom">
+                            <!-- <div class="card-header border-bottom">
                                 <h4 class="mb-0">{{__('Lessons')}}</h4>
-                            </div>
+                            </div> -->
                             <!-- Card body START -->
 
                             <div class="row g-5">
@@ -357,7 +357,7 @@
                                             <span class="h6 fw-light mb-0">
 
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar text-info me-2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                                                {{__('Deadline')}}
+                                                {{__('Last Day to Enroll')}}
                                             </span>
                                     <span>
                                                 @if(!empty($course->deadline))
@@ -418,7 +418,7 @@
                 <div class="col-md-8 mt-4">
 
                     <div>
-                        <h4 class="mb-5">{{__('Student Feedback')}}</h4>
+                        <!-- <h4 class="mb-5">{{__('Student Feedback')}}</h4> -->
                         @foreach($reviews as $review)
                             <div class="d-flex mt-6">
                                 <div>

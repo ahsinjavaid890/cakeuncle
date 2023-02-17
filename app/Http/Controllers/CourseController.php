@@ -247,7 +247,7 @@ class CourseController extends BaseController
     public function categoryupdate(Request $request)
     {   
         $update = CourseCategory::find($request->id);
-        echo$update->name = $request->name;exit;
+        $update->name = $request->name;
         $update->save();
         return redirect()->back();
     }

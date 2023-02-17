@@ -60,18 +60,10 @@
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
                                                 aria-labelledby="dropdownMarketingCard">
-                                                <li><a class="dropdown-item border-radius-md"
-                                                       href="{{ url('new-student')}}?id={{$r->id}}">{{__('Edit')}}</a></li>
-
-                                                <li><a class="dropdown-item border-radius-md"
-                                                       href="{{ url('student-about')}}?id={{$r->id}}">{{__('See Details')}}</a>
-                                                </li>
-                                                <li>
-                                                    <hr class="dropdown-divider">
-                                                </li>
+      
                                                 <li>
                                                     <a class="dropdown-item border-radius-md text-danger"
-                                                       href="{{ url('delete/student')}}/{{$r->id}}">{{__('Delete')}}
+                                                       href="{{ url('delete/gallaery')}}/{{$r->id}}">{{__('Delete')}}
                                                     </a>
                                                 </li>
                                             </ul>

@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    @if($courses)
+                    @if($courses->count() > 0)
                     @foreach($courses as $course)
                     
                         
@@ -91,7 +91,9 @@
                         </div>
                     @endforeach
                     @else
-                    <h2>You are not enrolled in any course. </h2>
+                    <div class="jumbotron text-center">
+                      <h3>You are not enrolled in any course.</h3>
+                    </div>
                     @endif
                 </div>
             </div>
@@ -108,7 +110,7 @@
 
                         <div class="row g-4">
                             <!-- Card item START -->
-                            @if($ebooks)
+                            @if($ebooks->count() > 0)
                             @foreach($ebooks as $product)
 
                                 <div class="col-sm-6 col-lg-4 col-xl-3">
@@ -148,7 +150,9 @@
                                 </div>
                         @endforeach
                         @else
-                        <h2>You are not enrolled in any Ebooks. </h2>
+                        <div class="jumbotron text-center">
+                          <h3>You are not enrolled in any Ebooks.</h3>
+                        </div>
                         @endif
                         <!-- Card item END -->
                         </div>
